@@ -1,19 +1,19 @@
 /*******************************************************************************
-* Copyright(c)2014£¬´óºÀĞÅÏ¢¼¼Êõ(Íşº£)ÓĞÏŞ¹«Ë¾
+* Copyright(c)2014ï¼Œå¤§è±ªä¿¡æ¯æŠ€æœ¯(å¨æµ·)æœ‰é™å…¬å¸
 *
 * All rights reserved
 *
-* ÎÄ¼şÃû³Æ£º  wnd_frmwifi.c
-* Õª    Òª£º  ÊµÏÖwifiµÄÁ¬½Ó
+* æ–‡ä»¶åç§°ï¼š  wnd_frmwifi.c
+* æ‘˜    è¦ï¼š  å®ç°wifiçš„è¿æ¥
 *             
 *
-* µ±Ç°°æ±¾£º  v1.0.0
-* ×÷    Õß£º  wuyaju
-* Íê³ÉÈÕÆÚ£º  2014-10-28
+* å½“å‰ç‰ˆæœ¬ï¼š  v1.0.0
+* ä½œ    è€…ï¼š  wuyaju
+* å®Œæˆæ—¥æœŸï¼š  2014-10-28
 *
-* È¡´ú°æ±¾£º
-* Ô­ ×÷ Õß£º
-* Íê³ÉÈÕÆÚ£º
+* å–ä»£ç‰ˆæœ¬ï¼š
+* åŸ ä½œ è€…ï¼š
+* å®Œæˆæ—¥æœŸï¼š
 *******************************************************************************/
 
 #include "wnd_frmwifi.h"
@@ -21,7 +21,7 @@
 #include "wnd_msgqueue.h"
 
 /*******************************************************************************
-**						ÎªÊµÏÖ´°Ìåfrmwifi¶øĞèÒªÒıÓÃµÄÆäËûÍ·ÎÄ¼ş 			  **
+**						ä¸ºå®ç°çª—ä½“frmwifiè€Œéœ€è¦å¼•ç”¨çš„å…¶ä»–å¤´æ–‡ä»¶ 			  **
 *******************************************************************************/
 #include <unistd.h>
 #include <stdio.h>
@@ -42,12 +42,12 @@
 #include "guiglobal.h"
 
 /*******************************************************************************
-**									ºê¶¨Òå 				 					  **
+**									å®å®šä¹‰ 				 					  **
 *******************************************************************************/	
 
 
 /*******************************************************************************
-**								±äÁ¿¶¨Òå				 					  **
+**								å˜é‡å®šä¹‰				 					  **
 *******************************************************************************/	
 GUITHREAD thdWifi = -1;
 static GUIMUTEX pWifiMutex;
@@ -55,53 +55,53 @@ static WIFI_INFO stGetWifi;
 char path[512] = "/mnt/sdcard/wifi/list.txt";
 static WIFI_INFO stWifi[MAX_SIGNUM];
 
-/* Ñ¡ÖĞ×´Ì¬Ê±wifi¼ÓÃÜÍ¼±ê */
+/* é€‰ä¸­çŠ¶æ€æ—¶wifiåŠ å¯†å›¾æ ‡ */
 static char *g_pWiFiSecEncryTypePath[] = {
 BmpFileDirectory"ico_wifi_no_encrypt_press.bmp", 
 BmpFileDirectory"ico_wifi_encrypt_press.bmp"};
 
-/* Ñ¡ÖĞ×´Ì¬Ê±wifiĞÅºÅÇ¿¶ÈÍ¼±ê */
+/* é€‰ä¸­çŠ¶æ€æ—¶wifiä¿¡å·å¼ºåº¦å›¾æ ‡ */
 /*static char *g_pWiFiSecStrengthPath[]  = {
 BmpFileDirectory"ico_wifi_empty_press.bmp", BmpFileDirectory"ico_wifi_quar_press.bmp", 
 BmpFileDirectory"ico_wifi_half_press.bmp", BmpFileDirectory"ico_wifi_three_quars_press.bmp",
 BmpFileDirectory"ico_wifi_full_press.bmp"};*/
 
-/* Î´Ñ¡ÖĞ×´Ì¬Ê±wifi¼ÓÃÜÍ¼±ê */
+/* æœªé€‰ä¸­çŠ¶æ€æ—¶wifiåŠ å¯†å›¾æ ‡ */
 static char *g_pWiFiUnSecEncryTypePath[] = {
 BmpFileDirectory"ico_wifi_no_encrypt_unpress.bmp", 
 BmpFileDirectory"ico_wifi_encrypt_unpress.bmp"};
 
-/* Î´Ñ¡ÖĞ×´Ì¬Ê±wifiĞÅºÅÇ¿¶ÈÍ¼±ê */
+/* æœªé€‰ä¸­çŠ¶æ€æ—¶wifiä¿¡å·å¼ºåº¦å›¾æ ‡ */
 static char *g_pWiFiUnSecStrengthPath[]  = {
 BmpFileDirectory"ico_wifi_empty_unpress.bmp", BmpFileDirectory"ico_wifi_quar_unpress.bmp", 
 BmpFileDirectory"ico_wifi_half_unpress.bmp", BmpFileDirectory"ico_wifi_three_quars_unpress.bmp",
 BmpFileDirectory"ico_wifi_full_unpress.bmp"};
 
 
-unsigned long g_Status = 0;						// wifiµÄµ±Ç°×´Ì¬£¬Ã¿Ò»Î»´ú±íÒ»ÖÖ×´Ì¬£¬Í¨¹ıºê¶¨Òå½øĞĞ²Ù×÷
+unsigned long g_Status = 0;						// wifiçš„å½“å‰çŠ¶æ€ï¼Œæ¯ä¸€ä½ä»£è¡¨ä¸€ç§çŠ¶æ€ï¼Œé€šè¿‡å®å®šä¹‰è¿›è¡Œæ“ä½œ
 
 
 /*******************************************************************************
-**							´°ÌåfrmwifiÖĞµÄ¿Ø¼ş¶¨Òå²¿·Ö					  	  **
+**							çª—ä½“frmwifiä¸­çš„æ§ä»¶å®šä¹‰éƒ¨åˆ†					  	  **
 *******************************************************************************/
 static GUIWINDOW *pFrmWiFi = NULL;
-static GUIFONT *pWifiFntBlack = NULL;     		//±êÌâ°´Å¥µÄ×ÖÌå
+static GUIFONT *pWifiFntBlack = NULL;     		//æ ‡é¢˜æŒ‰é’®çš„å­—ä½“
 
-/**********************************±³¾°¿Ø¼ş¶¨Òå********************************/ 
+/**********************************èƒŒæ™¯æ§ä»¶å®šä¹‰********************************/ 
 static GUIPICTURE *pWiFiBtnLeftBg  = NULL;       
 static GUIPICTURE *pWiFiInfoBg = NULL;
 
-/**********************************²Ëµ¥¿Ø¼ş¶¨Òå********************************/ 
+/**********************************èœå•æ§ä»¶å®šä¹‰********************************/ 
 static GUIPICTURE *pWiFiMenuBg = NULL;
 static GUIPICTURE *pWiFiMenu[5] = {NULL};
 static GUILABEL *pWiFiLblMenu[5] = {NULL};
 static GUICHAR *pWiFiStrMenu[5] = {NULL};
 
-/******************************´°Ìå±êÌâÀ¸¿Ø¼ş¶¨Òå******************************/
-static GUICHAR *pWiFiStrFrmName = NULL;	  	  	//´°Ìå×óÉÏ½Ç±êÌâÀ¸ÎÄ±¾
-static GUILABEL *pWiFiLblFrmName = NULL;		//×óÉÏ½Ç´°ÌåÃû×ÖµÄLabel
+/******************************çª—ä½“æ ‡é¢˜æ æ§ä»¶å®šä¹‰******************************/
+static GUICHAR *pWiFiStrFrmName = NULL;	  	  	//çª—ä½“å·¦ä¸Šè§’æ ‡é¢˜æ æ–‡æœ¬
+static GUILABEL *pWiFiLblFrmName = NULL;		//å·¦ä¸Šè§’çª—ä½“åå­—çš„Label
 
-/***************************´ò¿ª¹Ø±ÕwifiÄÚµÄ¿Ø¼ş¶¨Òå***************************/
+/***************************æ‰“å¼€å…³é—­wifiå†…çš„æ§ä»¶å®šä¹‰***************************/
 static GUICHAR *pWiFiStrOnOffInfo = NULL;
 
 static GUILABEL *pWiFiLblOnOffInfo = NULL;
@@ -110,20 +110,23 @@ static GUIPICTURE *pWiFiBtnOnOffBg		= NULL;
 static GUIPICTURE *pWiFiBtnREnableOn	= NULL; 
 static GUIPICTURE *pWiFiBtnREnableOff	= NULL; 
 
+static GUIPICTURE *pWiFiBtnConnect	= NULL; //victor
 
-/****************************ÒÑÁ¬½ÓwifiÄÚµÄ¿Ø¼ş¶¨Òå****************************/
+/****************************å·²è¿æ¥wifiå†…çš„æ§ä»¶å®šä¹‰****************************/
+static GUICHAR *pWiFiStrConnecting = NULL;//victor
+static GUILABEL *pWiFiLblConnecting = NULL;//victor
 
 
-/***************************É¨Ãèµ½µÄwifiÄÚµÄ¿Ø¼ş¶¨Òå***************************/
+/***************************æ‰«æåˆ°çš„wifiå†…çš„æ§ä»¶å®šä¹‰***************************/
 #define WIFIITEM   10
 static GUIPICTURE *pWiFiItem[WIFIITEM] = {NULL};
 static GUILABEL *pWiFiLblItem[WIFIITEM] = {NULL};
 static GUICHAR *pWiFiStrItem[WIFIITEM] = {NULL};
 
-/*****************************ÓÒ²à²Ëµ¥À¸¿Ø¼ş¶¨Òå*******************************/
+/*****************************å³ä¾§èœå•æ æ§ä»¶å®šä¹‰*******************************/
 
 /*******************************************************************************
-**	    	´°ÌåfrmwifiÖĞµÄ³õÊ¼»¯ÎÄ±¾×ÊÔ´¡¢ ÊÍ·ÅÎÄ±¾×ÊÔ´º¯Êı¶¨Òå²¿·Ö		  **
+**	    	çª—ä½“frmwifiä¸­çš„åˆå§‹åŒ–æ–‡æœ¬èµ„æºã€ é‡Šæ”¾æ–‡æœ¬èµ„æºå‡½æ•°å®šä¹‰éƒ¨åˆ†		  **
 *******************************************************************************/
 static int WiFiTextRes_Init(void *pInArg, int iInLen, 
 							void *pOutArg, int iOutLen);
@@ -132,16 +135,16 @@ static int WiFiTextRes_Exit(void *pInArg, int iInLen,
 
 
 /*******************************************************************************
-**			    	´°ÌåfrmwifiÖĞµÄ¿Ø¼şÊÂ¼ş´¦Àíº¯Êı¶¨Òå²¿·Ö				  	  **
+**			    	çª—ä½“frmwifiä¸­çš„æ§ä»¶äº‹ä»¶å¤„ç†å‡½æ•°å®šä¹‰éƒ¨åˆ†				  	  **
 *******************************************************************************/
 
-/***************************´°ÌåµÄ°´¼üÊÂ¼ş´¦Àíº¯Êı*****************************/
+/***************************çª—ä½“çš„æŒ‰é”®äº‹ä»¶å¤„ç†å‡½æ•°*****************************/
 static int WiFiWndKey_Down(void *pInArg, int iInLen, 
 							  void *pOutArg, int iOutLen);
 static int WiFiWndKey_Up(void *pInArg, int iInLen, 
 							void *pOutArg, int iOutLen);
 
-/**************************²Ëµ¥À¸¿Ø¼şµÄÊÂ¼ş´¦Àíº¯Êı****************************/
+/**************************èœå•æ æ§ä»¶çš„äº‹ä»¶å¤„ç†å‡½æ•°****************************/
 static int WiFiBtnMenu_Down(void *pInArg, int iInLen, 
                            void *pOutArg, int iOutLen);
 static int WiFiBtnMenu_Up(void *pInArg, int iInLen, 
@@ -149,7 +152,7 @@ static int WiFiBtnMenu_Up(void *pInArg, int iInLen,
 
 
 
-/************************´ò¿ª/¹Ø±Õwifi°´Å¥ÊÂ¼ş´¦Àíº¯Êı*************************/
+/************************æ‰“å¼€/å…³é—­wifiæŒ‰é’®äº‹ä»¶å¤„ç†å‡½æ•°*************************/
 static int WiFiBtnEnableOn_Down(void *pInArg,   int iInLen, 
                                void *pOutArg, int iOutLen);
 static int WiFiBtnEnableOff_Down(void *pInArg,   int iInLen, 
@@ -160,8 +163,10 @@ static int WiFiBtnEnableOn_Up(void *pInArg,   int iInLen,
 static int WiFiBtnEnableOff_Up(void *pInArg,   int iInLen, 
                                void *pOutArg, int iOutLen);
 
+static int WiFiBtnConnect(void *pInArg,   int iInLen, 
+                               void *pOutArg, int iOutLen);//victor
 
-/**************************Á¬½Ówifi°´Å¥ÊÂ¼ş´¦Àíº¯Êı****************************/
+/**************************è¿æ¥wifiæŒ‰é’®äº‹ä»¶å¤„ç†å‡½æ•°****************************/
 static int WiFiBtnItemSSID_Down(void *pInArg,   int iInLen, 
                                void *pOutArg, int iOutLen);
 static int WiFiBtnItemSSID_Up(void *pInArg,   int iInLen, 
@@ -170,13 +175,15 @@ static int WiFiBtnItemSSID_Up(void *pInArg,   int iInLen,
 
 
 /*******************************************************************************
-**			    			´°ÌåÄÚµÄÆäËûº¯ÊıÉùÃ÷					 		  **
+**			    			çª—ä½“å†…çš„å…¶ä»–å‡½æ•°å£°æ˜					 		  **
 *******************************************************************************/
 static void WifiOpen();
 static void WifiScan();	
 static void WifiScan_r();
 static void SortByLevel(int num);
 static int CalcWifiCell(int iLevel);
+static void WifiConnect();//vcitor
+
 
 int vsystem(const char * cmdstring)
 {
@@ -255,6 +262,9 @@ void* DefaultWifiThread(void *pThreadArg)
 				case ENUM_SCAN_R:
 					WifiScan_r();
 					break;
+				case ENUM_CONNECT://victor
+					WifiConnect();
+					break;
 				default:
 					break;
 			}
@@ -270,34 +280,34 @@ void* DefaultWifiThread(void *pThreadArg)
 }
 
 /***
-  * ¹¦ÄÜ£º
-        ´°ÌåFrmWiFiµÄ³õÊ¼»¯º¯Êı£¬½¨Á¢´°Ìå¿Ø¼ş¡¢×¢²áÏûÏ¢´¦Àí
-  * ²ÎÊı£º
-        1.void *pWndObj:    Ö¸Ïòµ±Ç°´°Ìå¶ÔÏó
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        çª—ä½“FrmWiFiçš„åˆå§‹åŒ–å‡½æ•°ï¼Œå»ºç«‹çª—ä½“æ§ä»¶ã€æ³¨å†Œæ¶ˆæ¯å¤„ç†
+  * å‚æ•°ï¼š
+        1.void *pWndObj:    æŒ‡å‘å½“å‰çª—ä½“å¯¹è±¡
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 int FrmWiFiInit(void *pWndObj)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 	int i = 0;
 
 	GUIMESSAGE *pMsg = NULL;
-    //µÃµ½µ±Ç°´°Ìå¶ÔÏó
+    //å¾—åˆ°å½“å‰çª—ä½“å¯¹è±¡
     pFrmWiFi = (GUIWINDOW *) pWndObj;
 	
     pWifiFntBlack = CreateFont(FontFileDirectory"unicode.fnt", 
                                  16, 16, 0x0000000, 0xFFFFFFFF);
 
-   	//³õÊ¼»¯ÎÄ±¾×ÊÔ´±ØĞëÔÚ½¨Á¢ÎÄ±¾CreateText()»ò½¨Á¢±êÇ©CreateLabel()Ö®Ç°
+   	//åˆå§‹åŒ–æ–‡æœ¬èµ„æºå¿…é¡»åœ¨å»ºç«‹æ–‡æœ¬CreateText()æˆ–å»ºç«‹æ ‡ç­¾CreateLabel()ä¹‹å‰
     WiFiTextRes_Init(NULL, 0, NULL, 0);
 
-	/* ×ÀÃæ±³¾°Í¼Æ¬ */
+	/* æ¡Œé¢èƒŒæ™¯å›¾ç‰‡ */
 	pWiFiBtnLeftBg = CreatePicture(0, 0, 681, 480, 
                                      	BmpFileDirectory"bg_wifi.bmp");
-	/*²Ëµ¥²¿·Ö*/
+	/*èœå•éƒ¨åˆ†*/
 	pWiFiMenuBg = CreatePicture(681, 39, 119, 441, 
 										BmpFileDirectory"wifi_global_menu_bg.bmp");
 	int y = 40;
@@ -311,19 +321,25 @@ int FrmWiFiInit(void *pWndObj)
 		SetLabelAlign(GUILABEL_ALIGN_CENTER, pWiFiLblMenu[i]);
 	}
 	
-	/* ´°Ìå±êÌâLabel */
+	/* çª—ä½“æ ‡é¢˜Label */
 	pWiFiLblFrmName = CreateLabel(0, 20, 100, 24, pWiFiStrFrmName);
 	SetLabelAlign(GUILABEL_ALIGN_CENTER, pWiFiLblFrmName);	
 	SetLabelFont(pWifiFntBlack, pWiFiLblFrmName);
 
-	/* ´ò¿ª¹Ø±ÕWiFiÇøÓò¿Ø¼ş¶¨Òå */	
+	/* æ‰“å¼€å…³é—­WiFiåŒºåŸŸæ§ä»¶å®šä¹‰ */	
 	pWiFiBtnREnableOn   = CreatePicture(350, 45, 84, 32, BmpFileDirectory"btn_wifi_on_unpress.bmp");
 	pWiFiBtnREnableOff  = CreatePicture(434, 45, 84, 32, BmpFileDirectory"btn_wifi_off_unpress.bmp");
+	pWiFiBtnConnect   = CreatePicture(350, 95, 84, 32, BmpFileDirectory"btn_wifi_on_unpress.bmp");//victor
 
 	pWiFiBtnOnOffBg = CreatePicture(28, 74, 313, 24, BmpFileDirectory"btn_wifi_ssid_unpress.bmp");
 	pWiFiLblOnOffInfo = CreateLabel(28, 76, 300, 24,  pWiFiStrOnOffInfo);
+
+	//pWiFiLblConnecting = CreateLabel(28, 116, 300, 24,  pWiFiStrConnecting);//victor
+	pWiFiLblConnecting = CreateLabel(250, 95, 300, 24,  pWiFiStrConnecting);//victor
+	SetLabelAlign(GUILABEL_ALIGN_CENTER, pWiFiLblConnecting );	
+	SetLabelFont(pWifiFntBlack, pWiFiLblConnecting );
 	
-	/* wifiÁĞ±í */
+	/* wifiåˆ—è¡¨ */
 	for(i = 0; i < WIFIITEM; i++)
 	{
 		pWiFiItem[i] = CreatePicture(10, 170+(i*30), 313, 28, BmpFileDirectory"btn_wifi_ssid_unpress.bmp");
@@ -334,11 +350,13 @@ int FrmWiFiInit(void *pWndObj)
     AddWindowComp(OBJTYP_GUIWINDOW, sizeof(GUIWINDOW), pFrmWiFi, 
                   pFrmWiFi);
 	
-	//×¢²á×ÀÃæÉÏµÄ¿Ø¼ş
+	//æ³¨å†Œæ¡Œé¢ä¸Šçš„æ§ä»¶
     AddWindowComp(OBJTYP_GUIPICTURE, sizeof(GUIPICTURE), pWiFiBtnREnableOn, 
                   pFrmWiFi);
     AddWindowComp(OBJTYP_GUIPICTURE, sizeof(GUIPICTURE), pWiFiBtnREnableOff, 
                   pFrmWiFi);	
+    AddWindowComp(OBJTYP_GUIPICTURE, sizeof(GUIPICTURE), pWiFiBtnConnect, 
+                  pFrmWiFi);//victor
 	
 	for(i= 0; i < 5; i++)
 	{
@@ -353,14 +371,14 @@ int FrmWiFiInit(void *pWndObj)
 
     pMsg = GetCurrMessage();
     
-    //×¢²á´°ÌåµÄ°´¼üÏûÏ¢´¦Àí
+    //æ³¨å†Œçª—ä½“çš„æŒ‰é”®æ¶ˆæ¯å¤„ç†
     LoginMessageReg(GUIMESSAGE_KEY_DOWN, pFrmWiFi, 
                     WiFiWndKey_Down, NULL, 0, pMsg);
     LoginMessageReg(GUIMESSAGE_KEY_UP, pFrmWiFi, 
                     WiFiWndKey_Up, NULL, 0, pMsg);
 
 
-    //×¢²á×ÀÃæÉÏ¿Ø¼şµÄÏûÏ¢´¦Àí
+    //æ³¨å†Œæ¡Œé¢ä¸Šæ§ä»¶çš„æ¶ˆæ¯å¤„ç†
     LoginMessageReg(GUIMESSAGE_TCH_DOWN, pWiFiBtnREnableOn, 
                     WiFiBtnEnableOn_Down, NULL, 0, pMsg);
     LoginMessageReg(GUIMESSAGE_TCH_DOWN, pWiFiBtnREnableOff, 
@@ -370,6 +388,8 @@ int FrmWiFiInit(void *pWndObj)
                     WiFiBtnEnableOn_Up, NULL, 0, pMsg);
     LoginMessageReg(GUIMESSAGE_TCH_UP, pWiFiBtnREnableOff, 
                     WiFiBtnEnableOff_Up, NULL, 0, pMsg);	
+    LoginMessageReg(GUIMESSAGE_TCH_UP, pWiFiBtnConnect, 
+                    WiFiBtnConnect, NULL, 0, pMsg);//victor
 
 	for(i= 0; i < 5; i++)
 	{
@@ -392,39 +412,39 @@ int FrmWiFiInit(void *pWndObj)
 
 
 /***
-  * ¹¦ÄÜ£º
-        ´°ÌåFrmWiFiµÄÍË³öº¯Êı£¬ÊÍ·ÅËùÓĞ×ÊÔ´
-  * ²ÎÊı£º
-        1.void *pWndObj:    Ö¸Ïòµ±Ç°´°Ìå¶ÔÏó
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        çª—ä½“FrmWiFiçš„é€€å‡ºå‡½æ•°ï¼Œé‡Šæ”¾æ‰€æœ‰èµ„æº
+  * å‚æ•°ï¼š
+        1.void *pWndObj:    æŒ‡å‘å½“å‰çª—ä½“å¯¹è±¡
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 int FrmWiFiExit(void *pWndObj)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 	int i = 0;
 
     GUIMESSAGE *pMsg = NULL;
-    //µÃµ½µ±Ç°´°Ìå¶ÔÏó
+    //å¾—åˆ°å½“å‰çª—ä½“å¯¹è±¡
     pFrmWiFi = (GUIWINDOW *) pWndObj;
 
-	//Çå¿ÕÏûÏ¢¶ÓÁĞÖĞµÄÏûÏ¢×¢²áÏî
+	//æ¸…ç©ºæ¶ˆæ¯é˜Ÿåˆ—ä¸­çš„æ¶ˆæ¯æ³¨å†Œé¡¹
     //***************************************************************/
     pMsg = GetCurrMessage();
     ClearMessageReg(pMsg);
 
-    //´Óµ±Ç°´°ÌåÖĞ×¢Ïú´°Ìå¿Ø¼ş
+    //ä»å½“å‰çª—ä½“ä¸­æ³¨é”€çª—ä½“æ§ä»¶
     //***************************************************************/
     ClearWindowComp(pFrmWiFi);
 
-    //Ïú»Ù´°Ìå¿Ø¼ş
+    //é”€æ¯çª—ä½“æ§ä»¶
     //***************************************************************/
-    //Ïú»Ù×ÀÃæ±³¾°Í¼Æ¬
+    //é”€æ¯æ¡Œé¢èƒŒæ™¯å›¾ç‰‡
     DestroyPicture(&pWiFiBtnLeftBg);
 
-	//Ïú»Ù²Ëµ¥
+	//é”€æ¯èœå•
 	DestroyPicture(&pWiFiMenuBg);
 
 	for(i = 0;i < 5;i++)
@@ -438,17 +458,19 @@ int FrmWiFiExit(void *pWndObj)
 		DestroyLabel(&pWiFiLblItem[i]);
 	}
 
-    //Ïú»Ù×ÀÃæÉÏµÄ¿Ø¼ş
+    //é”€æ¯æ¡Œé¢ä¸Šçš„æ§ä»¶
     DestroyPicture(&pWiFiBtnREnableOn);
 	DestroyPicture(&pWiFiBtnREnableOff);
 	DestroyPicture(&pWiFiBtnOnOffBg);
+	DestroyPicture(&pWiFiBtnConnect);//victor
 
-	//Ïú»Ù´°Ìå×óÉÏ½Ç´°ÌåLabel
+	//é”€æ¯çª—ä½“å·¦ä¸Šè§’çª—ä½“Label
 	DestroyLabel(&pWiFiLblFrmName);
 	DestroyLabel(&pWiFiLblOnOffInfo);
+	DestroyLabel(&pWiFiLblConnecting);
 	
 	DestroyFont(&pWifiFntBlack);
-	//ÊÍ·ÅÎÄ±¾×ÊÔ´
+	//é‡Šæ”¾æ–‡æœ¬èµ„æº
     //***************************************************************/
     WiFiTextRes_Exit(NULL, 0, NULL, 0);
 	
@@ -457,26 +479,26 @@ int FrmWiFiExit(void *pWndObj)
 
 
 /***
-  * ¹¦ÄÜ£º
-        ´°ÌåFrmWiFiµÄ»æÖÆº¯Êı£¬»æÖÆÕû¸ö´°Ìå
-  * ²ÎÊı£º
-        1.void *pWndObj:    Ö¸Ïòµ±Ç°´°Ìå¶ÔÏó
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        çª—ä½“FrmWiFiçš„ç»˜åˆ¶å‡½æ•°ï¼Œç»˜åˆ¶æ•´ä¸ªçª—ä½“
+  * å‚æ•°ï¼š
+        1.void *pWndObj:    æŒ‡å‘å½“å‰çª—ä½“å¯¹è±¡
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 int FrmWiFiPaint(void *pWndObj)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 	int i = 0;
-    //µÃµ½µ±Ç°´°Ìå¶ÔÏó
+    //å¾—åˆ°å½“å‰çª—ä½“å¯¹è±¡
     pFrmWiFi = (GUIWINDOW *) pWndObj;
 
-    //ÏÔÊ¾×ÀÃæ±³¾°Í¼Æ¬
+    //æ˜¾ç¤ºæ¡Œé¢èƒŒæ™¯å›¾ç‰‡
     DisplayPicture(pWiFiBtnLeftBg);
 
-	//ÏÔÊ¾²Ëµ¥
+	//æ˜¾ç¤ºèœå•
     DisplayPicture(pWiFiMenuBg);
 	for(i = 0; i < 5; i++)
 	{
@@ -484,18 +506,22 @@ int FrmWiFiPaint(void *pWndObj)
 		DisplayLabel(pWiFiLblMenu[i]);
 	}
 
-	//ÏÔÊ¾×´Ì¬À¸ÉÏµÄÍ¼Æ¬
+	//æ˜¾ç¤ºçŠ¶æ€æ ä¸Šçš„å›¾ç‰‡
 	DisplayPicture(pWiFiBtnOnOffBg);
 	
-	//ÏÔÊ¾´°Ìå×óÉÏ½Ç´°ÌåLabel
+	//æ˜¾ç¤ºçª—ä½“å·¦ä¸Šè§’çª—ä½“Label
 	DisplayLabel(pWiFiLblFrmName);
 	DisplayLabel(pWiFiLblOnOffInfo);
+	//DisplayLabel(pWiFiLblConnecting);//victor
 
 	SetPictureBitmap(BmpFileDirectory"btn_wifi_on_unpress.bmp", pWiFiBtnREnableOn);
 	SetPictureBitmap(BmpFileDirectory"btn_wifi_off_press.bmp", pWiFiBtnREnableOff);
+	SetPictureBitmap(BmpFileDirectory"btn_wifi_ssid_press.bmp", pWiFiBtnConnect);//victor
 
 	DisplayPicture(pWiFiBtnREnableOn);
 	DisplayPicture(pWiFiBtnREnableOff);	
+	DisplayPicture(pWiFiBtnConnect);//victor
+	DisplayLabel(pWiFiLblConnecting);//victor
 	
 	for(i = 0; i < WIFIITEM; i++)
 	{
@@ -503,7 +529,7 @@ int FrmWiFiPaint(void *pWndObj)
 		DisplayLabel(pWiFiLblItem[i]);
 	}
 
-	//³õÊ¼»¯wifi£¬´´½¨wifiÏß³Ì
+	//åˆå§‹åŒ–wifiï¼Œåˆ›å»ºwifiçº¿ç¨‹
 	InitMutex(&pWifiMutex, NULL);
 	InitWifiQueue(10);
 	ThreadCreate(&thdWifi, NULL, DefaultWifiThread, NULL);
@@ -513,17 +539,17 @@ int FrmWiFiPaint(void *pWndObj)
 
 
 /***
-  * ¹¦ÄÜ£º
-        ´°ÌåFrmWiFiµÄÑ­»·º¯Êı£¬½øĞĞ´°ÌåÑ­»·
-  * ²ÎÊı£º
-        1.void *pWndObj:    Ö¸Ïòµ±Ç°´°Ìå¶ÔÏó
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        çª—ä½“FrmWiFiçš„å¾ªç¯å‡½æ•°ï¼Œè¿›è¡Œçª—ä½“å¾ªç¯
+  * å‚æ•°ï¼š
+        1.void *pWndObj:    æŒ‡å‘å½“å‰çª—ä½“å¯¹è±¡
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 int FrmWiFiLoop(void *pWndObj)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 
     return iReturn;
@@ -531,17 +557,17 @@ int FrmWiFiLoop(void *pWndObj)
 
 
 /***
-  * ¹¦ÄÜ£º
-        ´°ÌåFrmWiFiµÄ¹ÒÆğº¯Êı£¬½øĞĞ´°Ìå¹ÒÆğÇ°Ô¤´¦Àí
-  * ²ÎÊı£º
-        1.void *pWndObj:    Ö¸Ïòµ±Ç°´°Ìå¶ÔÏó
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        çª—ä½“FrmWiFiçš„æŒ‚èµ·å‡½æ•°ï¼Œè¿›è¡Œçª—ä½“æŒ‚èµ·å‰é¢„å¤„ç†
+  * å‚æ•°ï¼š
+        1.void *pWndObj:    æŒ‡å‘å½“å‰çª—ä½“å¯¹è±¡
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 int FrmWiFiPause(void *pWndObj)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 
     return iReturn;
@@ -549,17 +575,17 @@ int FrmWiFiPause(void *pWndObj)
 
 
 /***
-  * ¹¦ÄÜ£º
-        ´°ÌåFrmWiFiµÄ»Ö¸´º¯Êı£¬½øĞĞ´°Ìå»Ö¸´Ç°Ô¤´¦Àí
-  * ²ÎÊı£º
-        1.void *pWndObj:    Ö¸Ïòµ±Ç°´°Ìå¶ÔÏó
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        çª—ä½“FrmWiFiçš„æ¢å¤å‡½æ•°ï¼Œè¿›è¡Œçª—ä½“æ¢å¤å‰é¢„å¤„ç†
+  * å‚æ•°ï¼š
+        1.void *pWndObj:    æŒ‡å‘å½“å‰çª—ä½“å¯¹è±¡
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 int FrmWiFiResume(void *pWndObj)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 
     return iReturn;
@@ -567,31 +593,33 @@ int FrmWiFiResume(void *pWndObj)
 
 
 /*******************************************************************************
-**	    	´°ÌåfrmwifiÖĞµÄ³õÊ¼»¯ÎÄ±¾×ÊÔ´¡¢ ÊÍ·ÅÎÄ±¾×ÊÔ´º¯Êı¶¨Òå²¿·Ö		  **
+**	    	çª—ä½“frmwifiä¸­çš„åˆå§‹åŒ–æ–‡æœ¬èµ„æºã€ é‡Šæ”¾æ–‡æœ¬èµ„æºå‡½æ•°å®šä¹‰éƒ¨åˆ†		  **
 *******************************************************************************/
 /***
-  * ¹¦ÄÜ£º
-		³õÊ¼»¯ÎÄ±¾×ÊÔ´
-  * ²ÎÊı£º
-		1.void *pInArg	:	Ö¸ÏòÊäÈë²ÎÊıµÄÖ¸Õë
-		2.int iInLen	:	ÊäÈë²ÎÊıµÄ³¤¶È
-		3.void *pOutArg :	Ö¸Ïò´«³ö²ÎÊıµÄÖ¸Õë
-		4.int iOutLen	:	Êä³ö²ÎÊıµÄ³¤¶È
-  * ·µ»Ø£º
-		³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+		åˆå§‹åŒ–æ–‡æœ¬èµ„æº
+  * å‚æ•°ï¼š
+		1.void *pInArg	:	æŒ‡å‘è¾“å…¥å‚æ•°çš„æŒ‡é’ˆ
+		2.int iInLen	:	è¾“å…¥å‚æ•°çš„é•¿åº¦
+		3.void *pOutArg :	æŒ‡å‘ä¼ å‡ºå‚æ•°çš„æŒ‡é’ˆ
+		4.int iOutLen	:	è¾“å‡ºå‚æ•°çš„é•¿åº¦
+  * è¿”å›ï¼š
+		æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 static int WiFiTextRes_Init(void *pInArg, int iInLen, 
                             void *pOutArg, int iOutLen)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 	int i;
-	//´°Ìå×óÉÏ½ÇµÄÎÄ±¾
+	//çª—ä½“å·¦ä¸Šè§’çš„æ–‡æœ¬
 	pWiFiStrFrmName = TransString("WLAN");
 	pWiFiStrOnOffInfo  = TransString("oooo");
+	pWiFiStrConnecting  = TransString("connecting");
 
-	pWiFiStrMenu[0] = TransString("Menu1");
+	//pWiFiStrMenu[0] = TransString("Menu1");
+	pWiFiStrMenu[0] = TransString("Mvictor");
 	pWiFiStrMenu[1] = TransString("Menu2");
 	pWiFiStrMenu[2] = TransString("Menu3");
 	pWiFiStrMenu[3] = TransString("Menu4");
@@ -601,7 +629,7 @@ static int WiFiTextRes_Init(void *pInArg, int iInLen,
 		pWiFiStrItem[i] = TransString("Item");
 	}
 
-	//×ÀÃæÉÏµÄÎÄ±¾
+	//æ¡Œé¢ä¸Šçš„æ–‡æœ¬
 	//pWiFiStrLEnable = GetCurrLanguageText(WIFI_STARTWLAN);
 	//pWiFiStrConnectedCap = GetCurrLanguageText(WIFI_CONNECTED_CAP);
 	//pWiFiStrScanCap =  GetCurrLanguageText(WIFI_AVAILABLE);
@@ -612,25 +640,25 @@ static int WiFiTextRes_Init(void *pInArg, int iInLen,
 
 
 /***
-  * ¹¦ÄÜ£º
-		ÊÍ·ÅÎÄ±¾×ÊÔ´
-  * ²ÎÊı£º
-		1.void *pInArg	:	Ö¸ÏòÊäÈë²ÎÊıµÄÖ¸Õë
-		2.int iInLen	:	ÊäÈë²ÎÊıµÄ³¤¶È
-		3.void *pOutArg :	Ö¸Ïò´«³ö²ÎÊıµÄÖ¸Õë
-		4.int iOutLen	:	Êä³ö²ÎÊıµÄ³¤¶È
-  * ·µ»Ø£º
-		³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+		é‡Šæ”¾æ–‡æœ¬èµ„æº
+  * å‚æ•°ï¼š
+		1.void *pInArg	:	æŒ‡å‘è¾“å…¥å‚æ•°çš„æŒ‡é’ˆ
+		2.int iInLen	:	è¾“å…¥å‚æ•°çš„é•¿åº¦
+		3.void *pOutArg :	æŒ‡å‘ä¼ å‡ºå‚æ•°çš„æŒ‡é’ˆ
+		4.int iOutLen	:	è¾“å‡ºå‚æ•°çš„é•¿åº¦
+  * è¿”å›ï¼š
+		æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 static int WiFiTextRes_Exit(void *pInArg, int iInLen, 
                                void *pOutArg, int iOutLen)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 	int i = 0;
 	
-	//ÊÍ·Å×óÉÏ½ÇµÄÎÄ±¾
+	//é‡Šæ”¾å·¦ä¸Šè§’çš„æ–‡æœ¬
 	free(pWiFiStrFrmName);
 
 	for(i = 0; i < 5; i++)
@@ -647,19 +675,19 @@ static int WiFiTextRes_Exit(void *pInArg, int iInLen,
 
 
 /**********************************************************************************
-**			    			´°ÌåµÄ°´¼üÊÂ¼ş´¦Àíº¯Êı				 				 **
+**			    			çª—ä½“çš„æŒ‰é”®äº‹ä»¶å¤„ç†å‡½æ•°				 				 **
 ***********************************************************************************/
 /***
-  * ¹¦ÄÜ£º
-        ´°ÌåµÄ°´¼ü°´ÏÂÊÂ¼ş´¦Àíº¯Êı
-  * ²ÎÊı£º
-        1.void *pInArg	:   Ö¸ÏòÊäÈë²ÎÊıµÄÖ¸Õë
-        2.int iInLen	:	ÊäÈë²ÎÊıµÄ³¤¶È
-        3.void *pOutArg	:	Ö¸Ïò´«³ö²ÎÊıµÄÖ¸Õë
-        4.int iOutLen	:	Êä³ö²ÎÊıµÄ³¤¶È
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        çª—ä½“çš„æŒ‰é”®æŒ‰ä¸‹äº‹ä»¶å¤„ç†å‡½æ•°
+  * å‚æ•°ï¼š
+        1.void *pInArg	:   æŒ‡å‘è¾“å…¥å‚æ•°çš„æŒ‡é’ˆ
+        2.int iInLen	:	è¾“å…¥å‚æ•°çš„é•¿åº¦
+        3.void *pOutArg	:	æŒ‡å‘ä¼ å‡ºå‚æ•°çš„æŒ‡é’ˆ
+        4.int iOutLen	:	è¾“å‡ºå‚æ•°çš„é•¿åº¦
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 static int WiFiWndKey_Down(void *pInArg, int iInLen, 
                              void *pOutArg, int iOutLen)
@@ -671,16 +699,16 @@ static int WiFiWndKey_Down(void *pInArg, int iInLen,
 
 
 /***
-  * ¹¦ÄÜ£º
-        ´°ÌåµÄ°´¼üµ¯ÆğÊÂ¼ş´¦Àíº¯Êı
-  * ²ÎÊı£º
-        1.void *pInArg	:   Ö¸ÏòÊäÈë²ÎÊıµÄÖ¸Õë
-        2.int iInLen	:	ÊäÈë²ÎÊıµÄ³¤¶È
-        3.void *pOutArg	:	Ö¸Ïò´«³ö²ÎÊıµÄÖ¸Õë
-        4.int iOutLen	:	Êä³ö²ÎÊıµÄ³¤¶È
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        çª—ä½“çš„æŒ‰é”®å¼¹èµ·äº‹ä»¶å¤„ç†å‡½æ•°
+  * å‚æ•°ï¼š
+        1.void *pInArg	:   æŒ‡å‘è¾“å…¥å‚æ•°çš„æŒ‡é’ˆ
+        2.int iInLen	:	è¾“å…¥å‚æ•°çš„é•¿åº¦
+        3.void *pOutArg	:	æŒ‡å‘ä¼ å‡ºå‚æ•°çš„æŒ‡é’ˆ
+        4.int iOutLen	:	è¾“å‡ºå‚æ•°çš„é•¿åº¦
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 static int WiFiWndKey_Up(void *pInArg, int iInLen, 
                            void *pOutArg, int iOutLen)
@@ -728,24 +756,24 @@ static char * mfgets(char * buffer, int size, FILE * stream)
 
 
 /*******************************************************************************
-**			    		´ò¿ª/¹Ø±Õwifi°´Å¥ÊÂ¼ş´¦Àíº¯Êı				 		  **
+**			    		æ‰“å¼€/å…³é—­wifiæŒ‰é’®äº‹ä»¶å¤„ç†å‡½æ•°				 		  **
 *******************************************************************************/
 /***
-  * ¹¦ÄÜ£º
-        ´ò¿ªWiFi downÊÂ¼ş
-  * ²ÎÊı£º
-        1.void *pInArg	:   Ö¸ÏòÊäÈë²ÎÊıµÄÖ¸Õë
-        2.int iInLen	:	ÊäÈë²ÎÊıµÄ³¤¶È
-        3.void *pOutArg	:	Ö¸Ïò´«³ö²ÎÊıµÄÖ¸Õë
-        4.int iOutLen	:	Êä³ö²ÎÊıµÄ³¤¶È
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        æ‰“å¼€WiFi downäº‹ä»¶
+  * å‚æ•°ï¼š
+        1.void *pInArg	:   æŒ‡å‘è¾“å…¥å‚æ•°çš„æŒ‡é’ˆ
+        2.int iInLen	:	è¾“å…¥å‚æ•°çš„é•¿åº¦
+        3.void *pOutArg	:	æŒ‡å‘ä¼ å‡ºå‚æ•°çš„æŒ‡é’ˆ
+        4.int iOutLen	:	è¾“å‡ºå‚æ•°çš„é•¿åº¦
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 static int WiFiBtnEnableOn_Down(void *pInArg,   int iInLen, 
                                void *pOutArg, int iOutLen)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 	
 	return iReturn;
@@ -753,42 +781,42 @@ static int WiFiBtnEnableOn_Down(void *pInArg,   int iInLen,
 
 
 /***
-  * ¹¦ÄÜ£º
-        ¹Ø±ÕWiFi downÊÂ¼ş
-  * ²ÎÊı£º
-        1.void *pInArg	:   Ö¸ÏòÊäÈë²ÎÊıµÄÖ¸Õë
-        2.int iInLen	:	ÊäÈë²ÎÊıµÄ³¤¶È
-        3.void *pOutArg	:	Ö¸Ïò´«³ö²ÎÊıµÄÖ¸Õë
-        4.int iOutLen	:	Êä³ö²ÎÊıµÄ³¤¶È
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        å…³é—­WiFi downäº‹ä»¶
+  * å‚æ•°ï¼š
+        1.void *pInArg	:   æŒ‡å‘è¾“å…¥å‚æ•°çš„æŒ‡é’ˆ
+        2.int iInLen	:	è¾“å…¥å‚æ•°çš„é•¿åº¦
+        3.void *pOutArg	:	æŒ‡å‘ä¼ å‡ºå‚æ•°çš„æŒ‡é’ˆ
+        4.int iOutLen	:	è¾“å‡ºå‚æ•°çš„é•¿åº¦
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 static int WiFiBtnEnableOff_Down(void *pInArg,   int iInLen, 
                                void *pOutArg, int iOutLen)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 	return iReturn;
 }                               
 
 
 /***
-  * ¹¦ÄÜ£º
-        ´ò¿ªWiFi upÊÂ¼ş
-  * ²ÎÊı£º
-        1.void *pInArg	:   Ö¸ÏòÊäÈë²ÎÊıµÄÖ¸Õë
-        2.int iInLen	:	ÊäÈë²ÎÊıµÄ³¤¶È
-        3.void *pOutArg	:	Ö¸Ïò´«³ö²ÎÊıµÄÖ¸Õë
-        4.int iOutLen	:	Êä³ö²ÎÊıµÄ³¤¶È
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        æ‰“å¼€WiFi upäº‹ä»¶
+  * å‚æ•°ï¼š
+        1.void *pInArg	:   æŒ‡å‘è¾“å…¥å‚æ•°çš„æŒ‡é’ˆ
+        2.int iInLen	:	è¾“å…¥å‚æ•°çš„é•¿åº¦
+        3.void *pOutArg	:	æŒ‡å‘ä¼ å‡ºå‚æ•°çš„æŒ‡é’ˆ
+        4.int iOutLen	:	è¾“å‡ºå‚æ•°çš„é•¿åº¦
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 static int WiFiBtnEnableOn_Up(void *pInArg,   int iInLen, 
                                void *pOutArg, int iOutLen)
 {
-    //´íÎó±êÖ¾¡¢·µ»ØÖµ¶¨Òå
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
     int iReturn = 0;
 	printf("on up\n");
 	WriteWifiMsgQueue(ENUM_OPEN);
@@ -796,18 +824,29 @@ static int WiFiBtnEnableOn_Up(void *pInArg,   int iInLen,
 	return iReturn;
 }  
 
+static int WiFiBtnConnect(void *pInArg,   int iInLen, 
+                               void *pOutArg, int iOutLen)
+{
+    //é”™è¯¯æ ‡å¿—ã€è¿”å›å€¼å®šä¹‰
+    int iReturn = 0;
+	printf("connecting!\n");
+	WriteWifiMsgQueue(ENUM_CONNECT);
+
+	return iReturn;
+}  
+
 
 /***
-  * ¹¦ÄÜ£º
-        ¹Ø±ÕWiFi upÊÂ¼ş
-  * ²ÎÊı£º
-        1.void *pInArg	:   Ö¸ÏòÊäÈë²ÎÊıµÄÖ¸Õë
-        2.int iInLen	:	ÊäÈë²ÎÊıµÄ³¤¶È
-        3.void *pOutArg	:	Ö¸Ïò´«³ö²ÎÊıµÄÖ¸Õë
-        4.int iOutLen	:	Êä³ö²ÎÊıµÄ³¤¶È
-  * ·µ»Ø£º
-        ³É¹¦·µ»ØÁã£¬Ê§°Ü·µ»Ø·ÇÁãÖµ
-  * ±¸×¢£º
+  * åŠŸèƒ½ï¼š
+        å…³é—­WiFi upäº‹ä»¶
+  * å‚æ•°ï¼š
+        1.void *pInArg	:   æŒ‡å‘è¾“å…¥å‚æ•°çš„æŒ‡é’ˆ
+        2.int iInLen	:	è¾“å…¥å‚æ•°çš„é•¿åº¦
+        3.void *pOutArg	:	æŒ‡å‘ä¼ å‡ºå‚æ•°çš„æŒ‡é’ˆ
+        4.int iOutLen	:	è¾“å‡ºå‚æ•°çš„é•¿åº¦
+  * è¿”å›ï¼š
+        æˆåŠŸè¿”å›é›¶ï¼Œå¤±è´¥è¿”å›éé›¶å€¼
+  * å¤‡æ³¨ï¼š
 ***/
 static int WiFiBtnEnableOff_Up(void *pInArg,   int iInLen, 
                                void *pOutArg, int iOutLen)
@@ -841,7 +880,7 @@ static int WiFiBtnItemSSID_Up(void *pInArg,   int iInLen,
 
 
 /*******************************************************************************
-**			    			Á¬½ÓwifiÊÂ¼ş´¦Àíº¯Êı				 		      **
+**			    			è¿æ¥wifiäº‹ä»¶å¤„ç†å‡½æ•°				 		      **
 *******************************************************************************/
 
 static int WiFiBtnMenu_Down(void *pInArg, int iInLen, 
@@ -863,7 +902,7 @@ static int WiFiBtnMenu_Up(void *pInArg, int iInLen,
 
 
 /*******************************************************************************
-**			    			Á¬½ÓwifiÊÂ¼ş´¦Àíº¯Êı				 		      **
+**			    			è¿æ¥wifiäº‹ä»¶å¤„ç†å‡½æ•°				 		      **
 *******************************************************************************/
 static void WifiOpen()
 {
@@ -889,7 +928,6 @@ static void WifiScan_r()
 	vsystem("awk '{print $5}' /mnt/sdcard/wifi/list.txt | tail -n +3 > /mnt/sdcard/scan");
 		
 	MutexLock(&pWifiMutex);
-	
     if (NULL == (fstream = fopen("/mnt/sdcard/scan", "r")))
     {
         perror("fopen");
@@ -1006,5 +1044,11 @@ static int Connect2Wifi(char *ssid, char *psk)
 		
 	}
 	fclose(fstream);
+}
+
+static void WifiConnect()//victor
+{	
+	printf("enter wifi connecting !");
+	vsystem("wpa_cli enable 0");
 }
 

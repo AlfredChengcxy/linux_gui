@@ -1,0 +1,1970 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AR	Makefile	/^AR = $(CROSS_COMPILE)ar$/;"	m
+AddWindowComp	guiwindow.c	/^int AddWindowComp(int iCompTyp, int iCompLen, void *pWndComp, $/;"	f
+Area	guibase.h	/^    GUIRECTANGLE Area;  \/\/可视控件的有效区域$/;"	m	struct:_visible
+BmpFileDirectory	guiglobal.h	47;"	d
+CC	Makefile	/^CC = $(CROSS_COMPILE)gcc$/;"	m
+CFLAGS	Makefile	/^CFLAGS = -Wall -O2 $(INCPATH) $(DBGINF) $(PRTINF)$/;"	m
+COLOR	guibase.h	/^typedef unsigned int COLOR;         \/\/由高到低为ARGB格式，目前尚不支持Alpha分量$/;"	t
+COLOR_TRANS	guibase.h	68;"	d
+CROSS_COMPILE	Makefile	/^CROSS_COMPILE = arm-none-linux-gnueabi-$/;"	m
+CalcWifiCell	wnd_frmwifi.c	/^static int CalcWifiCell(int iLevel)$/;"	f	file:
+CheckPinyinFile	input_china_pinyin.c	/^int CheckPinyinFile(char *pFileName)$/;"	f
+ClearEventQueue	guievent.c	/^int ClearEventQueue(GUIEVENT *pEventObj)$/;"	f
+ClearMessageQueue	guimessage.c	/^int ClearMessageQueue(GUIMESSAGE *pMsgObj)$/;"	f
+ClearMessageReg	guimessage.c	/^int ClearMessageReg(GUIMESSAGE *pMsgObj)$/;"	f
+ClearOTDRMsgQueue	wnd_msgqueue.c	/^int ClearOTDRMsgQueue(OTDRMSGQUEUE *pObjQueue)$/;"	f
+ClearSpecialMessage	guimessage.c	/^int ClearSpecialMessage(int iMsgType, GUIMESSAGE *pMsgObj)$/;"	f
+ClearWindowComp	guiwindow.c	/^int ClearWindowComp(GUIWINDOW *pWndObj)$/;"	f
+ClearWordPinyin	input_china_pinyin.c	/^int ClearWordPinyin(void)$/;"	f
+CloseInputDb	input_china_pinyin.c	/^int CloseInputDb(void)$/;"	f
+Connect2Wifi	wnd_frmwifi.c	/^static int Connect2Wifi(char *ssid, char *psk)$/;"	f	file:
+CreateBitmap	guibitmap.c	/^GUIBITMAP* CreateBitmap(char *strBitmapFile, $/;"	f
+CreateBrush	guibrush.c	/^GUIBRUSH* CreateBrush(int iBrushType)$/;"	f
+CreateEvent	guievent.c	/^GUIEVENT* CreateEvent(int iQueueLimit, THREADFUNC fnEventThread)$/;"	f
+CreateFbmap	guifbmap.c	/^GUIFBMAP* CreateFbmap(char *strDevName, int iDevType, $/;"	f
+CreateFont	guifont.c	/^GUIFONT* CreateFont(char *strFontFile, $/;"	f
+CreateImage	guiimage.c	/^GUIIMAGE* CreateImage(unsigned int uiImgWidth, unsigned int uiImgHeight, $/;"	f
+CreateKeypad	guikeypad.c	/^GUIKEYPAD* CreateKeypad(char *strDevName, int iDevType, $/;"	f
+CreateLabel	guilabel.c	/^GUILABEL* CreateLabel(unsigned int uiPlaceX, unsigned int uiPlaceY, $/;"	f
+CreateList	guibase.c	/^GUILIST* CreateList(int iLimit)$/;"	f
+CreateMessage	guimessage.c	/^GUIMESSAGE* CreateMessage(int iQueueLimit, int iRegLimit)$/;"	f
+CreateOTDRMsgQueue	wnd_msgqueue.c	/^OTDRMSGQUEUE *CreateOTDRMsgQueue(int iQueueLimit)$/;"	f
+CreatePalette	guipalette.c	/^GUIPALETTE* CreatePalette(int iPalLength)$/;"	f
+CreatePen	guipen.c	/^GUIPEN* CreatePen(int iPenType, int iPenWidth, unsigned int uiPenColor)$/;"	f
+CreatePicture	guipicture.c	/^GUIPICTURE* CreatePicture(unsigned int uiPlaceX, unsigned int uiPlaceY, $/;"	f
+CreateText	guitext.c	/^GUITEXT* CreateText(unsigned short *pTextData, $/;"	f
+CreateTouch	guitouch.c	/^GUITOUCH* CreateTouch(char *strDevName, int iDevType, $/;"	f
+CreateWindow	guiwindow.c	/^GUIWINDOW* CreateWindow(unsigned int uiPlaceX, unsigned int uiPlaceY, $/;"	f
+CustomFbmapFunc	guidevice.c	/^int CustomFbmapFunc(GUIFBMAP *pFbmapObj)$/;"	f
+CustomFbmapProcess	guifbmap.c	/^int CustomFbmapProcess(GUIFBMAP *pFbmapObj)$/;"	f
+CustomKeypadFunc	guidevice.c	/^int CustomKeypadFunc(GUIKEYPAD *pKeypadObj)$/;"	f
+CustomKeypadProcess	guikeypad.c	/^int CustomKeypadProcess(GUIKEYPAD *pKeypadObj)$/;"	f
+CustomTouchFunc	guidevice.c	/^int CustomTouchFunc(GUITOUCH *pTouchObj)$/;"	f
+CustomTouchProcess	guitouch.c	/^int CustomTouchProcess(GUITOUCH *pTouchObj)$/;"	f
+DBGINF	Makefile	/^DBGINF = -g$/;"	m
+DEPLST	Makefile	/^DEPLST = $(patsubst .\/%.c,.\/dep\/%.d,$(SRCLST))$/;"	m
+DESTFUNC	guibase.h	/^typedef int (*DESTFUNC) (void **);$/;"	t
+DEVFILE_FB	guidevice.h	36;"	d
+DEVFILE_KEYPAD	guidevice.h	37;"	d
+DEVFILE_TOUCH	guidevice.h	38;"	d
+DISPFUNC	guibase.h	/^typedef int (*DISPFUNC)(void *);$/;"	t
+DefaultFbThread	guifbmap.c	/^void* DefaultFbThread(void *pThreadArg)$/;"	f
+DefaultKeypadThread	guikeypad.c	/^void* DefaultKeypadThread(void *pThreadArg)$/;"	f
+DefaultTouchThread	guitouch.c	/^void* DefaultTouchThread(void *pThreadArg)$/;"	f
+DefaultWifiThread	wnd_frmwifi.c	/^void* DefaultWifiThread(void *pThreadArg)$/;"	f
+DefaultWindowThread	guischeduler.c	/^void* DefaultWindowThread(void *pThreadArg)$/;"	f
+DelWindowComp	guiwindow.c	/^int DelWindowComp(void *pWndComp, GUIWINDOW *pWndObj)$/;"	f
+DestroyBitmap	guibitmap.c	/^int DestroyBitmap(GUIBITMAP **ppBitmapObj)$/;"	f
+DestroyBrush	guibrush.c	/^int DestroyBrush(GUIBRUSH **ppBrushObj)$/;"	f
+DestroyEvent	guievent.c	/^int DestroyEvent(GUIEVENT **ppEventObj)$/;"	f
+DestroyFbmap	guifbmap.c	/^int DestroyFbmap(GUIFBMAP **ppFbmapObj)$/;"	f
+DestroyFont	guifont.c	/^int DestroyFont(GUIFONT **ppFontObj)$/;"	f
+DestroyImage	guiimage.c	/^int DestroyImage(GUIIMAGE **ppImgObj)$/;"	f
+DestroyKeypad	guikeypad.c	/^int DestroyKeypad(GUIKEYPAD **ppKeypadObj)$/;"	f
+DestroyLabel	guilabel.c	/^int DestroyLabel(GUILABEL **ppLblObj)$/;"	f
+DestroyList	guibase.c	/^int DestroyList(GUILIST *pList)$/;"	f
+DestroyMessage	guimessage.c	/^int DestroyMessage(GUIMESSAGE **ppMsgObj)$/;"	f
+DestroyPalette	guipalette.c	/^int DestroyPalette(GUIPALETTE **ppPalObj)$/;"	f
+DestroyPen	guipen.c	/^int DestroyPen(GUIPEN **ppPenObj)$/;"	f
+DestroyPicture	guipicture.c	/^int DestroyPicture(GUIPICTURE **ppPicObj)$/;"	f
+DestroyText	guitext.c	/^int DestroyText(GUITEXT **ppTextObj)$/;"	f
+DestroyTouch	guitouch.c	/^int DestroyTouch(GUITOUCH **ppTouchObj)$/;"	f
+DestroyWindow	guiwindow.c	/^int DestroyWindow(GUIWINDOW **ppWndObj)$/;"	f
+DisplayBitmap	guibitmap.c	/^int DisplayBitmap(GUIBITMAP *pBitmapObj)$/;"	f
+DisplayImage	guiimage.c	/^int DisplayImage(GUIIMAGE *pImgObj)$/;"	f
+DisplayLabel	guilabel.c	/^int DisplayLabel(GUILABEL *pLblObj)$/;"	f
+DisplayPicture	guipicture.c	/^int DisplayPicture(GUIPICTURE *pPicObj)$/;"	f
+DisplayText	guitext.c	/^int DisplayText(GUITEXT *pTextObj)$/;"	f
+DrawBlock	guidraw.c	/^int DrawBlock(unsigned int uiStartX, unsigned int uiStartY, $/;"	f
+DrawCircle	guidraw.c	/^int DrawCircle(unsigned int uiPointX, unsigned int uiPointY, $/;"	f
+DrawLine	guidraw.c	/^int DrawLine(unsigned int uiStartX, unsigned int uiStartY, $/;"	f
+DrawPixel	guidraw.c	/^int DrawPixel(unsigned int uiPixelX, unsigned int uiPixelY)$/;"	f
+DrawRectangle	guidraw.c	/^int DrawRectangle(unsigned int uiStartX, unsigned int uiStartY, $/;"	f
+DualFbmapProcess	guifbmap.c	/^int DualFbmapProcess(GUIFBMAP *pFbmapObj)$/;"	f
+ENUM_OPEN	wnd_frmwifi.h	/^	ENUM_OPEN = 1,$/;"	e	enum:_wifi_state
+ENUM_SCAN	wnd_frmwifi.h	/^	ENUM_SCAN,$/;"	e	enum:_wifi_state
+ENUM_SCAN_R	wnd_frmwifi.h	/^	ENUM_SCAN_R,$/;"	e	enum:_wifi_state
+End	guibase.h	/^    GUIPOINT End;       \/\/矩形终点，即右下角横纵坐标最大的点$/;"	m	struct:_rectangle
+EventPacketFunc	guievent.c	/^int EventPacketFunc(GUIEVENT *pEventObj)$/;"	f
+EventPacketThread	guievent.c	/^void* EventPacketThread(void *pThreadArg)$/;"	f
+ExecMessageProc	guimessage.c	/^int ExecMessageProc(GUIMESSAGE_ITEM *pMsgItem, GUIMESSAGE *pMsgObj)$/;"	f
+ExtractFontMatrix	guifont.c	/^GUIFONT_MATRIX* ExtractFontMatrix(unsigned short usMatrixCode, $/;"	f
+FNTFILE_STD	guiconfig.h	47;"	d
+FULLY_WITHIN	sqlite/include/sqlite3.h	7535;"	d
+FontFileDirectory	guiglobal.h	48;"	d
+FrmInitExit	wnd_frminit.c	/^int FrmInitExit(void *pWndObj)$/;"	f
+FrmInitInit	wnd_frminit.c	/^int FrmInitInit(void *pWndObj)$/;"	f
+FrmInitLoop	wnd_frminit.c	/^int FrmInitLoop(void *pWndObj)$/;"	f
+FrmInitPaint	wnd_frminit.c	/^int FrmInitPaint(void *pWndObj)$/;"	f
+FrmInitPause	wnd_frminit.c	/^int FrmInitPause(void *pWndObj)$/;"	f
+FrmInitResume	wnd_frminit.c	/^int FrmInitResume(void *pWndObj)$/;"	f
+FrmMainExit	wnd_frmmain.c	/^int FrmMainExit(void *pWndObj)$/;"	f
+FrmMainInit	wnd_frmmain.c	/^int FrmMainInit(void *pWndObj)$/;"	f
+FrmMainLoop	wnd_frmmain.c	/^int FrmMainLoop(void *pWndObj)$/;"	f
+FrmMainPaint	wnd_frmmain.c	/^int FrmMainPaint(void *pWndObj)$/;"	f
+FrmMainPause	wnd_frmmain.c	/^int FrmMainPause(void *pWndObj)$/;"	f
+FrmMainResume	wnd_frmmain.c	/^int FrmMainResume(void *pWndObj)$/;"	f
+FrmWiFiExit	wnd_frmwifi.c	/^int FrmWiFiExit(void *pWndObj)$/;"	f
+FrmWiFiInit	wnd_frmwifi.c	/^int FrmWiFiInit(void *pWndObj)$/;"	f
+FrmWiFiLoop	wnd_frmwifi.c	/^int FrmWiFiLoop(void *pWndObj)$/;"	f
+FrmWiFiPaint	wnd_frmwifi.c	/^int FrmWiFiPaint(void *pWndObj)$/;"	f
+FrmWiFiPause	wnd_frmwifi.c	/^int FrmWiFiPause(void *pWndObj)$/;"	f
+FrmWiFiResume	wnd_frmwifi.c	/^int FrmWiFiResume(void *pWndObj)$/;"	f
+G	Makefile	/^G = 1$/;"	m
+GUIBITMAP	guibitmap.h	/^} GUIBITMAP;$/;"	t	typeref:struct:_bitmap
+GUIBITMAP_FILEHEADER	guibitmap.h	/^} GUIBITMAP_FILEHEADER;$/;"	t	typeref:struct:_bitmap_fileheader
+GUIBITMAP_INFOHEADER	guibitmap.h	/^} GUIBITMAP_INFOHEADER;$/;"	t	typeref:struct:_bitmap_infoheader
+GUIBITMAP_RGBQUAD	guibitmap.h	/^} GUIBITMAP_RGBQUAD;$/;"	t	typeref:struct:_bitmap_rgbquad
+GUIBRUSH	guibrush.h	/^} GUIBRUSH;$/;"	t	typeref:struct:_brush
+GUIBRUSH_TYP_IMAGE	guibrush.h	32;"	d
+GUIBRUSH_TYP_SOLID	guibrush.h	31;"	d
+GUICHAR	guibase.h	/^typedef unsigned short GUICHAR;     \/\/为支持多国语言，GUI中使用宽字符$/;"	t
+GUICOMPONENT	guibase.h	/^} GUICOMPONENT;$/;"	t	typeref:struct:_component
+GUIEVENT	guievent.h	/^} GUIEVENT;$/;"	t	typeref:struct:_event
+GUIEVENT_ABS_DOWN	guievent.h	48;"	d
+GUIEVENT_ABS_UP	guievent.h	49;"	d
+GUIEVENT_ITEM	guievent.h	/^} GUIEVENT_ITEM;$/;"	t	typeref:struct:_event_item
+GUIEVENT_ITEM_LIMIT	guievent.h	32;"	d
+GUIEVENT_KEY_DOWN	guievent.h	46;"	d
+GUIEVENT_KEY_UP	guievent.h	47;"	d
+GUIEVENT_KNB_ANTI	guievent.h	45;"	d
+GUIEVENT_KNB_CLOCK	guievent.h	44;"	d
+GUIEVENT_MOV_CURSOR	guievent.h	50;"	d
+GUIEVENT_TYP_IN	guievent.h	38;"	d
+GUIFBMAP	guifbmap.h	/^} GUIFBMAP;$/;"	t	typeref:struct:_fbmap
+GUIFONT	guifont.h	/^} GUIFONT;$/;"	t	typeref:struct:_font
+GUIFONT_FILEHEADER	guifont.h	/^} GUIFONT_FILEHEADER;$/;"	t	typeref:struct:_font_fileheader
+GUIFONT_FILE_MIX	guifont.h	33;"	d
+GUIFONT_FILE_STD	guifont.h	32;"	d
+GUIFONT_MATRIX	guifont.h	/^} GUIFONT_MATRIX;$/;"	t	typeref:struct:_font_matrix
+GUIFONT_SEGMENTMAP	guifont.h	/^} GUIFONT_SEGMENTMAP;$/;"	t	typeref:struct:_font_segmentmap
+GUIIMAGE	guiimage.h	/^} GUIIMAGE;$/;"	t	typeref:struct:_image
+GUIKEYPAD	guikeypad.h	/^} GUIKEYPAD;$/;"	t	typeref:struct:_keypad
+GUIKEYPAD_TYP_CUST	guikeypad.h	34;"	d
+GUIKEYPAD_TYP_STD	guikeypad.h	33;"	d
+GUILABEL	guilabel.h	/^} GUILABEL;$/;"	t	typeref:struct:_label
+GUILABEL_ALIGN_CENTER	guilabel.h	37;"	d
+GUILABEL_ALIGN_LEFT	guilabel.h	35;"	d
+GUILABEL_ALIGN_RIGHT	guilabel.h	36;"	d
+GUILIST	guibase.h	/^} GUILIST;$/;"	t	typeref:struct:_list
+GUILIST_ITEM	guibase.h	/^} GUILIST_ITEM;$/;"	t	typeref:struct:_list_item
+GUIMESSAGE	guimessage.h	/^} GUIMESSAGE;$/;"	t	typeref:struct:_message
+GUIMESSAGE_ERR_PROC	guimessage.h	57;"	d
+GUIMESSAGE_ITEM	guimessage.h	/^} GUIMESSAGE_ITEM;$/;"	t	typeref:struct:_message_item
+GUIMESSAGE_ITEM_LIMIT	guimessage.h	32;"	d
+GUIMESSAGE_KEY_DOWN	guimessage.h	60;"	d
+GUIMESSAGE_KEY_UP	guimessage.h	61;"	d
+GUIMESSAGE_KNB_ANTI	guimessage.h	59;"	d
+GUIMESSAGE_KNB_CLOCK	guimessage.h	58;"	d
+GUIMESSAGE_LOP_DISABLE	guimessage.h	56;"	d
+GUIMESSAGE_LOP_ENABLE	guimessage.h	55;"	d
+GUIMESSAGE_MOV_CURSOR	guimessage.h	65;"	d
+GUIMESSAGE_MOV_FOCUS	guimessage.h	64;"	d
+GUIMESSAGE_REG	guimessage.h	/^} GUIMESSAGE_REG;$/;"	t	typeref:struct:_message_reg
+GUIMESSAGE_REG_LIMIT	guimessage.h	33;"	d
+GUIMESSAGE_SYS_EXIT	guimessage.h	46;"	d
+GUIMESSAGE_TCH_DOWN	guimessage.h	62;"	d
+GUIMESSAGE_TCH_UP	guimessage.h	63;"	d
+GUIMESSAGE_THD_CREATE	guimessage.h	47;"	d
+GUIMESSAGE_THD_DESTROY	guimessage.h	48;"	d
+GUIMESSAGE_TYP_SYS	guimessage.h	39;"	d
+GUIMESSAGE_TYP_WND	guimessage.h	40;"	d
+GUIMESSAGE_WND_EXIT	guimessage.h	50;"	d
+GUIMESSAGE_WND_INIT	guimessage.h	49;"	d
+GUIMESSAGE_WND_LOOP	guimessage.h	52;"	d
+GUIMESSAGE_WND_PAINT	guimessage.h	51;"	d
+GUIMESSAGE_WND_PAUSE	guimessage.h	53;"	d
+GUIMESSAGE_WND_RESUME	guimessage.h	54;"	d
+GUIMUTEX	guibase.h	/^typedef pthread_mutex_t GUIMUTEX;$/;"	t
+GUIMUTEX_ATTR	guibase.h	/^typedef pthread_mutexattr_t GUIMUTEX_ATTR;$/;"	t
+GUIOBJ	Makefile	/^GUIOBJ = $(patsubst .\/%.c,.\/obj\/%.o,$(GUISRC))$/;"	m
+GUIOBJ	guibase.h	/^} GUIOBJ;$/;"	t	typeref:struct:_object
+GUIPALETTE	guipalette.h	/^} GUIPALETTE;$/;"	t	typeref:struct:_palette
+GUIPEN	guipen.h	/^} GUIPEN;$/;"	t	typeref:struct:_pen
+GUIPEN_TYP_DASHED	guipen.h	32;"	d
+GUIPEN_TYP_SOLID	guipen.h	31;"	d
+GUIPICTURE	guipicture.h	/^} GUIPICTURE;$/;"	t	typeref:struct:_picture
+GUIPOINT	guibase.h	/^} GUIPOINT;$/;"	t	typeref:struct:_point
+GUIRECTANGLE	guibase.h	/^} GUIRECTANGLE;$/;"	t	typeref:struct:_rectangle
+GUIRECTANGLE_RELA	guibase.h	/^} GUIRECTANGLE_RELA;$/;"	t	typeref:enum:_rectangle_relation
+GUISRC	Makefile	/^GUISRC = $(wildcard .\/gui*.c)$/;"	m
+GUITEXT	guitext.h	/^} GUITEXT;$/;"	t	typeref:struct:_text
+GUITHREAD	guibase.h	/^typedef pthread_t GUITHREAD;$/;"	t
+GUITHREAD_ATTR	guibase.h	/^typedef pthread_attr_t GUITHREAD_ATTR;$/;"	t
+GUITOUCH	guitouch.h	/^} GUITOUCH;$/;"	t	typeref:struct:_touch
+GUITOUCH_TYP_CUST	guitouch.h	34;"	d
+GUITOUCH_TYP_STD	guitouch.h	33;"	d
+GUIVISIBLE	guibase.h	/^} GUIVISIBLE;$/;"	t	typeref:struct:_visible
+GUIWINDOW	guiwindow.h	/^} GUIWINDOW;$/;"	t	typeref:struct:_window
+GUIWINDOW_COMP_LIMIT	guiwindow.h	35;"	d
+GUI_FBTYP_CUST	guifbmap.h	35;"	d
+GUI_FBTYP_DUAL	guifbmap.h	34;"	d
+GUI_FBTYP_STD	guifbmap.h	33;"	d
+GUI_OS_ENV	guiconfig.h	28;"	d
+GetCurrBrush	guibrush.c	/^GUIBRUSH* GetCurrBrush(void)$/;"	f
+GetCurrEvent	guievent.c	/^GUIEVENT* GetCurrEvent(void)$/;"	f
+GetCurrFbmap	guifbmap.c	/^GUIFBMAP* GetCurrFbmap(void)$/;"	f
+GetCurrFont	guifont.c	/^GUIFONT* GetCurrFont(void)$/;"	f
+GetCurrKeypad	guikeypad.c	/^GUIKEYPAD* GetCurrKeypad(void)$/;"	f
+GetCurrMessage	guimessage.c	/^GUIMESSAGE* GetCurrMessage(void)$/;"	f
+GetCurrPalette	guipalette.c	/^GUIPALETTE* GetCurrPalette(void)$/;"	f
+GetCurrPen	guipen.c	/^GUIPEN* GetCurrPen(void)$/;"	f
+GetCurrTouch	guitouch.c	/^GUITOUCH* GetCurrTouch(void)$/;"	f
+GetCurrWindow	guiwindow.c	/^GUIWINDOW* GetCurrWindow(void)$/;"	f
+GetExitFlag	guischeduler.c	/^int GetExitFlag(void)$/;"	f
+GetWifiMsgQueue	wnd_msgqueue.c	/^OTDRMSGQUEUE * GetWifiMsgQueue(void)$/;"	f
+GetWordCode	input_china_pinyin.c	/^int GetWordCode(void *pInpPara,$/;"	f
+GetWordCount	input_china_pinyin.c	/^int GetWordCount(void *pInpPara,$/;"	f
+HOOKFUNC	guibase.h	/^typedef void* (*HOOKFUNC)(HOOKPAR *);$/;"	t
+HOOKPAR	guibase.h	/^} HOOKPAR;$/;"	t	typeref:struct:_hookpar
+Hide	guibase.h	/^    GUIRECTANGLE Hide;  \/\/可视控件的被覆盖区域$/;"	m	struct:_visible
+HoldCurrWindow	guiwindow.c	/^GUIWINDOW* HoldCurrWindow(void)$/;"	f
+IMPORT_LINE_MAXLEN	input_china_pinyin.c	364;"	d	file:
+IMPORT_WORD_MAXLEN	input_china_pinyin.c	365;"	d	file:
+INCPATH	Makefile	/^INCPATH = -I. -I.\/sqlite\/include$/;"	m
+INPOBJ	Makefile	/^INPOBJ = $(patsubst .\/%.c,.\/obj\/%.o,$(INPSRC))$/;"	m
+INPORT_PINYIN_MAXLEN	input_china_pinyin.c	366;"	d	file:
+INPSRC	Makefile	/^INPSRC = $(wildcard .\/input*.c)$/;"	m
+INPUTDB	input_china_pinyin.h	/^typedef sqlite3 INPUTDB;$/;"	t
+INPUT_CHINA_PINYIN_H_	input_china_pinyin.h	9;"	d
+INT16	guibase.h	/^typedef signed short INT16;$/;"	t
+INT32	guibase.h	/^typedef signed int INT32;$/;"	t
+INT8	guibase.h	/^typedef signed char INT8;$/;"	t
+ImportPinyinFile	input_china_pinyin.c	/^int ImportPinyinFile(char *pFileName)$/;"	f
+InitCurrWindow	guiwindow.c	/^int InitCurrWindow(void)$/;"	f
+InitErrProc_Func	wnd_frminit.c	/^static int InitErrProc_Func(void *pInArg, int iInLen,$/;"	f	file:
+InitExitFlag	guischeduler.c	/^int InitExitFlag(void)$/;"	f
+InitList	guibase.c	/^inline int InitList(GUILIST *pList)$/;"	f
+InitMutex	guibase.c	/^int InitMutex(GUIMUTEX *pMutex, GUIMUTEX_ATTR *pAttr)$/;"	f
+InitTextRes_Exit	wnd_frminit.c	/^static int InitTextRes_Exit(void *pInArg, int iInLen,$/;"	f	file:
+InitTextRes_Init	wnd_frminit.c	/^static int InitTextRes_Init(void *pInArg, int iInLen,$/;"	f	file:
+InitThreadLock	guischeduler.c	/^int InitThreadLock(void)$/;"	f
+InitWifiQueue	wnd_msgqueue.c	/^void InitWifiQueue(int iQueueLimit)$/;"	f
+InitWndKey_Down	wnd_frminit.c	/^static int InitWndKey_Down(void *pInArg, int iInLen,$/;"	f	file:
+InitWndKey_Up	wnd_frminit.c	/^static int InitWndKey_Up(void *pInArg, int iInLen,$/;"	f	file:
+InitWndMov_Cursor	wnd_frminit.c	/^static int InitWndMov_Cursor(void *pInArg, int iInLen,$/;"	f	file:
+InitializeDevice	wnd_main.c	/^int InitializeDevice(void)$/;"	f
+InitializeGUI	guiglobal.c	/^int InitializeGUI(void)$/;"	f
+InsertWordPinyin	input_china_pinyin.c	/^int InsertWordPinyin(char *pWordVal, char *pPinyinVal)$/;"	f
+IsEmptyOTDRMsgQueue	wnd_msgqueue.c	/^int IsEmptyOTDRMsgQueue(OTDRMSGQUEUE *pObjQueue)$/;"	f
+IsFULLOTDRMsgQueue	wnd_msgqueue.c	/^int IsFULLOTDRMsgQueue(OTDRMSGQUEUE *pObjQueue)$/;"	f
+KEYCODE_AVG	guidevice.h	62;"	d
+KEYCODE_DOWN	guidevice.h	59;"	d
+KEYCODE_ENTER	guidevice.h	57;"	d
+KEYCODE_ESC	guidevice.h	51;"	d
+KEYCODE_F1	guidevice.h	46;"	d
+KEYCODE_F2	guidevice.h	47;"	d
+KEYCODE_F3	guidevice.h	48;"	d
+KEYCODE_F4	guidevice.h	49;"	d
+KEYCODE_F5	guidevice.h	50;"	d
+KEYCODE_FILE	guidevice.h	52;"	d
+KEYCODE_KNOB	guidevice.h	61;"	d
+KEYCODE_LEFT	guidevice.h	56;"	d
+KEYCODE_MENU	guidevice.h	45;"	d
+KEYCODE_REALT	guidevice.h	60;"	d
+KEYCODE_RIGHT	guidevice.h	58;"	d
+KEYCODE_SCALE	guidevice.h	53;"	d
+KEYCODE_SETUP	guidevice.h	54;"	d
+KEYCODE_UP	guidevice.h	55;"	d
+LD	Makefile	/^LD = $(CROSS_COMPILE)ld$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS = $(LIBPATH) $(LIBS)$/;"	m
+LIBPATH	Makefile	/^LIBPATH = -L. -L.\/sqlite\/lib$/;"	m
+LIBS	Makefile	/^LIBS = -lsgui -lsqlite3 -lpthread$/;"	m
+LINUX_OS	guiconfig.h	27;"	d
+List	guibase.h	/^    GUILIST_ITEM List;  \/\/相邻对象，指向同一集合中相邻的另一个GUIOBJ$/;"	m	struct:_object
+ListAdd	guibase.c	/^int ListAdd(GUILIST_ITEM *pItem, GUILIST *pList)$/;"	f
+ListDel	guibase.c	/^int ListDel(GUILIST_ITEM *pItem, GUILIST *pList)$/;"	f
+ListEmpty	guibase.c	/^inline int ListEmpty(GUILIST *pList)$/;"	f
+ListFull	guibase.c	/^inline int ListFull(GUILIST *pList)$/;"	f
+ListMove	guibase.c	/^int ListMove(GUILIST_ITEM *pItem, GUILIST *pList)$/;"	f
+ListSplice	guibase.c	/^int ListSplice(GUILIST *pAttach, GUILIST *pList)$/;"	f
+LoadBitmapImage	guibitmap.c	/^int LoadBitmapImage(GUIBITMAP *pBitmapObj)$/;"	f
+LoadTextMatrix	guitext.c	/^int LoadTextMatrix(GUITEXT *pTextObj)$/;"	f
+LockCurrWindow	guiwindow.c	/^int LockCurrWindow(void)$/;"	f
+LockWindowThread	guischeduler.c	/^int LockWindowThread(void)$/;"	f
+LoginMessageReg	guimessage.c	/^int LoginMessageReg(int iMsgCode, void *pRecvObj, $/;"	f
+LogoutMessageReg	guimessage.c	/^int LogoutMessageReg(int iMsgCode, void *pRecvObj, GUIMESSAGE *pMsgObj)$/;"	f
+MAX_SIGNUM	wnd_frmwifi.h	21;"	d
+MSGFUNC	guimessage.h	/^typedef int (*MSGFUNC)(void *pInArg, int iInLen, void *pOutArg, int iOutLen);$/;"	t
+MainErrProc_Func	wnd_frmmain.c	/^static int MainErrProc_Func(void *pInArg, int iInLen,$/;"	f	file:
+MainLblA_Down	wnd_frmmain.c	/^static int MainLblA_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblA_Up	wnd_frmmain.c	/^static int MainLblA_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblB_Down	wnd_frmmain.c	/^static int MainLblB_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblB_Up	wnd_frmmain.c	/^static int MainLblB_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblBackspace_Down	wnd_frmmain.c	/^static int MainLblBackspace_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblBackspace_Up	wnd_frmmain.c	/^static int MainLblBackspace_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblC_Down	wnd_frmmain.c	/^static int MainLblC_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblC_Up	wnd_frmmain.c	/^static int MainLblC_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblD_Down	wnd_frmmain.c	/^static int MainLblD_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblD_Up	wnd_frmmain.c	/^static int MainLblD_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblDown_Down	wnd_frmmain.c	/^static int MainLblDown_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblDown_Up	wnd_frmmain.c	/^static int MainLblDown_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblE_Down	wnd_frmmain.c	/^static int MainLblE_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblE_Up	wnd_frmmain.c	/^static int MainLblE_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblEnter_Down	wnd_frmmain.c	/^static int MainLblEnter_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblEnter_Up	wnd_frmmain.c	/^static int MainLblEnter_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblF_Down	wnd_frmmain.c	/^static int MainLblF_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblF_Up	wnd_frmmain.c	/^static int MainLblF_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblG_Down	wnd_frmmain.c	/^static int MainLblG_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblG_Up	wnd_frmmain.c	/^static int MainLblG_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblH_Down	wnd_frmmain.c	/^static int MainLblH_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblH_Up	wnd_frmmain.c	/^static int MainLblH_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblI_Down	wnd_frmmain.c	/^static int MainLblI_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblI_Up	wnd_frmmain.c	/^static int MainLblI_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblJ_Down	wnd_frmmain.c	/^static int MainLblJ_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblJ_Up	wnd_frmmain.c	/^static int MainLblJ_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblK_Down	wnd_frmmain.c	/^static int MainLblK_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblK_Up	wnd_frmmain.c	/^static int MainLblK_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblL_Down	wnd_frmmain.c	/^static int MainLblL_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblL_Up	wnd_frmmain.c	/^static int MainLblL_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblM_Down	wnd_frmmain.c	/^static int MainLblM_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblM_Up	wnd_frmmain.c	/^static int MainLblM_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblN_Down	wnd_frmmain.c	/^static int MainLblN_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblN_Up	wnd_frmmain.c	/^static int MainLblN_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblO_Down	wnd_frmmain.c	/^static int MainLblO_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblO_Up	wnd_frmmain.c	/^static int MainLblO_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblP_Down	wnd_frmmain.c	/^static int MainLblP_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblP_Up	wnd_frmmain.c	/^static int MainLblP_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblQ_Down	wnd_frmmain.c	/^static int MainLblQ_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblQ_Up	wnd_frmmain.c	/^static int MainLblQ_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblR_Down	wnd_frmmain.c	/^static int MainLblR_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblR_Up	wnd_frmmain.c	/^static int MainLblR_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblS_Down	wnd_frmmain.c	/^static int MainLblS_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblS_Up	wnd_frmmain.c	/^static int MainLblS_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblT_Down	wnd_frmmain.c	/^static int MainLblT_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblT_Up	wnd_frmmain.c	/^static int MainLblT_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblU_Down	wnd_frmmain.c	/^static int MainLblU_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblU_Up	wnd_frmmain.c	/^static int MainLblU_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblUp_Down	wnd_frmmain.c	/^static int MainLblUp_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblUp_Up	wnd_frmmain.c	/^static int MainLblUp_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblV_Down	wnd_frmmain.c	/^static int MainLblV_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblV_Up	wnd_frmmain.c	/^static int MainLblV_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblW_Down	wnd_frmmain.c	/^static int MainLblW_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblW_Up	wnd_frmmain.c	/^static int MainLblW_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord0_Down	wnd_frmmain.c	/^static int MainLblWord0_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord0_Up	wnd_frmmain.c	/^static int MainLblWord0_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord1_Down	wnd_frmmain.c	/^static int MainLblWord1_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord1_Up	wnd_frmmain.c	/^static int MainLblWord1_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord2_Down	wnd_frmmain.c	/^static int MainLblWord2_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord2_Up	wnd_frmmain.c	/^static int MainLblWord2_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord3_Down	wnd_frmmain.c	/^static int MainLblWord3_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord3_Up	wnd_frmmain.c	/^static int MainLblWord3_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord4_Down	wnd_frmmain.c	/^static int MainLblWord4_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord4_Up	wnd_frmmain.c	/^static int MainLblWord4_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord5_Down	wnd_frmmain.c	/^static int MainLblWord5_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord5_Up	wnd_frmmain.c	/^static int MainLblWord5_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord6_Down	wnd_frmmain.c	/^static int MainLblWord6_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord6_Up	wnd_frmmain.c	/^static int MainLblWord6_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord7_Down	wnd_frmmain.c	/^static int MainLblWord7_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord7_Up	wnd_frmmain.c	/^static int MainLblWord7_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord8_Down	wnd_frmmain.c	/^static int MainLblWord8_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord8_Up	wnd_frmmain.c	/^static int MainLblWord8_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord9_Down	wnd_frmmain.c	/^static int MainLblWord9_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblWord9_Up	wnd_frmmain.c	/^static int MainLblWord9_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblX_Down	wnd_frmmain.c	/^static int MainLblX_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblX_Up	wnd_frmmain.c	/^static int MainLblX_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblY_Down	wnd_frmmain.c	/^static int MainLblY_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblY_Up	wnd_frmmain.c	/^static int MainLblY_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainLblZ_Down	wnd_frmmain.c	/^static int MainLblZ_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainLblZ_Up	wnd_frmmain.c	/^static int MainLblZ_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainTextRes_Exit	wnd_frmmain.c	/^static int MainTextRes_Exit(void *pInArg, int iInLen,$/;"	f	file:
+MainTextRes_Init	wnd_frmmain.c	/^static int MainTextRes_Init(void *pInArg, int iInLen,$/;"	f	file:
+MainWndKey_Down	wnd_frmmain.c	/^static int MainWndKey_Down(void *pInArg, int iInLen,$/;"	f	file:
+MainWndKey_Up	wnd_frmmain.c	/^static int MainWndKey_Up(void *pInArg, int iInLen,$/;"	f	file:
+MainWndMov_Cursor	wnd_frmmain.c	/^static int MainWndMov_Cursor(void *pInArg, int iInLen,$/;"	f	file:
+Main_AddPinyinChar	wnd_frmmain.c	/^static int Main_AddPinyinChar(char cAddChar, GUILABEL *pLblChar)$/;"	f	file:
+Main_SelectPinyinWord	wnd_frmmain.c	/^static int Main_SelectPinyinWord(int iSelOff, GUILABEL *pLblWord)$/;"	f	file:
+Main_ViewWordList	wnd_frmmain.c	/^static int Main_ViewWordList(void)$/;"	f	file:
+Main_WordTurnPage	wnd_frmmain.c	/^static int Main_WordTurnPage(int iTurnFlag, GUILABEL *pLblTurn)$/;"	f	file:
+MatchEventObject	guievent.c	/^void* MatchEventObject(GUIEVENT_ITEM *pEventItem)$/;"	f
+MatchMessageReg	guimessage.c	/^GUIMESSAGE_REG* MatchMessageReg(GUIMESSAGE_ITEM *pMsgItem, $/;"	f
+MatchPaletteColor	guipalette.c	/^int MatchPaletteColor(unsigned int uiRgbColor, GUIPALETTE *pPalObj)$/;"	f
+MntSDcardDirectory	guiglobal.h	45;"	d
+MsecSleep	guibase.c	/^int MsecSleep(unsigned long ulMsec)$/;"	f
+Mutex	guievent.h	/^    GUIMUTEX Mutex;             \/\/互斥锁，用于控制对输入事件队列的访问$/;"	m	struct:_event
+Mutex	guifbmap.h	/^    GUIMUTEX Mutex;             \/\/互斥锁，用于控制帧缓冲线程对输入缓冲的访问$/;"	m	struct:_fbmap
+Mutex	guikeypad.h	/^    GUIMUTEX Mutex;             \/\/互斥锁，用于控制键盘线程对键盘设备的访问$/;"	m	struct:_keypad
+Mutex	guimessage.h	/^    GUIMUTEX Mutex;         \/\/互斥锁，控制同步标志、消息队列及注册信息的访问$/;"	m	struct:_message
+Mutex	guitouch.h	/^    GUIMUTEX Mutex;             \/\/互斥锁，用于控制触摸屏线程对触摸屏设备的访问$/;"	m	struct:_touch
+Mutex	guiwindow.h	/^    GUIMUTEX Mutex;         \/\/互斥锁，用于控制对控件队列的访问$/;"	m	struct:_window
+Mutex	wnd_msgqueue.h	/^    GUIMUTEX Mutex;         \/\/互斥锁，控制同步标志、消息队列及注册信息的访问$/;"	m	struct:_otdr_msg_queue
+MutexLock	guibase.c	/^int MutexLock(GUIMUTEX *pMutex)$/;"	f
+MutexTrylock	guibase.c	/^int MutexTrylock(GUIMUTEX *pMutex)$/;"	f
+MutexUnlock	guibase.c	/^int MutexUnlock(GUIMUTEX *pMutex)$/;"	f
+NONE_OS	guiconfig.h	26;"	d
+NOT_WITHIN	sqlite/include/sqlite3.h	7533;"	d
+OBJLST	Makefile	/^OBJLST = $(patsubst .\/%.c,.\/obj\/%.o,$(SRCLST))$/;"	m
+OBJTYP_GUIBUTTON	guibase.h	298;"	d
+OBJTYP_GUICAPTION	guibase.h	299;"	d
+OBJTYP_GUILABEL	guibase.h	300;"	d
+OBJTYP_GUIMENU	guibase.h	301;"	d
+OBJTYP_GUIPICTURE	guibase.h	302;"	d
+OBJTYP_GUISCROLL	guibase.h	303;"	d
+OBJTYP_GUISTATUS	guibase.h	304;"	d
+OBJTYP_GUIWINDOW	guibase.h	305;"	d
+OTDRMESSAGE_ITEM_LIMIT	wnd_msgqueue.h	27;"	d
+OTDRMSGQUEUE	wnd_msgqueue.h	/^}OTDRMSGQUEUE, *POTDRMSGQUEUE;$/;"	t	typeref:struct:_otdr_msg_queue
+OpenInputDb	input_china_pinyin.c	/^int OpenInputDb(char *pDbName)$/;"	f
+PARTLY_WITHIN	sqlite/include/sqlite3.h	7534;"	d
+PINYIN_STORE_MAXLEN	input_china_pinyin.h	37;"	d
+PINYIN_VALID_MAXLEN	input_china_pinyin.h	36;"	d
+PIXEL_16BITS	guiconfig.h	36;"	d
+PIXEL_24BITS	guiconfig.h	37;"	d
+PIXEL_32BITS	guiconfig.h	38;"	d
+PIXEL_8BITS	guiconfig.h	35;"	d
+POTDRMSGQUEUE	wnd_msgqueue.h	/^}OTDRMSGQUEUE, *POTDRMSGQUEUE;$/;"	t	typeref:struct:_otdr_msg_queue
+PRELST	Makefile	/^PRELST = $(patsubst .\/%.c,.\/pre\/%.i,$(SRCLST))$/;"	m
+PRODIR	Makefile	/^PRODIR = .\/$/;"	m
+PRTINF	Makefile	/^PRTINF = -v$/;"	m
+PWIFI_INFO	wnd_frmwifi.h	/^}WIFI_INFO, *PWIFI_INFO;$/;"	t	typeref:struct:_wifi_info
+Pinyin	input_china_pinyin.h	/^    char Pinyin[PINYIN_STORE_MAXLEN];$/;"	m	struct:__anon1
+QueryWordPinyin	input_china_pinyin.c	/^WordList* QueryWordPinyin(char *pWordPinyin, int iViewLen)$/;"	f
+RESFILE_PATH	guiconfig.h	46;"	d
+RUNPATH_ROOT	guiconfig.h	45;"	d
+ReadBitmapPalette	guibitmap.c	/^GUIPALETTE* ReadBitmapPalette(GUIBITMAP *pBitmapObj)$/;"	f
+ReadEventQueue	guievent.c	/^GUIEVENT_ITEM* ReadEventQueue(GUIEVENT *pEventObj)$/;"	f
+ReadMessageQueue	guimessage.c	/^GUIMESSAGE_ITEM* ReadMessageQueue(GUIMESSAGE *pMsgObj)$/;"	f
+ReadOTDRMsgQueue	wnd_msgqueue.c	/^void ReadOTDRMsgQueue(int *key, OTDRMSGQUEUE *pObjQueue)$/;"	f
+ReadWifiMsgQueue	wnd_msgqueue.c	/^void ReadWifiMsgQueue(int *key)$/;"	f
+RectangleCompare	guibase.c	/^GUIRECTANGLE_RELA RectangleCompare(GUIRECTANGLE *pR1, GUIRECTANGLE *pR2)$/;"	f
+RectangleOverlap	guibase.c	/^int RectangleOverlap(GUIRECTANGLE *pR1, GUIRECTANGLE *pR2)$/;"	f
+RectangleOverlay	guibase.c	/^int RectangleOverlay(GUIRECTANGLE *pR1, GUIRECTANGLE *pR2)$/;"	f
+RectanglePortion	guibase.c	/^int RectanglePortion(GUIRECTANGLE *pR1, GUIRECTANGLE *pR2)$/;"	f
+RectangleSeparate	guibase.c	/^int RectangleSeparate(GUIRECTANGLE *pR1, GUIRECTANGLE *pR2)$/;"	f
+RecvSpecialMessage	guimessage.c	/^GUIMESSAGE_ITEM* RecvSpecialMessage(int iMsgType, GUIMESSAGE *pMsgObj)$/;"	f
+ReleaseGUI	guiglobal.c	/^int ReleaseGUI(void)$/;"	f
+SQLITE3_TEXT	sqlite/include/sqlite3.h	3788;"	d
+SQLITE_ABORT	sqlite/include/sqlite3.h	403;"	d
+SQLITE_ABORT_ROLLBACK	sqlite/include/sqlite3.h	486;"	d
+SQLITE_ACCESS_EXISTS	sqlite/include/sqlite3.h	1204;"	d
+SQLITE_ACCESS_READ	sqlite/include/sqlite3.h	1206;"	d
+SQLITE_ACCESS_READWRITE	sqlite/include/sqlite3.h	1205;"	d
+SQLITE_ALTER_TABLE	sqlite/include/sqlite3.h	2581;"	d
+SQLITE_ANALYZE	sqlite/include/sqlite3.h	2583;"	d
+SQLITE_ANY	sqlite/include/sqlite3.h	4155;"	d
+SQLITE_API	sqlite/include/sqlite3.h	53;"	d
+SQLITE_ATTACH	sqlite/include/sqlite3.h	2579;"	d
+SQLITE_AUTH	sqlite/include/sqlite3.h	422;"	d
+SQLITE_AUTH_USER	sqlite/include/sqlite3.h	500;"	d
+SQLITE_BLOB	sqlite/include/sqlite3.h	3781;"	d
+SQLITE_BUSY	sqlite/include/sqlite3.h	404;"	d
+SQLITE_BUSY_RECOVERY	sqlite/include/sqlite3.h	475;"	d
+SQLITE_BUSY_SNAPSHOT	sqlite/include/sqlite3.h	476;"	d
+SQLITE_CANTOPEN	sqlite/include/sqlite3.h	413;"	d
+SQLITE_CANTOPEN_CONVPATH	sqlite/include/sqlite3.h	480;"	d
+SQLITE_CANTOPEN_FULLPATH	sqlite/include/sqlite3.h	479;"	d
+SQLITE_CANTOPEN_ISDIR	sqlite/include/sqlite3.h	478;"	d
+SQLITE_CANTOPEN_NOTEMPDIR	sqlite/include/sqlite3.h	477;"	d
+SQLITE_CHECKPOINT_FULL	sqlite/include/sqlite3.h	7324;"	d
+SQLITE_CHECKPOINT_PASSIVE	sqlite/include/sqlite3.h	7323;"	d
+SQLITE_CHECKPOINT_RESTART	sqlite/include/sqlite3.h	7325;"	d
+SQLITE_CONFIG_COVERING_INDEX_SCAN	sqlite/include/sqlite3.h	1747;"	d
+SQLITE_CONFIG_GETMALLOC	sqlite/include/sqlite3.h	1732;"	d
+SQLITE_CONFIG_GETMUTEX	sqlite/include/sqlite3.h	1738;"	d
+SQLITE_CONFIG_GETPCACHE	sqlite/include/sqlite3.h	1742;"	d
+SQLITE_CONFIG_GETPCACHE2	sqlite/include/sqlite3.h	1746;"	d
+SQLITE_CONFIG_HEAP	sqlite/include/sqlite3.h	1735;"	d
+SQLITE_CONFIG_LOG	sqlite/include/sqlite3.h	1743;"	d
+SQLITE_CONFIG_LOOKASIDE	sqlite/include/sqlite3.h	1740;"	d
+SQLITE_CONFIG_MALLOC	sqlite/include/sqlite3.h	1731;"	d
+SQLITE_CONFIG_MEMSTATUS	sqlite/include/sqlite3.h	1736;"	d
+SQLITE_CONFIG_MMAP_SIZE	sqlite/include/sqlite3.h	1749;"	d
+SQLITE_CONFIG_MULTITHREAD	sqlite/include/sqlite3.h	1729;"	d
+SQLITE_CONFIG_MUTEX	sqlite/include/sqlite3.h	1737;"	d
+SQLITE_CONFIG_PAGECACHE	sqlite/include/sqlite3.h	1734;"	d
+SQLITE_CONFIG_PCACHE	sqlite/include/sqlite3.h	1741;"	d
+SQLITE_CONFIG_PCACHE2	sqlite/include/sqlite3.h	1745;"	d
+SQLITE_CONFIG_SCRATCH	sqlite/include/sqlite3.h	1733;"	d
+SQLITE_CONFIG_SERIALIZED	sqlite/include/sqlite3.h	1730;"	d
+SQLITE_CONFIG_SINGLETHREAD	sqlite/include/sqlite3.h	1728;"	d
+SQLITE_CONFIG_SQLLOG	sqlite/include/sqlite3.h	1748;"	d
+SQLITE_CONFIG_URI	sqlite/include/sqlite3.h	1744;"	d
+SQLITE_CONFIG_WIN32_HEAPSIZE	sqlite/include/sqlite3.h	1750;"	d
+SQLITE_CONSTRAINT	sqlite/include/sqlite3.h	418;"	d
+SQLITE_CONSTRAINT_CHECK	sqlite/include/sqlite3.h	487;"	d
+SQLITE_CONSTRAINT_COMMITHOOK	sqlite/include/sqlite3.h	488;"	d
+SQLITE_CONSTRAINT_FOREIGNKEY	sqlite/include/sqlite3.h	489;"	d
+SQLITE_CONSTRAINT_FUNCTION	sqlite/include/sqlite3.h	490;"	d
+SQLITE_CONSTRAINT_NOTNULL	sqlite/include/sqlite3.h	491;"	d
+SQLITE_CONSTRAINT_PRIMARYKEY	sqlite/include/sqlite3.h	492;"	d
+SQLITE_CONSTRAINT_ROWID	sqlite/include/sqlite3.h	496;"	d
+SQLITE_CONSTRAINT_TRIGGER	sqlite/include/sqlite3.h	493;"	d
+SQLITE_CONSTRAINT_UNIQUE	sqlite/include/sqlite3.h	494;"	d
+SQLITE_CONSTRAINT_VTAB	sqlite/include/sqlite3.h	495;"	d
+SQLITE_COPY	sqlite/include/sqlite3.h	2588;"	d
+SQLITE_CORRUPT	sqlite/include/sqlite3.h	410;"	d
+SQLITE_CORRUPT_VTAB	sqlite/include/sqlite3.h	481;"	d
+SQLITE_CREATE_INDEX	sqlite/include/sqlite3.h	2556;"	d
+SQLITE_CREATE_TABLE	sqlite/include/sqlite3.h	2557;"	d
+SQLITE_CREATE_TEMP_INDEX	sqlite/include/sqlite3.h	2558;"	d
+SQLITE_CREATE_TEMP_TABLE	sqlite/include/sqlite3.h	2559;"	d
+SQLITE_CREATE_TEMP_TRIGGER	sqlite/include/sqlite3.h	2560;"	d
+SQLITE_CREATE_TEMP_VIEW	sqlite/include/sqlite3.h	2561;"	d
+SQLITE_CREATE_TRIGGER	sqlite/include/sqlite3.h	2562;"	d
+SQLITE_CREATE_VIEW	sqlite/include/sqlite3.h	2563;"	d
+SQLITE_CREATE_VTABLE	sqlite/include/sqlite3.h	2584;"	d
+SQLITE_DBCONFIG_ENABLE_FKEY	sqlite/include/sqlite3.h	1811;"	d
+SQLITE_DBCONFIG_ENABLE_TRIGGER	sqlite/include/sqlite3.h	1812;"	d
+SQLITE_DBCONFIG_LOOKASIDE	sqlite/include/sqlite3.h	1810;"	d
+SQLITE_DBSTATUS_CACHE_HIT	sqlite/include/sqlite3.h	6465;"	d
+SQLITE_DBSTATUS_CACHE_MISS	sqlite/include/sqlite3.h	6466;"	d
+SQLITE_DBSTATUS_CACHE_USED	sqlite/include/sqlite3.h	6459;"	d
+SQLITE_DBSTATUS_CACHE_WRITE	sqlite/include/sqlite3.h	6467;"	d
+SQLITE_DBSTATUS_DEFERRED_FKS	sqlite/include/sqlite3.h	6468;"	d
+SQLITE_DBSTATUS_LOOKASIDE_HIT	sqlite/include/sqlite3.h	6462;"	d
+SQLITE_DBSTATUS_LOOKASIDE_MISS_FULL	sqlite/include/sqlite3.h	6464;"	d
+SQLITE_DBSTATUS_LOOKASIDE_MISS_SIZE	sqlite/include/sqlite3.h	6463;"	d
+SQLITE_DBSTATUS_LOOKASIDE_USED	sqlite/include/sqlite3.h	6458;"	d
+SQLITE_DBSTATUS_MAX	sqlite/include/sqlite3.h	6469;"	d
+SQLITE_DBSTATUS_SCHEMA_USED	sqlite/include/sqlite3.h	6460;"	d
+SQLITE_DBSTATUS_STMT_USED	sqlite/include/sqlite3.h	6461;"	d
+SQLITE_DELETE	sqlite/include/sqlite3.h	2564;"	d
+SQLITE_DENY	sqlite/include/sqlite3.h	2533;"	d
+SQLITE_DEPRECATED	sqlite/include/sqlite3.h	70;"	d
+SQLITE_DETACH	sqlite/include/sqlite3.h	2580;"	d
+SQLITE_DETERMINISTIC	sqlite/include/sqlite3.h	4166;"	d
+SQLITE_DONE	sqlite/include/sqlite3.h	429;"	d
+SQLITE_DROP_INDEX	sqlite/include/sqlite3.h	2565;"	d
+SQLITE_DROP_TABLE	sqlite/include/sqlite3.h	2566;"	d
+SQLITE_DROP_TEMP_INDEX	sqlite/include/sqlite3.h	2567;"	d
+SQLITE_DROP_TEMP_TABLE	sqlite/include/sqlite3.h	2568;"	d
+SQLITE_DROP_TEMP_TRIGGER	sqlite/include/sqlite3.h	2569;"	d
+SQLITE_DROP_TEMP_VIEW	sqlite/include/sqlite3.h	2570;"	d
+SQLITE_DROP_TRIGGER	sqlite/include/sqlite3.h	2571;"	d
+SQLITE_DROP_VIEW	sqlite/include/sqlite3.h	2572;"	d
+SQLITE_DROP_VTABLE	sqlite/include/sqlite3.h	2585;"	d
+SQLITE_EMPTY	sqlite/include/sqlite3.h	415;"	d
+SQLITE_ERROR	sqlite/include/sqlite3.h	400;"	d
+SQLITE_EXPERIMENTAL	sqlite/include/sqlite3.h	71;"	d
+SQLITE_EXTENSION_INIT1	sqlite/include/sqlite3ext.h	505;"	d
+SQLITE_EXTENSION_INIT1	sqlite/include/sqlite3ext.h	512;"	d
+SQLITE_EXTENSION_INIT2	sqlite/include/sqlite3ext.h	506;"	d
+SQLITE_EXTENSION_INIT2	sqlite/include/sqlite3ext.h	513;"	d
+SQLITE_EXTENSION_INIT3	sqlite/include/sqlite3ext.h	507;"	d
+SQLITE_EXTENSION_INIT3	sqlite/include/sqlite3ext.h	514;"	d
+SQLITE_EXTERN	sqlite/include/sqlite3.h	49;"	d
+SQLITE_FAIL	sqlite/include/sqlite3.h	7410;"	d
+SQLITE_FCNTL_BUSYHANDLER	sqlite/include/sqlite3.h	965;"	d
+SQLITE_FCNTL_CHUNK_SIZE	sqlite/include/sqlite3.h	956;"	d
+SQLITE_FCNTL_COMMIT_PHASETWO	sqlite/include/sqlite3.h	971;"	d
+SQLITE_FCNTL_FILE_POINTER	sqlite/include/sqlite3.h	957;"	d
+SQLITE_FCNTL_HAS_MOVED	sqlite/include/sqlite3.h	969;"	d
+SQLITE_FCNTL_LOCKSTATE	sqlite/include/sqlite3.h	951;"	d
+SQLITE_FCNTL_MMAP_SIZE	sqlite/include/sqlite3.h	967;"	d
+SQLITE_FCNTL_OVERWRITE	sqlite/include/sqlite3.h	961;"	d
+SQLITE_FCNTL_PERSIST_WAL	sqlite/include/sqlite3.h	960;"	d
+SQLITE_FCNTL_POWERSAFE_OVERWRITE	sqlite/include/sqlite3.h	963;"	d
+SQLITE_FCNTL_PRAGMA	sqlite/include/sqlite3.h	964;"	d
+SQLITE_FCNTL_SIZE_HINT	sqlite/include/sqlite3.h	955;"	d
+SQLITE_FCNTL_SYNC	sqlite/include/sqlite3.h	970;"	d
+SQLITE_FCNTL_SYNC_OMITTED	sqlite/include/sqlite3.h	958;"	d
+SQLITE_FCNTL_TEMPFILENAME	sqlite/include/sqlite3.h	966;"	d
+SQLITE_FCNTL_TRACE	sqlite/include/sqlite3.h	968;"	d
+SQLITE_FCNTL_VFSNAME	sqlite/include/sqlite3.h	962;"	d
+SQLITE_FCNTL_WIN32_AV_RETRY	sqlite/include/sqlite3.h	959;"	d
+SQLITE_FCNTL_WIN32_SET_HANDLE	sqlite/include/sqlite3.h	972;"	d
+SQLITE_FLOAT	sqlite/include/sqlite3.h	3780;"	d
+SQLITE_FORMAT	sqlite/include/sqlite3.h	423;"	d
+SQLITE_FULL	sqlite/include/sqlite3.h	412;"	d
+SQLITE_FUNCTION	sqlite/include/sqlite3.h	2586;"	d
+SQLITE_GET_LOCKPROXYFILE	sqlite/include/sqlite3.h	952;"	d
+SQLITE_IGNORE	sqlite/include/sqlite3.h	2534;"	d
+SQLITE_INDEX_CONSTRAINT_EQ	sqlite/include/sqlite3.h	5488;"	d
+SQLITE_INDEX_CONSTRAINT_GE	sqlite/include/sqlite3.h	5492;"	d
+SQLITE_INDEX_CONSTRAINT_GT	sqlite/include/sqlite3.h	5489;"	d
+SQLITE_INDEX_CONSTRAINT_LE	sqlite/include/sqlite3.h	5490;"	d
+SQLITE_INDEX_CONSTRAINT_LT	sqlite/include/sqlite3.h	5491;"	d
+SQLITE_INDEX_CONSTRAINT_MATCH	sqlite/include/sqlite3.h	5493;"	d
+SQLITE_INSERT	sqlite/include/sqlite3.h	2573;"	d
+SQLITE_INTEGER	sqlite/include/sqlite3.h	3779;"	d
+SQLITE_INTERNAL	sqlite/include/sqlite3.h	401;"	d
+SQLITE_INTERRUPT	sqlite/include/sqlite3.h	408;"	d
+SQLITE_IOCAP_ATOMIC	sqlite/include/sqlite3.h	560;"	d
+SQLITE_IOCAP_ATOMIC16K	sqlite/include/sqlite3.h	566;"	d
+SQLITE_IOCAP_ATOMIC1K	sqlite/include/sqlite3.h	562;"	d
+SQLITE_IOCAP_ATOMIC2K	sqlite/include/sqlite3.h	563;"	d
+SQLITE_IOCAP_ATOMIC32K	sqlite/include/sqlite3.h	567;"	d
+SQLITE_IOCAP_ATOMIC4K	sqlite/include/sqlite3.h	564;"	d
+SQLITE_IOCAP_ATOMIC512	sqlite/include/sqlite3.h	561;"	d
+SQLITE_IOCAP_ATOMIC64K	sqlite/include/sqlite3.h	568;"	d
+SQLITE_IOCAP_ATOMIC8K	sqlite/include/sqlite3.h	565;"	d
+SQLITE_IOCAP_IMMUTABLE	sqlite/include/sqlite3.h	573;"	d
+SQLITE_IOCAP_POWERSAFE_OVERWRITE	sqlite/include/sqlite3.h	572;"	d
+SQLITE_IOCAP_SAFE_APPEND	sqlite/include/sqlite3.h	569;"	d
+SQLITE_IOCAP_SEQUENTIAL	sqlite/include/sqlite3.h	570;"	d
+SQLITE_IOCAP_UNDELETABLE_WHEN_OPEN	sqlite/include/sqlite3.h	571;"	d
+SQLITE_IOERR	sqlite/include/sqlite3.h	409;"	d
+SQLITE_IOERR_ACCESS	sqlite/include/sqlite3.h	460;"	d
+SQLITE_IOERR_BLOCKED	sqlite/include/sqlite3.h	458;"	d
+SQLITE_IOERR_CHECKRESERVEDLOCK	sqlite/include/sqlite3.h	461;"	d
+SQLITE_IOERR_CLOSE	sqlite/include/sqlite3.h	463;"	d
+SQLITE_IOERR_CONVPATH	sqlite/include/sqlite3.h	473;"	d
+SQLITE_IOERR_DELETE	sqlite/include/sqlite3.h	457;"	d
+SQLITE_IOERR_DELETE_NOENT	sqlite/include/sqlite3.h	470;"	d
+SQLITE_IOERR_DIR_CLOSE	sqlite/include/sqlite3.h	464;"	d
+SQLITE_IOERR_DIR_FSYNC	sqlite/include/sqlite3.h	452;"	d
+SQLITE_IOERR_FSTAT	sqlite/include/sqlite3.h	454;"	d
+SQLITE_IOERR_FSYNC	sqlite/include/sqlite3.h	451;"	d
+SQLITE_IOERR_GETTEMPPATH	sqlite/include/sqlite3.h	472;"	d
+SQLITE_IOERR_LOCK	sqlite/include/sqlite3.h	462;"	d
+SQLITE_IOERR_MMAP	sqlite/include/sqlite3.h	471;"	d
+SQLITE_IOERR_NOMEM	sqlite/include/sqlite3.h	459;"	d
+SQLITE_IOERR_RDLOCK	sqlite/include/sqlite3.h	456;"	d
+SQLITE_IOERR_READ	sqlite/include/sqlite3.h	448;"	d
+SQLITE_IOERR_SEEK	sqlite/include/sqlite3.h	469;"	d
+SQLITE_IOERR_SHMLOCK	sqlite/include/sqlite3.h	467;"	d
+SQLITE_IOERR_SHMMAP	sqlite/include/sqlite3.h	468;"	d
+SQLITE_IOERR_SHMOPEN	sqlite/include/sqlite3.h	465;"	d
+SQLITE_IOERR_SHMSIZE	sqlite/include/sqlite3.h	466;"	d
+SQLITE_IOERR_SHORT_READ	sqlite/include/sqlite3.h	449;"	d
+SQLITE_IOERR_TRUNCATE	sqlite/include/sqlite3.h	453;"	d
+SQLITE_IOERR_UNLOCK	sqlite/include/sqlite3.h	455;"	d
+SQLITE_IOERR_WRITE	sqlite/include/sqlite3.h	450;"	d
+SQLITE_LAST_ERRNO	sqlite/include/sqlite3.h	954;"	d
+SQLITE_LIMIT_ATTACHED	sqlite/include/sqlite3.h	3115;"	d
+SQLITE_LIMIT_COLUMN	sqlite/include/sqlite3.h	3110;"	d
+SQLITE_LIMIT_COMPOUND_SELECT	sqlite/include/sqlite3.h	3112;"	d
+SQLITE_LIMIT_EXPR_DEPTH	sqlite/include/sqlite3.h	3111;"	d
+SQLITE_LIMIT_FUNCTION_ARG	sqlite/include/sqlite3.h	3114;"	d
+SQLITE_LIMIT_LENGTH	sqlite/include/sqlite3.h	3108;"	d
+SQLITE_LIMIT_LIKE_PATTERN_LENGTH	sqlite/include/sqlite3.h	3116;"	d
+SQLITE_LIMIT_SQL_LENGTH	sqlite/include/sqlite3.h	3109;"	d
+SQLITE_LIMIT_TRIGGER_DEPTH	sqlite/include/sqlite3.h	3118;"	d
+SQLITE_LIMIT_VARIABLE_NUMBER	sqlite/include/sqlite3.h	3117;"	d
+SQLITE_LIMIT_VDBE_OP	sqlite/include/sqlite3.h	3113;"	d
+SQLITE_LIMIT_WORKER_THREADS	sqlite/include/sqlite3.h	3119;"	d
+SQLITE_LOCKED	sqlite/include/sqlite3.h	405;"	d
+SQLITE_LOCKED_SHAREDCACHE	sqlite/include/sqlite3.h	474;"	d
+SQLITE_LOCK_EXCLUSIVE	sqlite/include/sqlite3.h	586;"	d
+SQLITE_LOCK_NONE	sqlite/include/sqlite3.h	582;"	d
+SQLITE_LOCK_PENDING	sqlite/include/sqlite3.h	585;"	d
+SQLITE_LOCK_RESERVED	sqlite/include/sqlite3.h	584;"	d
+SQLITE_LOCK_SHARED	sqlite/include/sqlite3.h	583;"	d
+SQLITE_MISMATCH	sqlite/include/sqlite3.h	419;"	d
+SQLITE_MISUSE	sqlite/include/sqlite3.h	420;"	d
+SQLITE_MUTEX_FAST	sqlite/include/sqlite3.h	6107;"	d
+SQLITE_MUTEX_RECURSIVE	sqlite/include/sqlite3.h	6108;"	d
+SQLITE_MUTEX_STATIC_APP1	sqlite/include/sqlite3.h	6117;"	d
+SQLITE_MUTEX_STATIC_APP2	sqlite/include/sqlite3.h	6118;"	d
+SQLITE_MUTEX_STATIC_APP3	sqlite/include/sqlite3.h	6119;"	d
+SQLITE_MUTEX_STATIC_LRU	sqlite/include/sqlite3.h	6114;"	d
+SQLITE_MUTEX_STATIC_LRU2	sqlite/include/sqlite3.h	6115;"	d
+SQLITE_MUTEX_STATIC_MASTER	sqlite/include/sqlite3.h	6109;"	d
+SQLITE_MUTEX_STATIC_MEM	sqlite/include/sqlite3.h	6110;"	d
+SQLITE_MUTEX_STATIC_MEM2	sqlite/include/sqlite3.h	6111;"	d
+SQLITE_MUTEX_STATIC_OPEN	sqlite/include/sqlite3.h	6112;"	d
+SQLITE_MUTEX_STATIC_PMEM	sqlite/include/sqlite3.h	6116;"	d
+SQLITE_MUTEX_STATIC_PRNG	sqlite/include/sqlite3.h	6113;"	d
+SQLITE_NOLFS	sqlite/include/sqlite3.h	421;"	d
+SQLITE_NOMEM	sqlite/include/sqlite3.h	406;"	d
+SQLITE_NOTADB	sqlite/include/sqlite3.h	425;"	d
+SQLITE_NOTFOUND	sqlite/include/sqlite3.h	411;"	d
+SQLITE_NOTICE	sqlite/include/sqlite3.h	426;"	d
+SQLITE_NOTICE_RECOVER_ROLLBACK	sqlite/include/sqlite3.h	498;"	d
+SQLITE_NOTICE_RECOVER_WAL	sqlite/include/sqlite3.h	497;"	d
+SQLITE_NULL	sqlite/include/sqlite3.h	3782;"	d
+SQLITE_OK	sqlite/include/sqlite3.h	398;"	d
+SQLITE_OPEN_AUTOPROXY	sqlite/include/sqlite3.h	514;"	d
+SQLITE_OPEN_CREATE	sqlite/include/sqlite3.h	511;"	d
+SQLITE_OPEN_DELETEONCLOSE	sqlite/include/sqlite3.h	512;"	d
+SQLITE_OPEN_EXCLUSIVE	sqlite/include/sqlite3.h	513;"	d
+SQLITE_OPEN_FULLMUTEX	sqlite/include/sqlite3.h	525;"	d
+SQLITE_OPEN_MAIN_DB	sqlite/include/sqlite3.h	517;"	d
+SQLITE_OPEN_MAIN_JOURNAL	sqlite/include/sqlite3.h	520;"	d
+SQLITE_OPEN_MASTER_JOURNAL	sqlite/include/sqlite3.h	523;"	d
+SQLITE_OPEN_MEMORY	sqlite/include/sqlite3.h	516;"	d
+SQLITE_OPEN_NOMUTEX	sqlite/include/sqlite3.h	524;"	d
+SQLITE_OPEN_PRIVATECACHE	sqlite/include/sqlite3.h	527;"	d
+SQLITE_OPEN_READONLY	sqlite/include/sqlite3.h	509;"	d
+SQLITE_OPEN_READWRITE	sqlite/include/sqlite3.h	510;"	d
+SQLITE_OPEN_SHAREDCACHE	sqlite/include/sqlite3.h	526;"	d
+SQLITE_OPEN_SUBJOURNAL	sqlite/include/sqlite3.h	522;"	d
+SQLITE_OPEN_TEMP_DB	sqlite/include/sqlite3.h	518;"	d
+SQLITE_OPEN_TEMP_JOURNAL	sqlite/include/sqlite3.h	521;"	d
+SQLITE_OPEN_TRANSIENT_DB	sqlite/include/sqlite3.h	519;"	d
+SQLITE_OPEN_URI	sqlite/include/sqlite3.h	515;"	d
+SQLITE_OPEN_WAL	sqlite/include/sqlite3.h	528;"	d
+SQLITE_PERM	sqlite/include/sqlite3.h	402;"	d
+SQLITE_PRAGMA	sqlite/include/sqlite3.h	2574;"	d
+SQLITE_PROTOCOL	sqlite/include/sqlite3.h	414;"	d
+SQLITE_RANGE	sqlite/include/sqlite3.h	424;"	d
+SQLITE_READ	sqlite/include/sqlite3.h	2575;"	d
+SQLITE_READONLY	sqlite/include/sqlite3.h	407;"	d
+SQLITE_READONLY_CANTLOCK	sqlite/include/sqlite3.h	483;"	d
+SQLITE_READONLY_DBMOVED	sqlite/include/sqlite3.h	485;"	d
+SQLITE_READONLY_RECOVERY	sqlite/include/sqlite3.h	482;"	d
+SQLITE_READONLY_ROLLBACK	sqlite/include/sqlite3.h	484;"	d
+SQLITE_RECURSIVE	sqlite/include/sqlite3.h	2589;"	d
+SQLITE_REINDEX	sqlite/include/sqlite3.h	2582;"	d
+SQLITE_REPLACE	sqlite/include/sqlite3.h	7412;"	d
+SQLITE_ROLLBACK	sqlite/include/sqlite3.h	7408;"	d
+SQLITE_ROW	sqlite/include/sqlite3.h	428;"	d
+SQLITE_SAVEPOINT	sqlite/include/sqlite3.h	2587;"	d
+SQLITE_SCHEMA	sqlite/include/sqlite3.h	416;"	d
+SQLITE_SELECT	sqlite/include/sqlite3.h	2576;"	d
+SQLITE_SET_LOCKPROXYFILE	sqlite/include/sqlite3.h	953;"	d
+SQLITE_SHM_EXCLUSIVE	sqlite/include/sqlite3.h	1233;"	d
+SQLITE_SHM_LOCK	sqlite/include/sqlite3.h	1231;"	d
+SQLITE_SHM_NLOCK	sqlite/include/sqlite3.h	1243;"	d
+SQLITE_SHM_SHARED	sqlite/include/sqlite3.h	1232;"	d
+SQLITE_SHM_UNLOCK	sqlite/include/sqlite3.h	1230;"	d
+SQLITE_SOURCE_ID	sqlite/include/sqlite3.h	112;"	d
+SQLITE_STATIC	sqlite/include/sqlite3.h	4384;"	d
+SQLITE_STATUS_MALLOC_COUNT	sqlite/include/sqlite3.h	6342;"	d
+SQLITE_STATUS_MALLOC_SIZE	sqlite/include/sqlite3.h	6338;"	d
+SQLITE_STATUS_MEMORY_USED	sqlite/include/sqlite3.h	6333;"	d
+SQLITE_STATUS_PAGECACHE_OVERFLOW	sqlite/include/sqlite3.h	6335;"	d
+SQLITE_STATUS_PAGECACHE_SIZE	sqlite/include/sqlite3.h	6340;"	d
+SQLITE_STATUS_PAGECACHE_USED	sqlite/include/sqlite3.h	6334;"	d
+SQLITE_STATUS_PARSER_STACK	sqlite/include/sqlite3.h	6339;"	d
+SQLITE_STATUS_SCRATCH_OVERFLOW	sqlite/include/sqlite3.h	6337;"	d
+SQLITE_STATUS_SCRATCH_SIZE	sqlite/include/sqlite3.h	6341;"	d
+SQLITE_STATUS_SCRATCH_USED	sqlite/include/sqlite3.h	6336;"	d
+SQLITE_STMTSTATUS_AUTOINDEX	sqlite/include/sqlite3.h	6536;"	d
+SQLITE_STMTSTATUS_FULLSCAN_STEP	sqlite/include/sqlite3.h	6534;"	d
+SQLITE_STMTSTATUS_SORT	sqlite/include/sqlite3.h	6535;"	d
+SQLITE_STMTSTATUS_VM_STEP	sqlite/include/sqlite3.h	6537;"	d
+SQLITE_SYNC_DATAONLY	sqlite/include/sqlite3.h	616;"	d
+SQLITE_SYNC_FULL	sqlite/include/sqlite3.h	615;"	d
+SQLITE_SYNC_NORMAL	sqlite/include/sqlite3.h	614;"	d
+SQLITE_TESTCTRL_ALWAYS	sqlite/include/sqlite3.h	6205;"	d
+SQLITE_TESTCTRL_ASSERT	sqlite/include/sqlite3.h	6204;"	d
+SQLITE_TESTCTRL_BENIGN_MALLOC_HOOKS	sqlite/include/sqlite3.h	6202;"	d
+SQLITE_TESTCTRL_BITVEC_TEST	sqlite/include/sqlite3.h	6200;"	d
+SQLITE_TESTCTRL_BYTEORDER	sqlite/include/sqlite3.h	6214;"	d
+SQLITE_TESTCTRL_EXPLAIN_STMT	sqlite/include/sqlite3.h	6211;"	d
+SQLITE_TESTCTRL_FAULT_INSTALL	sqlite/include/sqlite3.h	6201;"	d
+SQLITE_TESTCTRL_FIRST	sqlite/include/sqlite3.h	6196;"	d
+SQLITE_TESTCTRL_ISINIT	sqlite/include/sqlite3.h	6215;"	d
+SQLITE_TESTCTRL_ISKEYWORD	sqlite/include/sqlite3.h	6208;"	d
+SQLITE_TESTCTRL_LAST	sqlite/include/sqlite3.h	6217;"	d
+SQLITE_TESTCTRL_LOCALTIME_FAULT	sqlite/include/sqlite3.h	6210;"	d
+SQLITE_TESTCTRL_NEVER_CORRUPT	sqlite/include/sqlite3.h	6212;"	d
+SQLITE_TESTCTRL_OPTIMIZATIONS	sqlite/include/sqlite3.h	6207;"	d
+SQLITE_TESTCTRL_PENDING_BYTE	sqlite/include/sqlite3.h	6203;"	d
+SQLITE_TESTCTRL_PRNG_RESET	sqlite/include/sqlite3.h	6199;"	d
+SQLITE_TESTCTRL_PRNG_RESTORE	sqlite/include/sqlite3.h	6198;"	d
+SQLITE_TESTCTRL_PRNG_SAVE	sqlite/include/sqlite3.h	6197;"	d
+SQLITE_TESTCTRL_RESERVE	sqlite/include/sqlite3.h	6206;"	d
+SQLITE_TESTCTRL_SCRATCHMALLOC	sqlite/include/sqlite3.h	6209;"	d
+SQLITE_TESTCTRL_SORTER_MMAP	sqlite/include/sqlite3.h	6216;"	d
+SQLITE_TESTCTRL_VDBE_COVERAGE	sqlite/include/sqlite3.h	6213;"	d
+SQLITE_TEXT	sqlite/include/sqlite3.h	3784;"	d
+SQLITE_TEXT	sqlite/include/sqlite3.h	3786;"	d
+SQLITE_TOOBIG	sqlite/include/sqlite3.h	417;"	d
+SQLITE_TRANSACTION	sqlite/include/sqlite3.h	2577;"	d
+SQLITE_TRANSIENT	sqlite/include/sqlite3.h	4385;"	d
+SQLITE_UPDATE	sqlite/include/sqlite3.h	2578;"	d
+SQLITE_UTF16	sqlite/include/sqlite3.h	4154;"	d
+SQLITE_UTF16BE	sqlite/include/sqlite3.h	4153;"	d
+SQLITE_UTF16LE	sqlite/include/sqlite3.h	4152;"	d
+SQLITE_UTF16_ALIGNED	sqlite/include/sqlite3.h	4156;"	d
+SQLITE_UTF8	sqlite/include/sqlite3.h	4151;"	d
+SQLITE_VERSION	sqlite/include/sqlite3.h	110;"	d
+SQLITE_VERSION	sqlite/include/sqlite3.h	77;"	d
+SQLITE_VERSION_NUMBER	sqlite/include/sqlite3.h	111;"	d
+SQLITE_VERSION_NUMBER	sqlite/include/sqlite3.h	80;"	d
+SQLITE_VTAB_CONSTRAINT_SUPPORT	sqlite/include/sqlite3.h	7382;"	d
+SQLITE_WARNING	sqlite/include/sqlite3.h	427;"	d
+SQLITE_WARNING_AUTOINDEX	sqlite/include/sqlite3.h	499;"	d
+SQL_SENTENCE_MAXLEN	input_china_pinyin.c	229;"	d	file:
+SRCLST	Makefile	/^SRCLST = $(GUISRC) $(INPSRC) $(WNDSRC)$/;"	m
+SendSysMsg_ThreadCreate	guiglobal.c	/^int SendSysMsg_ThreadCreate(GUIWINDOW *pWndObj)$/;"	f
+SendSysMsg_ThreadDestroy	guiglobal.c	/^int SendSysMsg_ThreadDestroy(GUIWINDOW *pWndObj)$/;"	f
+SendWndMsg_ErrorProc	guiglobal.c	/^int SendWndMsg_ErrorProc(void *pErrData, int iDataLen, void *pRecvObj)$/;"	f
+SendWndMsg_LoopDisable	guiglobal.c	/^int SendWndMsg_LoopDisable(GUIWINDOW *pWndObj)$/;"	f
+SendWndMsg_LoopEnable	guiglobal.c	/^int SendWndMsg_LoopEnable(GUIWINDOW *pWndObj)$/;"	f
+SendWndMsg_WindowExit	guiglobal.c	/^int SendWndMsg_WindowExit(GUIWINDOW *pWndObj)$/;"	f
+SendWndMsg_WindowInit	guiglobal.c	/^int SendWndMsg_WindowInit(GUIWINDOW *pWndObj)$/;"	f
+SendWndMsg_WindowLoop	guiglobal.c	/^int SendWndMsg_WindowLoop(GUIWINDOW *pWndObj)$/;"	f
+SendWndMsg_WindowPaint	guiglobal.c	/^int SendWndMsg_WindowPaint(GUIWINDOW *pWndObj)$/;"	f
+SendWndMsg_WindowPause	guiglobal.c	/^int SendWndMsg_WindowPause(GUIWINDOW *pWndObj)$/;"	f
+SendWndMsg_WindowResume	guiglobal.c	/^int SendWndMsg_WindowResume(GUIWINDOW *pWndObj)$/;"	f
+SetBitmapPlace	guibitmap.c	/^int SetBitmapPlace(unsigned int uiPlaceX, unsigned int uiPlaceY, $/;"	f
+SetBitmapView	guibitmap.c	/^int SetBitmapView(unsigned int uiViewWidth, unsigned int uiViewHeight, $/;"	f
+SetBrushColor	guibrush.c	/^int SetBrushColor(unsigned int uiFgColor, unsigned int uiBgColor, $/;"	f
+SetCurrBrush	guibrush.c	/^int SetCurrBrush(GUIBRUSH *pBrushObj)$/;"	f
+SetCurrEvent	guievent.c	/^int SetCurrEvent(GUIEVENT *pEventObj)$/;"	f
+SetCurrFbmap	guifbmap.c	/^int SetCurrFbmap(GUIFBMAP *pFbmapObj)$/;"	f
+SetCurrFont	guifont.c	/^int SetCurrFont(GUIFONT *pFontObj)$/;"	f
+SetCurrKeypad	guikeypad.c	/^int SetCurrKeypad(GUIKEYPAD *pKeypadObj)$/;"	f
+SetCurrMessage	guimessage.c	/^int SetCurrMessage(GUIMESSAGE *pMsgObj)$/;"	f
+SetCurrPalette	guipalette.c	/^int SetCurrPalette(GUIPALETTE *pPalObj)$/;"	f
+SetCurrPen	guipen.c	/^int SetCurrPen(GUIPEN *pPenObj)$/;"	f
+SetCurrTouch	guitouch.c	/^int SetCurrTouch(GUITOUCH *pTouchObj)$/;"	f
+SetCurrWindow	guiwindow.c	/^int SetCurrWindow(GUIWINDOW *pWndObj)$/;"	f
+SetExitFlag	guischeduler.c	/^void SetExitFlag(int iFlag)$/;"	f
+SetFbmapSync	guifbmap.c	/^int SetFbmapSync(int iSyncFlag, GUIFBMAP *pFbmapObj)$/;"	f
+SetFontColor	guifont.c	/^int SetFontColor(unsigned int uiFgColor, unsigned int uiBgColor, $/;"	f
+SetFontGap	guifont.c	/^int SetFontGap(unsigned int uiLeftGap, unsigned int uiRightGap, $/;"	f
+SetImageColor	guiimage.c	/^int SetImageColor(unsigned int uiFgColor, unsigned int uiBgColor, $/;"	f
+SetImagePalette	guiimage.c	/^int SetImagePalette(GUIPALETTE *pRefPal, GUIIMAGE *pImgObj)$/;"	f
+SetImagePlace	guiimage.c	/^int SetImagePlace(unsigned int uiPlaceX, unsigned int uiPlaceY, $/;"	f
+SetLabelAlign	guilabel.c	/^int SetLabelAlign(int iLblAlign, GUILABEL *pLblObj)$/;"	f
+SetLabelArea	guilabel.c	/^int SetLabelArea(unsigned int uiStartX, unsigned int uiStartY, $/;"	f
+SetLabelBrush	guilabel.c	/^int SetLabelBrush(GUIBRUSH *pLblBrush, GUILABEL *pLblObj)$/;"	f
+SetLabelEnable	guilabel.c	/^int SetLabelEnable(int iEnable, GUILABEL *pLblObj)$/;"	f
+SetLabelFont	guilabel.c	/^int SetLabelFont(GUIFONT *pLblFont, GUILABEL *pLblObj)$/;"	f
+SetLabelPen	guilabel.c	/^int SetLabelPen(GUIPEN *pLblPen, GUILABEL *pLblObj)$/;"	f
+SetLabelText	guilabel.c	/^int SetLabelText(unsigned short *pTextData, GUILABEL *pLblObj)$/;"	f
+SetPenColor	guipen.c	/^int SetPenColor(unsigned int uiPenColor, GUIPEN *pPenObj)$/;"	f
+SetPictureArea	guipicture.c	/^int SetPictureArea(unsigned int uiStartX, unsigned int uiStartY, $/;"	f
+SetPictureBitmap	guipicture.c	/^int SetPictureBitmap(char *strBitmapFile, GUIPICTURE *pPicObj)$/;"	f
+SetPictureBrush	guipicture.c	/^int SetPictureBrush(GUIBRUSH *pPicBrush, GUIPICTURE *pPicObj)$/;"	f
+SetPictureEnable	guipicture.c	/^int SetPictureEnable(int iEnable, GUIPICTURE *pPicObj)$/;"	f
+SetPictureFont	guipicture.c	/^int SetPictureFont(GUIFONT *pPicFont, GUIPICTURE *pPicObj)$/;"	f
+SetPicturePen	guipicture.c	/^int SetPicturePen(GUIPEN *pPicPen, GUIPICTURE *pPicObj)$/;"	f
+SetTextData	guitext.c	/^int SetTextData(unsigned short *pTextData, GUITEXT *pTextObj)$/;"	f
+SetTextPlace	guitext.c	/^int SetTextPlace(unsigned int uiPlaceX, unsigned int uiPlaceY, $/;"	f
+SetTextView	guitext.c	/^int SetTextView(unsigned int uiViewWidth, unsigned int uiViewHeight, $/;"	f
+SetTouchCursor	guitouch.c	/^int SetTouchCursor(unsigned int uiCursX, unsigned int uiCursY,$/;"	f
+SetWifiMsgQueue	wnd_msgqueue.c	/^void SetWifiMsgQueue(OTDRMSGQUEUE *q)$/;"	f
+SetWindowArea	guiwindow.c	/^int SetWindowArea(unsigned int uiStartX, unsigned int uiStartY, $/;"	f
+SetWindowBrush	guiwindow.c	/^int SetWindowBrush(GUIBRUSH *pWndBrush, GUIWINDOW *pWndObj)$/;"	f
+SetWindowFont	guiwindow.c	/^int SetWindowFont(GUIFONT *pWndFont, GUIWINDOW *pWndObj)$/;"	f
+SetWindowPen	guiwindow.c	/^int SetWindowPen(GUIPEN *pWndPen, GUIWINDOW *pWndObj)$/;"	f
+ShowSingleRecord	input_china_pinyin.c	/^int ShowSingleRecord(void *pInpPara,$/;"	f
+SortByLevel	wnd_frmwifi.c	/^static void SortByLevel(int num)$/;"	f	file:
+StandardFbmapProcess	guifbmap.c	/^int StandardFbmapProcess(GUIFBMAP *pFbmapObj)$/;"	f
+StandardKeypadProcess	guikeypad.c	/^int StandardKeypadProcess(GUIKEYPAD *pKeypadObj)$/;"	f
+StandardTouchProcess	guitouch.c	/^int StandardTouchProcess(GUITOUCH *pTouchObj)$/;"	f
+Start	guibase.h	/^    GUIPOINT Start;     \/\/矩形起点，即左上角横纵坐标最小的点$/;"	m	struct:_rectangle
+StrToLower	input_china_pinyin.c	/^char* StrToLower(char *pConvStr)$/;"	f
+StringCat	guibase.c	/^GUICHAR* StringCat(GUICHAR **ppDest, GUICHAR *pSrc)$/;"	f
+StringCmp	guibase.c	/^int StringCmp(GUICHAR *pS1, GUICHAR *pS2)$/;"	f
+StringCpy	guibase.c	/^GUICHAR* StringCpy(GUICHAR **ppDest, GUICHAR *pSrc)$/;"	f
+THREADFUNC	guibase.h	/^typedef void* (*THREADFUNC)(void *arg);$/;"	t
+TableName	input_china_pinyin.c	/^static char TableName[26][9] = {$/;"	v	file:
+ThreadCancel	guibase.c	/^int ThreadCancel(GUITHREAD Thread)$/;"	f
+ThreadCreate	guibase.c	/^int ThreadCreate(GUITHREAD *pThread, GUITHREAD_ATTR *pAttr,$/;"	f
+ThreadExit	guibase.c	/^int ThreadExit(void *pReturn)$/;"	f
+ThreadJoin	guibase.c	/^int ThreadJoin(GUITHREAD Thread, void **ppReturn)$/;"	f
+ThreadTestcancel	guibase.c	/^int ThreadTestcancel(void)$/;"	f
+TransCharU	input_china_pinyin.c	/^char* TransCharU(char *pPinyinStr)$/;"	f
+TransCharV	input_china_pinyin.c	/^char* TransCharV(char *pPinyinStr)$/;"	f
+TransString	guibase.c	/^GUICHAR* TransString(char *pString)$/;"	f
+UCS2	input_china_pinyin.h	/^typedef unsigned short UCS2;$/;"	t
+UINT16	guibase.h	/^typedef unsigned short UINT16;$/;"	t
+UINT32	guibase.h	/^typedef unsigned int UINT32;$/;"	t
+UINT8	guibase.h	/^typedef unsigned char UINT8;$/;"	t
+UTF8	input_china_pinyin.h	/^typedef unsigned char UTF8;$/;"	t
+UTF8_STORE_MAXLEN	input_china_pinyin.h	30;"	d
+UTF8_VALID_MAXLEN	input_china_pinyin.h	29;"	d
+Ucs2ToUtf8	input_china_pinyin.c	/^UTF8* Ucs2ToUtf8(UCS2 *pUcs2Code)$/;"	f
+UnloadBitmapImage	guibitmap.c	/^int UnloadBitmapImage(GUIBITMAP *pBitmapObj)$/;"	f
+UnloadTextMatrix	guitext.c	/^int UnloadTextMatrix(GUITEXT *pTextObj)$/;"	f
+UnlockCurrWindow	guiwindow.c	/^int UnlockCurrWindow(void)$/;"	f
+UnlockWindowThread	guischeduler.c	/^int UnlockWindowThread(void)$/;"	f
+Utf8ToUcs2	input_china_pinyin.c	/^UCS2* Utf8ToUcs2(UTF8 *pUtf8Code)$/;"	f
+V	Makefile	/^V = 0$/;"	m
+Visible	guibase.h	/^    GUIVISIBLE Visible;$/;"	m	struct:_component
+Visible	guilabel.h	/^    GUIVISIBLE Visible;         \/\/可视信息，任何窗体控件都必须将其作为第一个成员$/;"	m	struct:_label
+Visible	guipicture.h	/^    GUIVISIBLE Visible;         \/\/可视信息，任何窗体控件都必须将其作为第一个成员$/;"	m	struct:_picture
+Visible	guiwindow.h	/^    GUIVISIBLE Visible;     \/\/窗体的可视信息$/;"	m	struct:_window
+WIFIITEM	wnd_frmwifi.c	118;"	d	file:
+WIFI_INFO	wnd_frmwifi.h	/^}WIFI_INFO, *PWIFI_INFO;$/;"	t	typeref:struct:_wifi_info
+WIFI_S	wnd_frmwifi.h	/^}WIFI_S;$/;"	t	typeref:enum:_wifi_state
+WNDFUNC	guiwindow.h	/^typedef int (*WNDFUNC)(void *pWndObj);$/;"	t
+WNDOBJ	Makefile	/^WNDOBJ = $(patsubst .\/%.c,.\/obj\/%.o,$(WNDSRC))$/;"	m
+WNDSRC	Makefile	/^WNDSRC = $(wildcard .\/wnd*.c)$/;"	m
+WiFiBtnEnableOff_Down	wnd_frmwifi.c	/^static int WiFiBtnEnableOff_Down(void *pInArg,   int iInLen, $/;"	f	file:
+WiFiBtnEnableOff_Up	wnd_frmwifi.c	/^static int WiFiBtnEnableOff_Up(void *pInArg,   int iInLen, $/;"	f	file:
+WiFiBtnEnableOn_Down	wnd_frmwifi.c	/^static int WiFiBtnEnableOn_Down(void *pInArg,   int iInLen, $/;"	f	file:
+WiFiBtnEnableOn_Up	wnd_frmwifi.c	/^static int WiFiBtnEnableOn_Up(void *pInArg,   int iInLen, $/;"	f	file:
+WiFiBtnItemSSID_Down	wnd_frmwifi.c	/^static int WiFiBtnItemSSID_Down(void *pInArg,   int iInLen, $/;"	f	file:
+WiFiBtnItemSSID_Up	wnd_frmwifi.c	/^static int WiFiBtnItemSSID_Up(void *pInArg,   int iInLen, $/;"	f	file:
+WiFiBtnMenu_Down	wnd_frmwifi.c	/^static int WiFiBtnMenu_Down(void *pInArg, int iInLen, $/;"	f	file:
+WiFiBtnMenu_Up	wnd_frmwifi.c	/^static int WiFiBtnMenu_Up(void *pInArg, int iInLen, $/;"	f	file:
+WiFiTextRes_Exit	wnd_frmwifi.c	/^static int WiFiTextRes_Exit(void *pInArg, int iInLen, $/;"	f	file:
+WiFiTextRes_Init	wnd_frmwifi.c	/^static int WiFiTextRes_Init(void *pInArg, int iInLen, $/;"	f	file:
+WiFiWndKey_Down	wnd_frmwifi.c	/^static int WiFiWndKey_Down(void *pInArg, int iInLen, $/;"	f	file:
+WiFiWndKey_Up	wnd_frmwifi.c	/^static int WiFiWndKey_Up(void *pInArg, int iInLen, $/;"	f	file:
+WifiOpen	wnd_frmwifi.c	/^static void WifiOpen()$/;"	f	file:
+WifiScan	wnd_frmwifi.c	/^static void WifiScan()$/;"	f	file:
+WifiScan_r	wnd_frmwifi.c	/^static void WifiScan_r()$/;"	f	file:
+WindowSchedulerThread	guischeduler.c	/^void* WindowSchedulerThread(void *pThreadArg)$/;"	f
+WordList	input_china_pinyin.h	/^} WordList;$/;"	t	typeref:struct:__anon1
+WriteEventQueue	guievent.c	/^int WriteEventQueue(GUIEVENT_ITEM *pEventItem, GUIEVENT *pEventObj)$/;"	f
+WriteMessageQueue	guimessage.c	/^int WriteMessageQueue(GUIMESSAGE_ITEM *pMsgItem, GUIMESSAGE *pMsgObj)$/;"	f
+WriteOTDRMsgQueue	wnd_msgqueue.c	/^void WriteOTDRMsgQueue(int key, OTDRMSGQUEUE *pObjQueue)$/;"	f
+WriteWifiMsgQueue	wnd_msgqueue.c	/^void WriteWifiMsgQueue(int key)$/;"	f
+_APP_FRMOTDRMESSAGE_H	wnd_msgqueue.h	20;"	d
+_DrawBias16	guidraw.c	/^void _DrawBias16(COLOR value, $/;"	f
+_DrawBias24	guidraw.c	/^void _DrawBias24(COLOR value, $/;"	f
+_DrawBias32	guidraw.c	/^void _DrawBias32(COLOR value, $/;"	f
+_DrawBias8	guidraw.c	/^void _DrawBias8(COLOR value, $/;"	f
+_DrawBlock16	guidraw.c	/^void _DrawBlock16(COLOR value, $/;"	f
+_DrawBlock24	guidraw.c	/^void _DrawBlock24(COLOR value, $/;"	f
+_DrawBlock32	guidraw.c	/^void _DrawBlock32(COLOR value, $/;"	f
+_DrawBlock8	guidraw.c	/^void _DrawBlock8(COLOR value, $/;"	f
+_DrawCircle16	guidraw.c	/^void _DrawCircle16(COLOR value,$/;"	f
+_DrawCircle24	guidraw.c	/^void _DrawCircle24(COLOR value,$/;"	f
+_DrawCircle32	guidraw.c	/^void _DrawCircle32(COLOR value,$/;"	f
+_DrawCircle8	guidraw.c	/^void _DrawCircle8(COLOR value,$/;"	f
+_DrawHor16	guidraw.c	/^void _DrawHor16(COLOR value, $/;"	f
+_DrawHor24	guidraw.c	/^void _DrawHor24(COLOR value, $/;"	f
+_DrawHor32	guidraw.c	/^void _DrawHor32(COLOR value, $/;"	f
+_DrawHor8	guidraw.c	/^void _DrawHor8(COLOR value, $/;"	f
+_DrawPixel16	guidraw.c	/^void _DrawPixel16(COLOR value, $/;"	f
+_DrawPixel24	guidraw.c	/^void _DrawPixel24(COLOR value, $/;"	f
+_DrawPixel32	guidraw.c	/^void _DrawPixel32(COLOR value, $/;"	f
+_DrawPixel8	guidraw.c	/^void _DrawPixel8(COLOR value,$/;"	f
+_DrawVer16	guidraw.c	/^void _DrawVer16(COLOR value, $/;"	f
+_DrawVer24	guidraw.c	/^void _DrawVer24(COLOR value, $/;"	f
+_DrawVer32	guidraw.c	/^void _DrawVer32(COLOR value, $/;"	f
+_DrawVer8	guidraw.c	/^void _DrawVer8(COLOR value, $/;"	f
+_GUI_BASE_H	guibase.h	20;"	d
+_GUI_BITMAP_H	guibitmap.h	19;"	d
+_GUI_BRUSH_H	guibrush.h	19;"	d
+_GUI_CONFIG_H	guiconfig.h	19;"	d
+_GUI_DEVICE_H	guidevice.h	20;"	d
+_GUI_DRAW_H	guidraw.h	19;"	d
+_GUI_EVENT_H	guievent.h	20;"	d
+_GUI_FBMAP_H	guifbmap.h	21;"	d
+_GUI_FONT_H	guifont.h	19;"	d
+_GUI_GLOBAL_H	guiglobal.h	19;"	d
+_GUI_IMAGE_H	guiimage.h	20;"	d
+_GUI_KEYPAD_H	guikeypad.h	21;"	d
+_GUI_LABEL_H	guilabel.h	19;"	d
+_GUI_MESSAGE_H	guimessage.h	20;"	d
+_GUI_PALETTE_H	guipalette.h	19;"	d
+_GUI_PEN_H	guipen.h	19;"	d
+_GUI_PICTURE_H	guipicture.h	19;"	d
+_GUI_SCHEDULER_H	guischeduler.h	19;"	d
+_GUI_TEXT_H	guitext.h	20;"	d
+_GUI_TOUCH_H	guitouch.h	21;"	d
+_GUI_WINDOW_H	guiwindow.h	19;"	d
+_Image1Fb16	guiimage.c	/^void _Image1Fb16(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image1Fb24	guiimage.c	/^void _Image1Fb24(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image1Fb32	guiimage.c	/^void _Image1Fb32(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image1Fb8	guiimage.c	/^void _Image1Fb8(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image24Fb16	guiimage.c	/^void _Image24Fb16(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image24Fb24	guiimage.c	/^void _Image24Fb24(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image24Fb32	guiimage.c	/^void _Image24Fb32(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image24Fb8	guiimage.c	/^void _Image24Fb8(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image8Fb16	guiimage.c	/^void _Image8Fb16(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image8Fb24	guiimage.c	/^void _Image8Fb24(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image8Fb32	guiimage.c	/^void _Image8Fb32(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_Image8Fb8	guiimage.c	/^void _Image8Fb8(GUIIMAGE *pimg, GUIFBMAP *pfbmap)$/;"	f
+_SQLITE3EXT_H_	sqlite/include/sqlite3ext.h	19;"	d
+_SQLITE3RTREE_H_	sqlite/include/sqlite3.h	7443;"	d
+_SQLITE3_H_	sqlite/include/sqlite3.h	34;"	d
+_WND_FRMINIT_H	wnd_frminit.h	19;"	d
+_WND_FRMMAIN_H	wnd_frmmain.h	19;"	d
+_WND_FRMWIFI_H_	wnd_frmwifi.h	19;"	d
+_bitmap	guibitmap.h	/^typedef struct _bitmap$/;"	s
+_bitmap_fileheader	guibitmap.h	/^typedef struct _bitmap_fileheader$/;"	s
+_bitmap_infoheader	guibitmap.h	/^typedef struct _bitmap_infoheader$/;"	s
+_bitmap_rgbquad	guibitmap.h	/^typedef struct _bitmap_rgbquad$/;"	s
+_brush	guibrush.h	/^typedef struct _brush$/;"	s
+_component	guibase.h	/^typedef struct _component$/;"	s
+_event	guievent.h	/^typedef struct _event$/;"	s
+_event_item	guievent.h	/^typedef struct _event_item$/;"	s
+_fbmap	guifbmap.h	/^typedef struct _fbmap$/;"	s
+_font	guifont.h	/^typedef struct _font$/;"	s
+_font_fileheader	guifont.h	/^typedef struct _font_fileheader$/;"	s
+_font_matrix	guifont.h	/^typedef struct _font_matrix$/;"	s
+_font_segmentmap	guifont.h	/^typedef struct _font_segmentmap$/;"	s
+_hookpar	guibase.h	/^typedef struct _hookpar$/;"	s
+_image	guiimage.h	/^typedef struct _image$/;"	s
+_keypad	guikeypad.h	/^typedef struct _keypad$/;"	s
+_label	guilabel.h	/^typedef struct _label$/;"	s
+_list	guibase.h	/^typedef struct _list$/;"	s
+_list_item	guibase.h	/^typedef struct _list_item$/;"	s
+_message	guimessage.h	/^typedef struct _message$/;"	s
+_message_item	guimessage.h	/^typedef struct _message_item$/;"	s
+_message_reg	guimessage.h	/^typedef struct _message_reg$/;"	s
+_object	guibase.h	/^typedef struct _object$/;"	s
+_otdr_msg_queue	wnd_msgqueue.h	/^typedef struct _otdr_msg_queue$/;"	s
+_palette	guipalette.h	/^typedef struct _palette$/;"	s
+_pen	guipen.h	/^typedef struct _pen$/;"	s
+_picture	guipicture.h	/^typedef struct _picture$/;"	s
+_point	guibase.h	/^typedef struct _point$/;"	s
+_rectangle	guibase.h	/^typedef struct _rectangle$/;"	s
+_rectangle_relation	guibase.h	/^typedef enum _rectangle_relation$/;"	g
+_text	guitext.h	/^typedef struct _text$/;"	s
+_touch	guitouch.h	/^typedef struct _touch$/;"	s
+_visible	guibase.h	/^typedef struct _visible$/;"	s
+_wifi_info	wnd_frmwifi.h	/^typedef struct _wifi_info$/;"	s
+_wifi_state	wnd_frmwifi.h	/^typedef enum _wifi_state$/;"	g
+_window	guiwindow.h	/^typedef struct _window$/;"	s
+aConstraint	sqlite/include/sqlite3.h	/^  } *aConstraint;            \/* Table of WHERE clause constraints *\/$/;"	m	struct:sqlite3_index_info	typeref:struct:sqlite3_index_info::sqlite3_index_constraint
+aConstraintUsage	sqlite/include/sqlite3.h	/^  } *aConstraintUsage;$/;"	m	struct:sqlite3_index_info	typeref:struct:sqlite3_index_info::sqlite3_index_constraint_usage
+aCoord	sqlite/include/sqlite3.h	/^  sqlite3_rtree_dbl *aCoord;        \/* Coordinates of node or entry to check *\/$/;"	m	struct:sqlite3_rtree_query_info
+aOrderBy	sqlite/include/sqlite3.h	/^  } *aOrderBy;               \/* The ORDER BY clause *\/$/;"	m	struct:sqlite3_index_info	typeref:struct:sqlite3_index_info::sqlite3_index_orderby
+aParam	sqlite/include/sqlite3.h	/^  sqlite3_rtree_dbl *aParam;        \/* value of function parameters *\/$/;"	m	struct:sqlite3_rtree_query_info
+aParam	sqlite/include/sqlite3.h	/^  sqlite3_rtree_dbl *aParam;      \/* Parameters passed to SQL geom function *\/$/;"	m	struct:sqlite3_rtree_geometry
+able	wnd_frmwifi.h	/^	int able;$/;"	m	struct:_wifi_info
+aggregate_context	sqlite/include/sqlite3ext.h	/^  void * (*aggregate_context)(sqlite3_context*,int nBytes);$/;"	m	struct:sqlite3_api_routines
+aggregate_count	sqlite/include/sqlite3ext.h	/^  int  (*aggregate_count)(sqlite3_context*);$/;"	m	struct:sqlite3_api_routines
+anQueue	sqlite/include/sqlite3.h	/^  unsigned int *anQueue;            \/* Number of pending entries in the queue *\/$/;"	m	struct:sqlite3_rtree_query_info
+argvIndex	sqlite/include/sqlite3.h	/^    int argvIndex;           \/* if >0, constraint is part of argv to xFilter *\/$/;"	m	struct:sqlite3_index_info::sqlite3_index_constraint_usage
+auto_extension	sqlite/include/sqlite3ext.h	/^  int (*auto_extension)(void(*)(void));$/;"	m	struct:sqlite3_api_routines
+backup_finish	sqlite/include/sqlite3ext.h	/^  int (*backup_finish)(sqlite3_backup*);$/;"	m	struct:sqlite3_api_routines
+backup_init	sqlite/include/sqlite3ext.h	/^  sqlite3_backup *(*backup_init)(sqlite3*,const char*,sqlite3*,const char*);$/;"	m	struct:sqlite3_api_routines
+backup_pagecount	sqlite/include/sqlite3ext.h	/^  int (*backup_pagecount)(sqlite3_backup*);$/;"	m	struct:sqlite3_api_routines
+backup_remaining	sqlite/include/sqlite3ext.h	/^  int (*backup_remaining)(sqlite3_backup*);$/;"	m	struct:sqlite3_api_routines
+backup_step	sqlite/include/sqlite3ext.h	/^  int (*backup_step)(sqlite3_backup*,int);$/;"	m	struct:sqlite3_api_routines
+bind_blob	sqlite/include/sqlite3ext.h	/^  int  (*bind_blob)(sqlite3_stmt*,int,const void*,int n,void(*)(void*));$/;"	m	struct:sqlite3_api_routines
+bind_blob64	sqlite/include/sqlite3ext.h	/^  int (*bind_blob64)(sqlite3_stmt*,int,const void*,sqlite3_uint64,$/;"	m	struct:sqlite3_api_routines
+bind_double	sqlite/include/sqlite3ext.h	/^  int  (*bind_double)(sqlite3_stmt*,int,double);$/;"	m	struct:sqlite3_api_routines
+bind_int	sqlite/include/sqlite3ext.h	/^  int  (*bind_int)(sqlite3_stmt*,int,int);$/;"	m	struct:sqlite3_api_routines
+bind_int64	sqlite/include/sqlite3ext.h	/^  int  (*bind_int64)(sqlite3_stmt*,int,sqlite_int64);$/;"	m	struct:sqlite3_api_routines
+bind_null	sqlite/include/sqlite3ext.h	/^  int  (*bind_null)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+bind_parameter_count	sqlite/include/sqlite3ext.h	/^  int  (*bind_parameter_count)(sqlite3_stmt*);$/;"	m	struct:sqlite3_api_routines
+bind_parameter_index	sqlite/include/sqlite3ext.h	/^  int  (*bind_parameter_index)(sqlite3_stmt*,const char*zName);$/;"	m	struct:sqlite3_api_routines
+bind_parameter_name	sqlite/include/sqlite3ext.h	/^  const char * (*bind_parameter_name)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+bind_text	sqlite/include/sqlite3ext.h	/^  int  (*bind_text)(sqlite3_stmt*,int,const char*,int n,void(*)(void*));$/;"	m	struct:sqlite3_api_routines
+bind_text16	sqlite/include/sqlite3ext.h	/^  int  (*bind_text16)(sqlite3_stmt*,int,const void*,int,void(*)(void*));$/;"	m	struct:sqlite3_api_routines
+bind_text64	sqlite/include/sqlite3ext.h	/^  int (*bind_text64)(sqlite3_stmt*,int,const char*,sqlite3_uint64,$/;"	m	struct:sqlite3_api_routines
+bind_value	sqlite/include/sqlite3ext.h	/^  int  (*bind_value)(sqlite3_stmt*,int,const sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+bind_zeroblob	sqlite/include/sqlite3ext.h	/^  int (*bind_zeroblob)(sqlite3_stmt*,int,int);$/;"	m	struct:sqlite3_api_routines
+bitmask_high	guibase.h	83;"	d
+bitmask_low	guibase.h	84;"	d
+blob_bytes	sqlite/include/sqlite3ext.h	/^  int (*blob_bytes)(sqlite3_blob*);$/;"	m	struct:sqlite3_api_routines
+blob_close	sqlite/include/sqlite3ext.h	/^  int (*blob_close)(sqlite3_blob*);$/;"	m	struct:sqlite3_api_routines
+blob_open	sqlite/include/sqlite3ext.h	/^  int (*blob_open)(sqlite3*,const char*,const char*,const char*,sqlite3_int64,$/;"	m	struct:sqlite3_api_routines
+blob_read	sqlite/include/sqlite3ext.h	/^  int (*blob_read)(sqlite3_blob*,void*,int,int);$/;"	m	struct:sqlite3_api_routines
+blob_reopen	sqlite/include/sqlite3ext.h	/^  int (*blob_reopen)(sqlite3_blob*,sqlite3_int64);$/;"	m	struct:sqlite3_api_routines
+blob_write	sqlite/include/sqlite3ext.h	/^  int (*blob_write)(sqlite3_blob*,const void*,int,int);$/;"	m	struct:sqlite3_api_routines
+busy_handler	sqlite/include/sqlite3ext.h	/^  int  (*busy_handler)(sqlite3*,int(*)(void*,int),void*);$/;"	m	struct:sqlite3_api_routines
+busy_timeout	sqlite/include/sqlite3ext.h	/^  int  (*busy_timeout)(sqlite3*,int ms);$/;"	m	struct:sqlite3_api_routines
+cancel_auto_extension	sqlite/include/sqlite3ext.h	/^  int (*cancel_auto_extension)(void(*)(void));$/;"	m	struct:sqlite3_api_routines
+changes	sqlite/include/sqlite3ext.h	/^  int  (*changes)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+clear_bindings	sqlite/include/sqlite3ext.h	/^  int (*clear_bindings)(sqlite3_stmt*);$/;"	m	struct:sqlite3_api_routines
+close	sqlite/include/sqlite3ext.h	/^  int  (*close)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+close_v2	sqlite/include/sqlite3ext.h	/^  int (*close_v2)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+collation_needed	sqlite/include/sqlite3ext.h	/^  int  (*collation_needed)(sqlite3*,void*,void(*)(void*,sqlite3*,$/;"	m	struct:sqlite3_api_routines
+collation_needed16	sqlite/include/sqlite3ext.h	/^  int  (*collation_needed16)(sqlite3*,void*,void(*)(void*,sqlite3*,$/;"	m	struct:sqlite3_api_routines
+column_blob	sqlite/include/sqlite3ext.h	/^  const void * (*column_blob)(sqlite3_stmt*,int iCol);$/;"	m	struct:sqlite3_api_routines
+column_bytes	sqlite/include/sqlite3ext.h	/^  int  (*column_bytes)(sqlite3_stmt*,int iCol);$/;"	m	struct:sqlite3_api_routines
+column_bytes16	sqlite/include/sqlite3ext.h	/^  int  (*column_bytes16)(sqlite3_stmt*,int iCol);$/;"	m	struct:sqlite3_api_routines
+column_count	sqlite/include/sqlite3ext.h	/^  int  (*column_count)(sqlite3_stmt*pStmt);$/;"	m	struct:sqlite3_api_routines
+column_database_name	sqlite/include/sqlite3ext.h	/^  const char * (*column_database_name)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+column_database_name16	sqlite/include/sqlite3ext.h	/^  const void * (*column_database_name16)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+column_decltype	sqlite/include/sqlite3ext.h	/^  const char * (*column_decltype)(sqlite3_stmt*,int i);$/;"	m	struct:sqlite3_api_routines
+column_decltype16	sqlite/include/sqlite3ext.h	/^  const void * (*column_decltype16)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+column_double	sqlite/include/sqlite3ext.h	/^  double  (*column_double)(sqlite3_stmt*,int iCol);$/;"	m	struct:sqlite3_api_routines
+column_int	sqlite/include/sqlite3ext.h	/^  int  (*column_int)(sqlite3_stmt*,int iCol);$/;"	m	struct:sqlite3_api_routines
+column_int64	sqlite/include/sqlite3ext.h	/^  sqlite_int64  (*column_int64)(sqlite3_stmt*,int iCol);$/;"	m	struct:sqlite3_api_routines
+column_name	sqlite/include/sqlite3ext.h	/^  const char * (*column_name)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+column_name16	sqlite/include/sqlite3ext.h	/^  const void * (*column_name16)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+column_origin_name	sqlite/include/sqlite3ext.h	/^  const char * (*column_origin_name)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+column_origin_name16	sqlite/include/sqlite3ext.h	/^  const void * (*column_origin_name16)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+column_table_name	sqlite/include/sqlite3ext.h	/^  const char * (*column_table_name)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+column_table_name16	sqlite/include/sqlite3ext.h	/^  const void * (*column_table_name16)(sqlite3_stmt*,int);$/;"	m	struct:sqlite3_api_routines
+column_text	sqlite/include/sqlite3ext.h	/^  const unsigned char * (*column_text)(sqlite3_stmt*,int iCol);$/;"	m	struct:sqlite3_api_routines
+column_text16	sqlite/include/sqlite3ext.h	/^  const void * (*column_text16)(sqlite3_stmt*,int iCol);$/;"	m	struct:sqlite3_api_routines
+column_type	sqlite/include/sqlite3ext.h	/^  int  (*column_type)(sqlite3_stmt*,int iCol);$/;"	m	struct:sqlite3_api_routines
+column_value	sqlite/include/sqlite3ext.h	/^  sqlite3_value* (*column_value)(sqlite3_stmt*,int iCol);$/;"	m	struct:sqlite3_api_routines
+commit_hook	sqlite/include/sqlite3ext.h	/^  void * (*commit_hook)(sqlite3*,int(*)(void*),void*);$/;"	m	struct:sqlite3_api_routines
+compileoption_get	sqlite/include/sqlite3ext.h	/^  const char *(*compileoption_get)(int);$/;"	m	struct:sqlite3_api_routines
+compileoption_used	sqlite/include/sqlite3ext.h	/^  int (*compileoption_used)(const char*);$/;"	m	struct:sqlite3_api_routines
+complete	sqlite/include/sqlite3ext.h	/^  int  (*complete)(const char*sql);$/;"	m	struct:sqlite3_api_routines
+complete16	sqlite/include/sqlite3ext.h	/^  int  (*complete16)(const void*sql);$/;"	m	struct:sqlite3_api_routines
+container_of	guibase.h	308;"	d
+context_db_handle	sqlite/include/sqlite3ext.h	/^  sqlite3 *(*context_db_handle)(sqlite3_context*);$/;"	m	struct:sqlite3_api_routines
+create_collation	sqlite/include/sqlite3ext.h	/^  int  (*create_collation)(sqlite3*,const char*,int,void*,$/;"	m	struct:sqlite3_api_routines
+create_collation16	sqlite/include/sqlite3ext.h	/^  int  (*create_collation16)(sqlite3*,const void*,int,void*,$/;"	m	struct:sqlite3_api_routines
+create_collation_v2	sqlite/include/sqlite3ext.h	/^  int (*create_collation_v2)(sqlite3*,const char*,int,void*,$/;"	m	struct:sqlite3_api_routines
+create_function	sqlite/include/sqlite3ext.h	/^  int  (*create_function)(sqlite3*,const char*,int,int,void*,$/;"	m	struct:sqlite3_api_routines
+create_function16	sqlite/include/sqlite3ext.h	/^  int  (*create_function16)(sqlite3*,const void*,int,int,void*,$/;"	m	struct:sqlite3_api_routines
+create_function_v2	sqlite/include/sqlite3ext.h	/^  int (*create_function_v2)(sqlite3*,const char*,int,int,void*,$/;"	m	struct:sqlite3_api_routines
+create_module	sqlite/include/sqlite3ext.h	/^  int (*create_module)(sqlite3*,const char*,const sqlite3_module*,void*);$/;"	m	struct:sqlite3_api_routines
+create_module_v2	sqlite/include/sqlite3ext.h	/^  int (*create_module_v2)(sqlite3*,const char*,const sqlite3_module*,void*,$/;"	m	struct:sqlite3_api_routines
+data_count	sqlite/include/sqlite3ext.h	/^  int  (*data_count)(sqlite3_stmt*pStmt);$/;"	m	struct:sqlite3_api_routines
+db_config	sqlite/include/sqlite3ext.h	/^  int (*db_config)(sqlite3*,int,...);$/;"	m	struct:sqlite3_api_routines
+db_filename	sqlite/include/sqlite3ext.h	/^  const char *(*db_filename)(sqlite3*,const char*);$/;"	m	struct:sqlite3_api_routines
+db_handle	sqlite/include/sqlite3ext.h	/^  sqlite3 * (*db_handle)(sqlite3_stmt*);$/;"	m	struct:sqlite3_api_routines
+db_mutex	sqlite/include/sqlite3ext.h	/^  sqlite3_mutex *(*db_mutex)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+db_readonly	sqlite/include/sqlite3ext.h	/^  int (*db_readonly)(sqlite3*,const char*);$/;"	m	struct:sqlite3_api_routines
+db_release_memory	sqlite/include/sqlite3ext.h	/^  int (*db_release_memory)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+db_status	sqlite/include/sqlite3ext.h	/^  int (*db_status)(sqlite3*,int,int*,int*,int);$/;"	m	struct:sqlite3_api_routines
+declare_vtab	sqlite/include/sqlite3ext.h	/^  int (*declare_vtab)(sqlite3*,const char*);$/;"	m	struct:sqlite3_api_routines
+desc	sqlite/include/sqlite3.h	/^     unsigned char desc;       \/* True for DESC.  False for ASC. *\/$/;"	m	struct:sqlite3_index_info::sqlite3_index_orderby
+double	sqlite/include/sqlite3.h	264;"	d
+double	sqlite/include/sqlite3.h	7421;"	d
+eParentWithin	sqlite/include/sqlite3.h	/^  int eParentWithin;                \/* Visibility of parent node *\/$/;"	m	struct:sqlite3_rtree_query_info
+eWithin	sqlite/include/sqlite3.h	/^  int eWithin;                      \/* OUT: Visiblity *\/$/;"	m	struct:sqlite3_rtree_query_info
+enable_shared_cache	sqlite/include/sqlite3ext.h	/^  int  (*enable_shared_cache)(int);$/;"	m	struct:sqlite3_api_routines
+enuOverlap	guibase.h	/^    enuOverlap     = 3  \/\/矩形之间有部分重叠$/;"	e	enum:_rectangle_relation
+enuOverlay	guibase.h	/^    enuOverlay     = 1, \/\/矩形之间存在完全覆盖$/;"	e	enum:_rectangle_relation
+enuPortion	guibase.h	/^    enuPortion     = 2, \/\/矩形之间存在完全包含$/;"	e	enum:_rectangle_relation
+enuSeparate	guibase.h	/^    enuSeparate    = 0, \/\/矩形之间彼此是分离的$/;"	e	enum:_rectangle_relation
+errcode	sqlite/include/sqlite3ext.h	/^  int  (*errcode)(sqlite3*db);$/;"	m	struct:sqlite3_api_routines
+errmsg	sqlite/include/sqlite3ext.h	/^  const char * (*errmsg)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+errmsg16	sqlite/include/sqlite3ext.h	/^  const void * (*errmsg16)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+errstr	sqlite/include/sqlite3ext.h	/^  const char *(*errstr)(int);$/;"	m	struct:sqlite3_api_routines
+estimatedCost	sqlite/include/sqlite3.h	/^  double estimatedCost;           \/* Estimated cost of using this index *\/$/;"	m	struct:sqlite3_index_info
+estimatedRows	sqlite/include/sqlite3.h	/^  sqlite3_int64 estimatedRows;    \/* Estimated number of rows returned *\/$/;"	m	struct:sqlite3_index_info
+exec	sqlite/include/sqlite3ext.h	/^  int  (*exec)(sqlite3*,const char*,sqlite3_callback,void*,char**);$/;"	m	struct:sqlite3_api_routines
+expired	sqlite/include/sqlite3ext.h	/^  int  (*expired)(sqlite3_stmt*);$/;"	m	struct:sqlite3_api_routines
+extended_errcode	sqlite/include/sqlite3ext.h	/^  int (*extended_errcode)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+extended_result_codes	sqlite/include/sqlite3ext.h	/^  int (*extended_result_codes)(sqlite3*,int);$/;"	m	struct:sqlite3_api_routines
+file_control	sqlite/include/sqlite3ext.h	/^  int (*file_control)(sqlite3*,const char*,int,void*);$/;"	m	struct:sqlite3_api_routines
+finalize	sqlite/include/sqlite3ext.h	/^  int  (*finalize)(sqlite3_stmt*pStmt);$/;"	m	struct:sqlite3_api_routines
+fnDestroy	guibase.h	/^    DESTFUNC fnDestroy; \/\/可视控件的对象删除函数$/;"	m	struct:_visible
+fnDisplay	guibase.h	/^    DISPFUNC fnDisplay; \/\/可视控件的显示输出函数$/;"	m	struct:_visible
+fnEventThread	guievent.h	/^    THREADFUNC fnEventThread;   \/\/线程函数，用于创建事件封装线程$/;"	m	struct:_event
+fnFbThread	guifbmap.h	/^    THREADFUNC fnFbThread;      \/\/回调函数，用于创建帧缓冲线程$/;"	m	struct:_fbmap
+fnKeypadThread	guikeypad.h	/^    THREADFUNC fnKeypadThread;  \/\/回调函数，用于创建键盘线程$/;"	m	struct:_keypad
+fnMsgFunc	guimessage.h	/^    MSGFUNC fnMsgFunc;      \/\/用于处理消息的函数$/;"	m	struct:_message_reg
+fnTouchThread	guitouch.h	/^    THREADFUNC fnTouchThread;   \/\/回调函数，用于创建触摸屏线程$/;"	m	struct:_touch
+fnWndExit	guiwindow.h	/^    WNDFUNC fnWndExit;      \/\/指向窗体退出函数，完成消息注销及资源回收$/;"	m	struct:_window
+fnWndInit	guiwindow.h	/^    WNDFUNC fnWndInit;      \/\/指向窗体初始化函数，完成资源分配及消息注册等$/;"	m	struct:_window
+fnWndLoop	guiwindow.h	/^    WNDFUNC fnWndLoop;      \/\/指向窗体循环函数，完成窗体循环处理，为空则忽略$/;"	m	struct:_window
+fnWndPaint	guiwindow.h	/^    WNDFUNC fnWndPaint;     \/\/指向窗体绘制函数，完成窗体控件的绘制$/;"	m	struct:_window
+fnWndPause	guiwindow.h	/^    WNDFUNC fnWndPause;     \/\/指向窗体挂起函数，完成挂起前预处理，为空则忽略$/;"	m	struct:_window
+fnWndResume	guiwindow.h	/^    WNDFUNC fnWndResume;    \/\/指向窗体恢复函数，完成恢复前预处理，为空则忽略$/;"	m	struct:_window
+fnWndThread	guiwindow.h	/^    THREADFUNC fnWndThread; \/\/用于创建窗体处理线程，为空使用系统的窗体处理线程$/;"	m	struct:_window
+free	sqlite/include/sqlite3ext.h	/^  void  (*free)(void*);$/;"	m	struct:sqlite3_api_routines
+free_table	sqlite/include/sqlite3ext.h	/^  void  (*free_table)(char**result);$/;"	m	struct:sqlite3_api_routines
+g_Status	wnd_frmwifi.c	/^unsigned long g_Status = 0;						\/\/ wifi的当前状态，每一位代表一种状态，通过宏定义进行操作$/;"	v
+g_pWiFiSecEncryTypePath	wnd_frmwifi.c	/^static char *g_pWiFiSecEncryTypePath[] = {$/;"	v	file:
+g_pWiFiUnSecEncryTypePath	wnd_frmwifi.c	/^static char *g_pWiFiUnSecEncryTypePath[] = {$/;"	v	file:
+g_pWiFiUnSecStrengthPath	wnd_frmwifi.c	/^static char *g_pWiFiUnSecStrengthPath[]  = {$/;"	v	file:
+get_autocommit	sqlite/include/sqlite3ext.h	/^  int  (*get_autocommit)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+get_auxdata	sqlite/include/sqlite3ext.h	/^  void * (*get_auxdata)(sqlite3_context*,int);$/;"	m	struct:sqlite3_api_routines
+get_table	sqlite/include/sqlite3ext.h	/^  int  (*get_table)(sqlite3*,const char*,char***,int*,int*,char**);$/;"	m	struct:sqlite3_api_routines
+global_recover	sqlite/include/sqlite3ext.h	/^  int  (*global_recover)(void);$/;"	m	struct:sqlite3_api_routines
+head	wnd_msgqueue.h	/^	int head, tail;$/;"	m	struct:_otdr_msg_queue
+iAddCount	input_china_pinyin.h	/^    int iAddCount;  \/\/when iAddCount == iWordCount, pWordCode[] Full$/;"	m	struct:__anon1
+iBitmapFd	guibitmap.h	/^    int iBitmapFd;              \/\/位图文件描述符$/;"	m	struct:_bitmap
+iBrushType	guibrush.h	/^    int iBrushType;         \/\/画刷类型，目前只支持纯色画刷$/;"	m	struct:_brush
+iCell	wnd_frmwifi.h	/^	int iCell;$/;"	m	struct:_wifi_info
+iColumn	sqlite/include/sqlite3.h	/^     int iColumn;              \/* Column number *\/$/;"	m	struct:sqlite3_index_info::sqlite3_index_orderby
+iColumn	sqlite/include/sqlite3.h	/^     int iColumn;              \/* Column on left-hand side of constraint *\/$/;"	m	struct:sqlite3_index_info::sqlite3_index_constraint
+iCount	guibase.h	/^    int iCount;                 \/\/列表项计数，0 <= iCount <= iLimit$/;"	m	struct:_list
+iCursor	guibase.h	/^    int iCursor;        \/\/可视控件是否具有光标，0无光标，1有光标$/;"	m	struct:_visible
+iDevFd	guifbmap.h	/^    int iDevFd;                 \/\/帧缓冲设备文件描述符$/;"	m	struct:_fbmap
+iDevFd	guikeypad.h	/^    int iDevFd;                 \/\/键盘设备文件描述符$/;"	m	struct:_keypad
+iDevFd	guitouch.h	/^    int iDevFd;                 \/\/触摸屏设备文件描述符$/;"	m	struct:_touch
+iDevType	guifbmap.h	/^    int iDevType;               \/\/帧缓冲设备类型，1标准、2双缓冲$/;"	m	struct:_fbmap
+iDevType	guikeypad.h	/^    int iDevType;               \/\/键盘设备类型，1表示标准、2表示自定义$/;"	m	struct:_keypad
+iDevType	guitouch.h	/^    int iDevType;               \/\/触摸屏设备类型，1表示标准、2表示自定义$/;"	m	struct:_touch
+iEnable	guibase.h	/^    int iEnable;        \/\/可视控件是否可见，0不可见，1可见$/;"	m	struct:_visible
+iExitFlag	guischeduler.c	/^static int iExitFlag = 0;$/;"	v	file:
+iFocus	guibase.h	/^    int iFocus;         \/\/可视控件是否具有焦点，0无焦点，1有焦点$/;"	m	struct:_visible
+iFontFd	guifont.h	/^    int iFontFd;                \/\/字体文件描述符$/;"	m	struct:_font
+iHeadPos	input_china_pinyin.h	/^    int iHeadPos;   \/\/view set:pWordCode[iHeadPos]~pWordCode[iTailPos]$/;"	m	struct:__anon1
+iLayer	guibase.h	/^    int iLayer;         \/\/可视控件所处的图层，其值必须>=0，0为最底层$/;"	m	struct:_visible
+iLblAlign	guilabel.h	/^    int iLblAlign;              \/\/标签文本对齐方式，0靠左，1靠右，2居中，默认0$/;"	m	struct:_label
+iLength	guibase.h	/^    int iLength;        \/\/对象长度，GUIOBJ中所包含对象的长度(主要用于窗体控件)$/;"	m	struct:_object
+iLevel	sqlite/include/sqlite3.h	/^  int iLevel;                       \/* Level of current node or entry *\/$/;"	m	struct:sqlite3_rtree_query_info
+iLevel	wnd_frmwifi.h	/^	int iLevel;$/;"	m	struct:_wifi_info
+iLimit	guibase.h	/^    int iLimit;                 \/\/列表项限制，iLimit >= iCount >= 0$/;"	m	struct:_list
+iMsgCode	guimessage.h	/^    int iMsgCode;               \/\/消息编码，WND_EXIT，KEY_UP…，<0自定义编码$/;"	m	struct:_message_item
+iMsgCode	guimessage.h	/^    int iMsgCode;           \/\/消息编码，用于匹配消息处理函数$/;"	m	struct:_message_reg
+iMsgType	guimessage.h	/^    int iMsgType;               \/\/消息类型，1系统消息，2窗体消息，<0自定义类型$/;"	m	struct:_message_item
+iOutLength	guimessage.h	/^    int iOutLength;         \/\/传出参数的长度$/;"	m	struct:_message_reg
+iPalLength	guipalette.h	/^    int iPalLength;             \/\/调色板长度，即有多少个颜色，取值范围为1~256$/;"	m	struct:_palette
+iPenType	guipen.h	/^    int iPenType;               \/\/画笔类型，目前只支持实线画笔$/;"	m	struct:_pen
+iPenWidth	guipen.h	/^    int iPenWidth;              \/\/画笔宽度，目前只支持宽度为1$/;"	m	struct:_pen
+iRowid	sqlite/include/sqlite3.h	/^  sqlite3_int64 iRowid;             \/* Rowid for current entry *\/$/;"	m	struct:sqlite3_rtree_query_info
+iSelOffset	input_china_pinyin.h	/^    int iSelOffset; \/\/select word:pWordCode[iHeadPos+iSelOffset]$/;"	m	struct:__anon1
+iSyncFlag	guifbmap.h	/^    int iSyncFlag;              \/\/同步标志，当输入缓冲需要同步刷新时置1$/;"	m	struct:_fbmap
+iTailPos	input_china_pinyin.h	/^    int iTailPos;   \/\/view set:pWordCode[iHeadPos]~pWordCode[iTailPos]$/;"	m	struct:__anon1
+iTermOffset	sqlite/include/sqlite3.h	/^     int iTermOffset;          \/* Used internally - xBestIndex should ignore *\/$/;"	m	struct:sqlite3_index_info::sqlite3_index_constraint
+iType	guibase.h	/^    int iType;          \/\/对象类型，GUIOBJ中所包含对象的类型(主要用于窗体控件)$/;"	m	struct:_object
+iValueLength	guimessage.h	/^    int iValueLength;           \/\/消息数值的长度，当消息数值为某个指针时有效$/;"	m	struct:_message_item
+iVersion	sqlite/include/sqlite3.h	/^  int iVersion;            \/* Structure version number (currently 3) *\/$/;"	m	struct:sqlite3_vfs
+iVersion	sqlite/include/sqlite3.h	/^  int iVersion;$/;"	m	struct:sqlite3_io_methods
+iVersion	sqlite/include/sqlite3.h	/^  int iVersion;$/;"	m	struct:sqlite3_module
+iVersion	sqlite/include/sqlite3.h	/^  int iVersion;$/;"	m	struct:sqlite3_pcache_methods2
+iViewLen	input_china_pinyin.h	/^    int iViewLen;   \/\/view set length$/;"	m	struct:__anon1
+iWordCount	input_china_pinyin.h	/^    int iWordCount; \/\/count of all word$/;"	m	struct:__anon1
+idxNum	sqlite/include/sqlite3.h	/^  int idxNum;                \/* Number used to identify the index *\/$/;"	m	struct:sqlite3_index_info
+idxStr	sqlite/include/sqlite3.h	/^  char *idxStr;              \/* String, possibly obtained from sqlite3_malloc *\/$/;"	m	struct:sqlite3_index_info
+inlen	guibase.h	/^    int inlen;$/;"	m	struct:_hookpar
+inpar	guibase.h	/^    void *inpar;$/;"	m	struct:_hookpar
+interruptx	sqlite/include/sqlite3ext.h	/^  void  (*interruptx)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+last_insert_rowid	sqlite/include/sqlite3ext.h	/^  sqlite_int64  (*last_insert_rowid)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+libversion	sqlite/include/sqlite3ext.h	/^  const char * (*libversion)(void);$/;"	m	struct:sqlite3_api_routines
+libversion_number	sqlite/include/sqlite3ext.h	/^  int  (*libversion_number)(void);$/;"	m	struct:sqlite3_api_routines
+limit	sqlite/include/sqlite3ext.h	/^  int (*limit)(sqlite3*,int,int);$/;"	m	struct:sqlite3_api_routines
+list_next_each	guibase.h	279;"	d
+list_prev_each	guibase.h	282;"	d
+load_extension	sqlite/include/sqlite3ext.h	/^  int (*load_extension)(sqlite3*,const char*,const char*,char**);$/;"	m	struct:sqlite3_api_routines
+log	sqlite/include/sqlite3ext.h	/^  void (*log)(int,const char*,...);$/;"	m	struct:sqlite3_api_routines
+main	wnd_main.c	/^int main(int argc, char *argv[])$/;"	f
+malloc	sqlite/include/sqlite3ext.h	/^  void *(*malloc)(int);$/;"	m	struct:sqlite3_api_routines
+malloc64	sqlite/include/sqlite3ext.h	/^  void *(*malloc64)(sqlite3_uint64);$/;"	m	struct:sqlite3_api_routines
+memory_highwater	sqlite/include/sqlite3ext.h	/^  sqlite3_int64 (*memory_highwater)(int);$/;"	m	struct:sqlite3_api_routines
+memory_used	sqlite/include/sqlite3ext.h	/^  sqlite3_int64 (*memory_used)(void);$/;"	m	struct:sqlite3_api_routines
+mfgets	wnd_frmwifi.c	/^static char * mfgets(char * buffer, int size, FILE * stream)$/;"	f	file:
+mprintf	sqlite/include/sqlite3ext.h	/^  char * (*mprintf)(const char*,...);$/;"	m	struct:sqlite3_api_routines
+msize	sqlite/include/sqlite3ext.h	/^  sqlite3_uint64 (*msize)(void*);$/;"	m	struct:sqlite3_api_routines
+mutexExitFlag	guischeduler.c	/^static GUIMUTEX mutexExitFlag;$/;"	v	file:
+mutexThreadLock	guischeduler.c	/^static GUIMUTEX mutexThreadLock;$/;"	v	file:
+mutexWndLock	guiwindow.c	/^static GUIMUTEX mutexWndLock;$/;"	v	file:
+mutex_alloc	sqlite/include/sqlite3ext.h	/^  sqlite3_mutex *(*mutex_alloc)(int);$/;"	m	struct:sqlite3_api_routines
+mutex_enter	sqlite/include/sqlite3ext.h	/^  void (*mutex_enter)(sqlite3_mutex*);$/;"	m	struct:sqlite3_api_routines
+mutex_free	sqlite/include/sqlite3ext.h	/^  void (*mutex_free)(sqlite3_mutex*);$/;"	m	struct:sqlite3_api_routines
+mutex_leave	sqlite/include/sqlite3ext.h	/^  void (*mutex_leave)(sqlite3_mutex*);$/;"	m	struct:sqlite3_api_routines
+mutex_try	sqlite/include/sqlite3ext.h	/^  int (*mutex_try)(sqlite3_mutex*);$/;"	m	struct:sqlite3_api_routines
+mxLevel	sqlite/include/sqlite3.h	/^  int mxLevel;                      \/* The largest iLevel value in the tree *\/$/;"	m	struct:sqlite3_rtree_query_info
+mxPathname	sqlite/include/sqlite3.h	/^  int mxPathname;          \/* Maximum file pathname length *\/$/;"	m	struct:sqlite3_vfs
+nConstraint	sqlite/include/sqlite3.h	/^  int nConstraint;           \/* Number of entries in aConstraint *\/$/;"	m	struct:sqlite3_index_info
+nCoord	sqlite/include/sqlite3.h	/^  int nCoord;                       \/* Number of coordinates *\/$/;"	m	struct:sqlite3_rtree_query_info
+nOrderBy	sqlite/include/sqlite3.h	/^  int nOrderBy;              \/* Number of terms in the ORDER BY clause *\/$/;"	m	struct:sqlite3_index_info
+nParam	sqlite/include/sqlite3.h	/^  int nParam;                       \/* Number of function parameters *\/$/;"	m	struct:sqlite3_rtree_query_info
+nParam	sqlite/include/sqlite3.h	/^  int nParam;                     \/* Size of array aParam[] *\/$/;"	m	struct:sqlite3_rtree_geometry
+nRef	sqlite/include/sqlite3.h	/^  int nRef;                       \/* NO LONGER USED *\/$/;"	m	struct:sqlite3_vtab
+needToFreeIdxStr	sqlite/include/sqlite3.h	/^  int needToFreeIdxStr;      \/* Free idxStr using sqlite3_free() if true *\/$/;"	m	struct:sqlite3_index_info
+next_stmt	sqlite/include/sqlite3ext.h	/^  sqlite3_stmt *(*next_stmt)(sqlite3*,sqlite3_stmt*);$/;"	m	struct:sqlite3_api_routines
+omit	sqlite/include/sqlite3.h	/^    unsigned char omit;      \/* Do not code a test for this constraint *\/$/;"	m	struct:sqlite3_index_info::sqlite3_index_constraint_usage
+op	sqlite/include/sqlite3.h	/^     unsigned char op;         \/* Constraint operator *\/$/;"	m	struct:sqlite3_index_info::sqlite3_index_constraint
+open	sqlite/include/sqlite3ext.h	/^  int  (*open)(const char*,sqlite3**);$/;"	m	struct:sqlite3_api_routines
+open16	sqlite/include/sqlite3ext.h	/^  int  (*open16)(const void*,sqlite3**);$/;"	m	struct:sqlite3_api_routines
+open_v2	sqlite/include/sqlite3ext.h	/^  int (*open_v2)(const char*,sqlite3**,int,const char*);$/;"	m	struct:sqlite3_api_routines
+orderByConsumed	sqlite/include/sqlite3.h	/^  int orderByConsumed;       \/* True if output is already ordered *\/$/;"	m	struct:sqlite3_index_info
+outlen	guibase.h	/^    int outlen;$/;"	m	struct:_hookpar
+outpar	guibase.h	/^    void *outpar;$/;"	m	struct:_hookpar
+overload_function	sqlite/include/sqlite3ext.h	/^  int (*overload_function)(sqlite3*, const char *zFuncName, int nArg);$/;"	m	struct:sqlite3_api_routines
+pAppData	sqlite/include/sqlite3.h	/^  void *pAppData;                \/* Argument to xInit() and xShutdown() *\/$/;"	m	struct:sqlite3_mem_methods
+pAppData	sqlite/include/sqlite3.h	/^  void *pAppData;          \/* Pointer to application-specific data *\/$/;"	m	struct:sqlite3_vfs
+pArg	sqlite/include/sqlite3.h	/^  void *pArg;$/;"	m	struct:sqlite3_pcache_methods
+pArg	sqlite/include/sqlite3.h	/^  void *pArg;$/;"	m	struct:sqlite3_pcache_methods2
+pBitmapImg	guibitmap.h	/^    GUIIMAGE *pBitmapImg;       \/\/位图所对应的图像资源$/;"	m	struct:_bitmap
+pBlueValue	guipalette.h	/^    unsigned char *pBlueValue;  \/\/指针，用于访问颜色表中各颜色的蓝色分量$/;"	m	struct:_palette
+pBuf	sqlite/include/sqlite3.h	/^  void *pBuf;        \/* The content of the page *\/$/;"	m	struct:sqlite3_pcache_page
+pContext	sqlite/include/sqlite3.h	/^  void *pContext;                   \/* pContext from when function registered *\/$/;"	m	struct:sqlite3_rtree_query_info
+pContext	sqlite/include/sqlite3.h	/^  void *pContext;                 \/* Copy of pContext passed to s_r_g_c() *\/$/;"	m	struct:sqlite3_rtree_geometry
+pCurrBrush	guibrush.c	/^static GUIBRUSH *pCurrBrush = NULL;$/;"	v	file:
+pCurrEvent	guievent.c	/^static GUIEVENT *pCurrEvent = NULL;$/;"	v	file:
+pCurrFbmap	guifbmap.c	/^static GUIFBMAP *pCurrFbmap = NULL;$/;"	v	file:
+pCurrFont	guifont.c	/^static GUIFONT *pCurrFont = NULL;$/;"	v	file:
+pCurrKeypad	guikeypad.c	/^static GUIKEYPAD *pCurrKeypad = NULL;$/;"	v	file:
+pCurrMessage	guimessage.c	/^static GUIMESSAGE *pCurrMessage = NULL;$/;"	v	file:
+pCurrPalette	guipalette.c	/^static GUIPALETTE *pCurrPalette = NULL;$/;"	v	file:
+pCurrPen	guipen.c	/^static GUIPEN *pCurrPen = NULL;$/;"	v	file:
+pCurrTouch	guitouch.c	/^static GUITOUCH *pCurrTouch = NULL;$/;"	v	file:
+pCurrWindow	guiwindow.c	/^static GUIWINDOW *pCurrWindow = NULL;$/;"	v	file:
+pEnvBrush	guiglobal.c	/^static GUIBRUSH *pEnvBrush = NULL;$/;"	v	file:
+pEnvEvent	guiglobal.c	/^static GUIEVENT *pEnvEvent = NULL;$/;"	v	file:
+pEnvFbmap	guiglobal.c	/^static GUIFBMAP *pEnvFbmap = NULL;$/;"	v	file:
+pEnvFont	guiglobal.c	/^static GUIFONT *pEnvFont = NULL;$/;"	v	file:
+pEnvKeypad	guiglobal.c	/^static GUIKEYPAD *pEnvKeypad = NULL;$/;"	v	file:
+pEnvMessage	guiglobal.c	/^static GUIMESSAGE *pEnvMessage = NULL;$/;"	v	file:
+pEnvPalette	guiglobal.c	/^static GUIPALETTE *pEnvPalette = NULL;$/;"	v	file:
+pEnvPen	guiglobal.c	/^static GUIPEN *pEnvPen = NULL;$/;"	v	file:
+pEnvTouch	guiglobal.c	/^static GUITOUCH *pEnvTouch = NULL;$/;"	v	file:
+pEventQueue	guievent.h	/^    GUILIST *pEventQueue;       \/\/输入事件队列，输入抽象层利用其保存标准输入事件$/;"	m	struct:_event
+pExtra	sqlite/include/sqlite3.h	/^  void *pExtra;      \/* Extra information associated with the page *\/$/;"	m	struct:sqlite3_pcache_page
+pFbEntry	guifbmap.h	/^    void *pFbEntry;             \/\/经mmap()映射后得到的帧缓冲入口$/;"	m	struct:_fbmap
+pFrmInit	wnd_frminit.c	/^static GUIWINDOW *pFrmInit = NULL;$/;"	v	file:
+pFrmMain	wnd_frmmain.c	/^static GUIWINDOW *pFrmMain = NULL;$/;"	v	file:
+pFrmWiFi	wnd_frmwifi.c	/^static GUIWINDOW *pFrmWiFi = NULL;$/;"	v	file:
+pGreenValue	guipalette.h	/^    unsigned char *pGreenValue; \/\/指针，用于访问颜色表中各颜色的绿色分量$/;"	m	struct:_palette
+pHead	guibase.h	/^    GUILIST_ITEM *pHead;        \/\/指向列表头$/;"	m	struct:_list
+pImgData	guiimage.h	/^    unsigned char *pImgData;    \/\/图像数据$/;"	m	struct:_image
+pInitBgDesk	wnd_frminit.c	/^static GUIPICTURE *pInitBgDesk = NULL;$/;"	v	file:
+pInpDb	input_china_pinyin.c	/^static INPUTDB *pInpDb = NULL;$/;"	v	file:
+pLblBrush	guilabel.h	/^    GUIBRUSH *pLblBrush;        \/\/标签使用的画刷，为NULL则使用GUI中的当前画刷$/;"	m	struct:_label
+pLblFont	guilabel.h	/^    GUIFONT *pLblFont;          \/\/标签使用的字体，为NULL则使用GUI中的当前字体$/;"	m	struct:_label
+pLblPen	guilabel.h	/^    GUIPEN *pLblPen;            \/\/标签使用的画笔，为NULL则使用GUI中的当前画笔$/;"	m	struct:_label
+pLblText	guilabel.h	/^    GUITEXT *pLblText;          \/\/标签所对应的文本资源$/;"	m	struct:_label
+pMainBarInfo	wnd_frmmain.c	/^static GUIPICTURE *pMainBarInfo = NULL;$/;"	v	file:
+pMainBarStatus	wnd_frmmain.c	/^static GUIPICTURE *pMainBarStatus = NULL;$/;"	v	file:
+pMainBgDesk	wnd_frmmain.c	/^static GUIPICTURE *pMainBgDesk = NULL;$/;"	v	file:
+pMainLblA	wnd_frmmain.c	/^static GUILABEL *pMainLblA = NULL;$/;"	v	file:
+pMainLblB	wnd_frmmain.c	/^static GUILABEL *pMainLblB = NULL;$/;"	v	file:
+pMainLblBackspace	wnd_frmmain.c	/^static GUILABEL *pMainLblBackspace = NULL;$/;"	v	file:
+pMainLblC	wnd_frmmain.c	/^static GUILABEL *pMainLblC = NULL;$/;"	v	file:
+pMainLblD	wnd_frmmain.c	/^static GUILABEL *pMainLblD = NULL;$/;"	v	file:
+pMainLblDown	wnd_frmmain.c	/^static GUILABEL *pMainLblDown = NULL;$/;"	v	file:
+pMainLblE	wnd_frmmain.c	/^static GUILABEL *pMainLblE = NULL;$/;"	v	file:
+pMainLblEnter	wnd_frmmain.c	/^static GUILABEL *pMainLblEnter = NULL;$/;"	v	file:
+pMainLblF	wnd_frmmain.c	/^static GUILABEL *pMainLblF = NULL;$/;"	v	file:
+pMainLblG	wnd_frmmain.c	/^static GUILABEL *pMainLblG = NULL;$/;"	v	file:
+pMainLblH	wnd_frmmain.c	/^static GUILABEL *pMainLblH = NULL;$/;"	v	file:
+pMainLblI	wnd_frmmain.c	/^static GUILABEL *pMainLblI = NULL;$/;"	v	file:
+pMainLblJ	wnd_frmmain.c	/^static GUILABEL *pMainLblJ = NULL;$/;"	v	file:
+pMainLblK	wnd_frmmain.c	/^static GUILABEL *pMainLblK = NULL;$/;"	v	file:
+pMainLblL	wnd_frmmain.c	/^static GUILABEL *pMainLblL = NULL;$/;"	v	file:
+pMainLblM	wnd_frmmain.c	/^static GUILABEL *pMainLblM = NULL;$/;"	v	file:
+pMainLblN	wnd_frmmain.c	/^static GUILABEL *pMainLblN = NULL;$/;"	v	file:
+pMainLblO	wnd_frmmain.c	/^static GUILABEL *pMainLblO = NULL;$/;"	v	file:
+pMainLblP	wnd_frmmain.c	/^static GUILABEL *pMainLblP = NULL;$/;"	v	file:
+pMainLblPinyin	wnd_frmmain.c	/^static GUILABEL *pMainLblPinyin = NULL;$/;"	v	file:
+pMainLblQ	wnd_frmmain.c	/^static GUILABEL *pMainLblQ = NULL;$/;"	v	file:
+pMainLblR	wnd_frmmain.c	/^static GUILABEL *pMainLblR = NULL;$/;"	v	file:
+pMainLblS	wnd_frmmain.c	/^static GUILABEL *pMainLblS = NULL;$/;"	v	file:
+pMainLblSelect	wnd_frmmain.c	/^static GUILABEL *pMainLblSelect = NULL;$/;"	v	file:
+pMainLblSet	wnd_frmmain.c	/^static GUILABEL *pMainLblSet = NULL;$/;"	v	file:
+pMainLblT	wnd_frmmain.c	/^static GUILABEL *pMainLblT = NULL;$/;"	v	file:
+pMainLblU	wnd_frmmain.c	/^static GUILABEL *pMainLblU = NULL;$/;"	v	file:
+pMainLblUp	wnd_frmmain.c	/^static GUILABEL *pMainLblUp = NULL;$/;"	v	file:
+pMainLblV	wnd_frmmain.c	/^static GUILABEL *pMainLblV = NULL;$/;"	v	file:
+pMainLblW	wnd_frmmain.c	/^static GUILABEL *pMainLblW = NULL;$/;"	v	file:
+pMainLblWord0	wnd_frmmain.c	/^static GUILABEL *pMainLblWord0 = NULL;$/;"	v	file:
+pMainLblWord1	wnd_frmmain.c	/^static GUILABEL *pMainLblWord1 = NULL;$/;"	v	file:
+pMainLblWord2	wnd_frmmain.c	/^static GUILABEL *pMainLblWord2 = NULL;$/;"	v	file:
+pMainLblWord3	wnd_frmmain.c	/^static GUILABEL *pMainLblWord3 = NULL;$/;"	v	file:
+pMainLblWord4	wnd_frmmain.c	/^static GUILABEL *pMainLblWord4 = NULL;$/;"	v	file:
+pMainLblWord5	wnd_frmmain.c	/^static GUILABEL *pMainLblWord5 = NULL;$/;"	v	file:
+pMainLblWord6	wnd_frmmain.c	/^static GUILABEL *pMainLblWord6 = NULL;$/;"	v	file:
+pMainLblWord7	wnd_frmmain.c	/^static GUILABEL *pMainLblWord7 = NULL;$/;"	v	file:
+pMainLblWord8	wnd_frmmain.c	/^static GUILABEL *pMainLblWord8 = NULL;$/;"	v	file:
+pMainLblWord9	wnd_frmmain.c	/^static GUILABEL *pMainLblWord9 = NULL;$/;"	v	file:
+pMainLblX	wnd_frmmain.c	/^static GUILABEL *pMainLblX = NULL;$/;"	v	file:
+pMainLblY	wnd_frmmain.c	/^static GUILABEL *pMainLblY = NULL;$/;"	v	file:
+pMainLblZ	wnd_frmmain.c	/^static GUILABEL *pMainLblZ = NULL;$/;"	v	file:
+pMainStrA	wnd_frmmain.c	/^static GUICHAR *pMainStrA = NULL;$/;"	v	file:
+pMainStrB	wnd_frmmain.c	/^static GUICHAR *pMainStrB = NULL;$/;"	v	file:
+pMainStrBackspace	wnd_frmmain.c	/^static GUICHAR *pMainStrBackspace = NULL;$/;"	v	file:
+pMainStrC	wnd_frmmain.c	/^static GUICHAR *pMainStrC = NULL;$/;"	v	file:
+pMainStrD	wnd_frmmain.c	/^static GUICHAR *pMainStrD = NULL;$/;"	v	file:
+pMainStrDown	wnd_frmmain.c	/^static GUICHAR *pMainStrDown = NULL;$/;"	v	file:
+pMainStrE	wnd_frmmain.c	/^static GUICHAR *pMainStrE = NULL;$/;"	v	file:
+pMainStrEnter	wnd_frmmain.c	/^static GUICHAR *pMainStrEnter = NULL;$/;"	v	file:
+pMainStrF	wnd_frmmain.c	/^static GUICHAR *pMainStrF = NULL;$/;"	v	file:
+pMainStrG	wnd_frmmain.c	/^static GUICHAR *pMainStrG = NULL;$/;"	v	file:
+pMainStrH	wnd_frmmain.c	/^static GUICHAR *pMainStrH = NULL;$/;"	v	file:
+pMainStrI	wnd_frmmain.c	/^static GUICHAR *pMainStrI = NULL;$/;"	v	file:
+pMainStrJ	wnd_frmmain.c	/^static GUICHAR *pMainStrJ = NULL;$/;"	v	file:
+pMainStrK	wnd_frmmain.c	/^static GUICHAR *pMainStrK = NULL;$/;"	v	file:
+pMainStrL	wnd_frmmain.c	/^static GUICHAR *pMainStrL = NULL;$/;"	v	file:
+pMainStrM	wnd_frmmain.c	/^static GUICHAR *pMainStrM = NULL;$/;"	v	file:
+pMainStrN	wnd_frmmain.c	/^static GUICHAR *pMainStrN = NULL;$/;"	v	file:
+pMainStrO	wnd_frmmain.c	/^static GUICHAR *pMainStrO = NULL;$/;"	v	file:
+pMainStrP	wnd_frmmain.c	/^static GUICHAR *pMainStrP = NULL;$/;"	v	file:
+pMainStrPinyin	wnd_frmmain.c	/^static GUICHAR *pMainStrPinyin = NULL;$/;"	v	file:
+pMainStrQ	wnd_frmmain.c	/^static GUICHAR *pMainStrQ = NULL;$/;"	v	file:
+pMainStrR	wnd_frmmain.c	/^static GUICHAR *pMainStrR = NULL;$/;"	v	file:
+pMainStrS	wnd_frmmain.c	/^static GUICHAR *pMainStrS = NULL;$/;"	v	file:
+pMainStrSelect	wnd_frmmain.c	/^static GUICHAR *pMainStrSelect = NULL;$/;"	v	file:
+pMainStrSet	wnd_frmmain.c	/^static GUICHAR *pMainStrSet = NULL;$/;"	v	file:
+pMainStrT	wnd_frmmain.c	/^static GUICHAR *pMainStrT = NULL;$/;"	v	file:
+pMainStrU	wnd_frmmain.c	/^static GUICHAR *pMainStrU = NULL;$/;"	v	file:
+pMainStrUp	wnd_frmmain.c	/^static GUICHAR *pMainStrUp = NULL;$/;"	v	file:
+pMainStrV	wnd_frmmain.c	/^static GUICHAR *pMainStrV = NULL;$/;"	v	file:
+pMainStrW	wnd_frmmain.c	/^static GUICHAR *pMainStrW = NULL;$/;"	v	file:
+pMainStrWord0	wnd_frmmain.c	/^static GUICHAR *pMainStrWord0 = NULL;$/;"	v	file:
+pMainStrWord1	wnd_frmmain.c	/^static GUICHAR *pMainStrWord1 = NULL;$/;"	v	file:
+pMainStrWord2	wnd_frmmain.c	/^static GUICHAR *pMainStrWord2 = NULL;$/;"	v	file:
+pMainStrWord3	wnd_frmmain.c	/^static GUICHAR *pMainStrWord3 = NULL;$/;"	v	file:
+pMainStrWord4	wnd_frmmain.c	/^static GUICHAR *pMainStrWord4 = NULL;$/;"	v	file:
+pMainStrWord5	wnd_frmmain.c	/^static GUICHAR *pMainStrWord5 = NULL;$/;"	v	file:
+pMainStrWord6	wnd_frmmain.c	/^static GUICHAR *pMainStrWord6 = NULL;$/;"	v	file:
+pMainStrWord7	wnd_frmmain.c	/^static GUICHAR *pMainStrWord7 = NULL;$/;"	v	file:
+pMainStrWord8	wnd_frmmain.c	/^static GUICHAR *pMainStrWord8 = NULL;$/;"	v	file:
+pMainStrWord9	wnd_frmmain.c	/^static GUICHAR *pMainStrWord9 = NULL;$/;"	v	file:
+pMainStrX	wnd_frmmain.c	/^static GUICHAR *pMainStrX = NULL;$/;"	v	file:
+pMainStrY	wnd_frmmain.c	/^static GUICHAR *pMainStrY = NULL;$/;"	v	file:
+pMainStrZ	wnd_frmmain.c	/^static GUICHAR *pMainStrZ = NULL;$/;"	v	file:
+pMainWordSet	wnd_frmmain.c	/^static WordList *pMainWordSet = NULL;$/;"	v	file:
+pMapBuff	guifbmap.h	/^    void *pMapBuff;             \/\/输入缓冲，GUI对象总是将其自身绘制到该缓冲$/;"	m	struct:_fbmap
+pMatrixData	guifont.h	/^    unsigned char *pMatrixData; \/\/点阵数据，其每行数据存储时都按8位对齐并靠左$/;"	m	struct:_font_matrix
+pMethods	sqlite/include/sqlite3.h	/^  const struct sqlite3_io_methods *pMethods;  \/* Methods for an open file *\/$/;"	m	struct:sqlite3_file	typeref:struct:sqlite3_file::sqlite3_io_methods
+pModule	sqlite/include/sqlite3.h	/^  const sqlite3_module *pModule;  \/* The module for this virtual table *\/$/;"	m	struct:sqlite3_vtab
+pMsgQueue	guimessage.h	/^    GUILIST *pMsgQueue;     \/\/消息队列，用于保存GUI消息$/;"	m	struct:_message
+pMsgReg	guimessage.h	/^    GUILIST *pMsgReg;       \/\/注册信息，用于保存消息注册项$/;"	m	struct:_message
+pNext	guibase.h	/^    struct _list_item *pNext;   \/\/下一个列表项$/;"	m	struct:_list_item	typeref:struct:_list_item::_list_item
+pNext	sqlite/include/sqlite3.h	/^  sqlite3_vfs *pNext;      \/* Next registered VFS *\/$/;"	m	struct:sqlite3_vfs
+pObj	guibase.h	/^    void *pObj;         \/\/包含对象，所包含的特定GUI对象$/;"	m	struct:_object
+pOutArg	guimessage.h	/^    void *pOutArg;          \/\/消息处理函数的传出参数$/;"	m	struct:_message_reg
+pOwner	guibase.h	/^    struct _list *pOwner;       \/\/指向列表头$/;"	m	struct:_list_item	typeref:struct:_list_item::_list
+pPicBitmap	guipicture.h	/^    GUIBITMAP *pPicBitmap;      \/\/图形框所对应的位图资源$/;"	m	struct:_picture
+pPicBrush	guipicture.h	/^    GUIBRUSH *pPicBrush;        \/\/图形框使用的画刷，为NULL则使用GUI中的当前画刷$/;"	m	struct:_picture
+pPicFont	guipicture.h	/^    GUIFONT *pPicFont;          \/\/图形框使用的字体，为NULL则使用GUI中的当前字体$/;"	m	struct:_picture
+pPicPen	guipicture.h	/^    GUIPEN *pPicPen;            \/\/图形框使用的画笔，为NULL则使用GUI中的当前画笔$/;"	m	struct:_picture
+pPrev	guibase.h	/^    struct _list_item *pPrev;   \/\/前一个列表项$/;"	m	struct:_list_item	typeref:struct:_list_item::_list_item
+pRecvObj	guimessage.h	/^    void *pRecvObj;             \/\/消息接收对象，用于匹配消息处理函数$/;"	m	struct:_message_item
+pRecvObj	guimessage.h	/^    void *pRecvObj;         \/\/消息接收对象，用于匹配消息处理函数$/;"	m	struct:_message_reg
+pRedValue	guipalette.h	/^    unsigned char *pRedValue;   \/\/指针，用于访问颜色表中各颜色的红色分量$/;"	m	struct:_palette
+pRefPal	guiimage.h	/^    GUIPALETTE *pRefPal;        \/\/图像引用的调色板，当uiImgDepth为8时使用$/;"	m	struct:_image
+pResume	guibase.h	/^    void *pResume;      \/\/保存被覆盖区域的图像，用于恢复显示$/;"	m	struct:_visible
+pTabEntry	guipalette.h	/^    unsigned char *pTabEntry;   \/\/调色板颜色表的入口地址$/;"	m	struct:_palette
+pTail	guibase.h	/^    GUILIST_ITEM *pTail;        \/\/指向列表尾$/;"	m	struct:_list
+pTextData	guitext.h	/^    unsigned short *pTextData;      \/\/文本内容，以'\\0'结尾$/;"	m	struct:_text
+pUser	sqlite/include/sqlite3.h	/^  void *pUser;                      \/* callback can use this, if desired *\/$/;"	m	struct:sqlite3_rtree_query_info
+pUser	sqlite/include/sqlite3.h	/^  void *pUser;                    \/* Callback implementation user data *\/$/;"	m	struct:sqlite3_rtree_geometry
+pVtab	sqlite/include/sqlite3.h	/^  sqlite3_vtab *pVtab;      \/* Virtual table of this cursor *\/$/;"	m	struct:sqlite3_vtab_cursor
+pWiFiBtnLeftBg	wnd_frmwifi.c	/^static GUIPICTURE *pWiFiBtnLeftBg  = NULL;       $/;"	v	file:
+pWiFiBtnOnOffBg	wnd_frmwifi.c	/^static GUIPICTURE *pWiFiBtnOnOffBg		= NULL;		$/;"	v	file:
+pWiFiBtnREnableOff	wnd_frmwifi.c	/^static GUIPICTURE *pWiFiBtnREnableOff	= NULL; $/;"	v	file:
+pWiFiBtnREnableOn	wnd_frmwifi.c	/^static GUIPICTURE *pWiFiBtnREnableOn	= NULL; $/;"	v	file:
+pWiFiInfoBg	wnd_frmwifi.c	/^static GUIPICTURE *pWiFiInfoBg = NULL;$/;"	v	file:
+pWiFiItem	wnd_frmwifi.c	/^static GUIPICTURE *pWiFiItem[WIFIITEM] = {NULL};$/;"	v	file:
+pWiFiLblFrmName	wnd_frmwifi.c	/^static GUILABEL *pWiFiLblFrmName = NULL;		\/\/左上角窗体名字的Label$/;"	v	file:
+pWiFiLblItem	wnd_frmwifi.c	/^static GUILABEL *pWiFiLblItem[WIFIITEM] = {NULL};$/;"	v	file:
+pWiFiLblMenu	wnd_frmwifi.c	/^static GUILABEL *pWiFiLblMenu[5] = {NULL};$/;"	v	file:
+pWiFiLblOnOffInfo	wnd_frmwifi.c	/^static GUILABEL *pWiFiLblOnOffInfo = NULL;$/;"	v	file:
+pWiFiMenu	wnd_frmwifi.c	/^static GUIPICTURE *pWiFiMenu[5] = {NULL};$/;"	v	file:
+pWiFiMenuBg	wnd_frmwifi.c	/^static GUIPICTURE *pWiFiMenuBg = NULL;$/;"	v	file:
+pWiFiStrFrmName	wnd_frmwifi.c	/^static GUICHAR *pWiFiStrFrmName = NULL;	  	  	\/\/窗体左上角标题栏文本$/;"	v	file:
+pWiFiStrItem	wnd_frmwifi.c	/^static GUICHAR *pWiFiStrItem[WIFIITEM] = {NULL};$/;"	v	file:
+pWiFiStrMenu	wnd_frmwifi.c	/^static GUICHAR *pWiFiStrMenu[5] = {NULL};$/;"	v	file:
+pWiFiStrOnOffInfo	wnd_frmwifi.c	/^static GUICHAR *pWiFiStrOnOffInfo = NULL;$/;"	v	file:
+pWifiFntBlack	wnd_frmwifi.c	/^static GUIFONT *pWifiFntBlack = NULL;     		\/\/标题按钮的字体$/;"	v	file:
+pWifiMsg	wnd_msgqueue.c	/^static OTDRMSGQUEUE *pWifiMsg = NULL;$/;"	v	file:
+pWifiMutex	wnd_frmwifi.c	/^static GUIMUTEX pWifiMutex;$/;"	v	file:
+pWndBrush	guiwindow.h	/^    GUIBRUSH *pWndBrush;    \/\/窗体所使用的画刷，为NULL则使用GUI中的当前画刷$/;"	m	struct:_window
+pWndComps	guiwindow.h	/^    GUILIST *pWndComps;     \/\/控件队列，窗体所包含的GUI窗体控件对象$/;"	m	struct:_window
+pWndFont	guiwindow.h	/^    GUIFONT *pWndFont;      \/\/窗体所使用的字体，为NULL则使用GUI中的当前字体$/;"	m	struct:_window
+pWndPen	guiwindow.h	/^    GUIPEN *pWndPen;        \/\/窗体所使用的画笔，为NULL则使用GUI中的当前画笔$/;"	m	struct:_window
+pWordCode	input_china_pinyin.h	/^    UCS2 *pWordCode;$/;"	m	struct:__anon1
+path	wnd_frmwifi.c	/^char path[512] = "\/mnt\/sdcard\/wifi\/list.txt";$/;"	v
+ppTextMatrix	guitext.h	/^    GUIFONT_MATRIX **ppTextMatrix;  \/\/文本所对应的点阵资源入口$/;"	m	struct:_text
+prepare	sqlite/include/sqlite3ext.h	/^  int  (*prepare)(sqlite3*,const char*,int,sqlite3_stmt**,const char**);$/;"	m	struct:sqlite3_api_routines
+prepare16	sqlite/include/sqlite3ext.h	/^  int  (*prepare16)(sqlite3*,const void*,int,sqlite3_stmt**,const void**);$/;"	m	struct:sqlite3_api_routines
+prepare16_v2	sqlite/include/sqlite3ext.h	/^  int (*prepare16_v2)(sqlite3*,const void*,int,sqlite3_stmt**,const void**);$/;"	m	struct:sqlite3_api_routines
+prepare_v2	sqlite/include/sqlite3ext.h	/^  int (*prepare_v2)(sqlite3*,const char*,int,sqlite3_stmt**,const char**);$/;"	m	struct:sqlite3_api_routines
+profile	sqlite/include/sqlite3ext.h	/^  void * (*profile)(sqlite3*,void(*)(void*,const char*,sqlite_uint64),void*);$/;"	m	struct:sqlite3_api_routines
+progress_handler	sqlite/include/sqlite3ext.h	/^  void  (*progress_handler)(sqlite3*,int,int(*)(void*),void*);$/;"	m	struct:sqlite3_api_routines
+q	wnd_msgqueue.h	/^	int *q;$/;"	m	struct:_otdr_msg_queue
+queuesize	wnd_msgqueue.h	/^	int queuesize;$/;"	m	struct:_otdr_msg_queue
+rParentScore	sqlite/include/sqlite3.h	/^  sqlite3_rtree_dbl rParentScore;   \/* Score of parent node *\/$/;"	m	struct:sqlite3_rtree_query_info
+rScore	sqlite/include/sqlite3.h	/^  sqlite3_rtree_dbl rScore;         \/* OUT: Write the score here *\/$/;"	m	struct:sqlite3_rtree_query_info
+randomness	sqlite/include/sqlite3ext.h	/^  void (*randomness)(int,void*);$/;"	m	struct:sqlite3_api_routines
+realloc	sqlite/include/sqlite3ext.h	/^  void *(*realloc)(void*,int);$/;"	m	struct:sqlite3_api_routines
+realloc64	sqlite/include/sqlite3ext.h	/^  void *(*realloc64)(void*,sqlite3_uint64);$/;"	m	struct:sqlite3_api_routines
+release_memory	sqlite/include/sqlite3ext.h	/^  int (*release_memory)(int);$/;"	m	struct:sqlite3_api_routines
+reset	sqlite/include/sqlite3ext.h	/^  int  (*reset)(sqlite3_stmt*pStmt);$/;"	m	struct:sqlite3_api_routines
+reset_auto_extension	sqlite/include/sqlite3ext.h	/^  void (*reset_auto_extension)(void);$/;"	m	struct:sqlite3_api_routines
+result_blob	sqlite/include/sqlite3ext.h	/^  void  (*result_blob)(sqlite3_context*,const void*,int,void(*)(void*));$/;"	m	struct:sqlite3_api_routines
+result_blob64	sqlite/include/sqlite3ext.h	/^  void (*result_blob64)(sqlite3_context*,const void*,sqlite3_uint64,$/;"	m	struct:sqlite3_api_routines
+result_double	sqlite/include/sqlite3ext.h	/^  void  (*result_double)(sqlite3_context*,double);$/;"	m	struct:sqlite3_api_routines
+result_error	sqlite/include/sqlite3ext.h	/^  void  (*result_error)(sqlite3_context*,const char*,int);$/;"	m	struct:sqlite3_api_routines
+result_error16	sqlite/include/sqlite3ext.h	/^  void  (*result_error16)(sqlite3_context*,const void*,int);$/;"	m	struct:sqlite3_api_routines
+result_error_code	sqlite/include/sqlite3ext.h	/^  void (*result_error_code)(sqlite3_context*,int);$/;"	m	struct:sqlite3_api_routines
+result_error_nomem	sqlite/include/sqlite3ext.h	/^  void (*result_error_nomem)(sqlite3_context*);$/;"	m	struct:sqlite3_api_routines
+result_error_toobig	sqlite/include/sqlite3ext.h	/^  void (*result_error_toobig)(sqlite3_context*);$/;"	m	struct:sqlite3_api_routines
+result_int	sqlite/include/sqlite3ext.h	/^  void  (*result_int)(sqlite3_context*,int);$/;"	m	struct:sqlite3_api_routines
+result_int64	sqlite/include/sqlite3ext.h	/^  void  (*result_int64)(sqlite3_context*,sqlite_int64);$/;"	m	struct:sqlite3_api_routines
+result_null	sqlite/include/sqlite3ext.h	/^  void  (*result_null)(sqlite3_context*);$/;"	m	struct:sqlite3_api_routines
+result_text	sqlite/include/sqlite3ext.h	/^  void  (*result_text)(sqlite3_context*,const char*,int,void(*)(void*));$/;"	m	struct:sqlite3_api_routines
+result_text16	sqlite/include/sqlite3ext.h	/^  void  (*result_text16)(sqlite3_context*,const void*,int,void(*)(void*));$/;"	m	struct:sqlite3_api_routines
+result_text16be	sqlite/include/sqlite3ext.h	/^  void  (*result_text16be)(sqlite3_context*,const void*,int,void(*)(void*));$/;"	m	struct:sqlite3_api_routines
+result_text16le	sqlite/include/sqlite3ext.h	/^  void  (*result_text16le)(sqlite3_context*,const void*,int,void(*)(void*));$/;"	m	struct:sqlite3_api_routines
+result_text64	sqlite/include/sqlite3ext.h	/^  void (*result_text64)(sqlite3_context*,const char*,sqlite3_uint64,$/;"	m	struct:sqlite3_api_routines
+result_value	sqlite/include/sqlite3ext.h	/^  void  (*result_value)(sqlite3_context*,sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+result_zeroblob	sqlite/include/sqlite3ext.h	/^  void (*result_zeroblob)(sqlite3_context*,int);$/;"	m	struct:sqlite3_api_routines
+ret	guibase.h	/^    int ret;$/;"	m	struct:_hookpar
+rollback_hook	sqlite/include/sqlite3ext.h	/^  void * (*rollback_hook)(sqlite3*,void(*)(void*),void*);$/;"	m	struct:sqlite3_api_routines
+round_down	guibase.h	91;"	d
+round_up	guibase.h	90;"	d
+set_authorizer	sqlite/include/sqlite3ext.h	/^  int  (*set_authorizer)(sqlite3*,int(*)(void*,int,const char*,const char*,$/;"	m	struct:sqlite3_api_routines
+set_auxdata	sqlite/include/sqlite3ext.h	/^  void  (*set_auxdata)(sqlite3_context*,int,void*,void (*)(void*));$/;"	m	struct:sqlite3_api_routines
+sleep	sqlite/include/sqlite3ext.h	/^  int (*sleep)(int);$/;"	m	struct:sqlite3_api_routines
+snprintf	sqlite/include/sqlite3ext.h	/^  char * (*snprintf)(int,char*,const char*,...);$/;"	m	struct:sqlite3_api_routines
+soft_heap_limit	sqlite/include/sqlite3ext.h	/^  void (*soft_heap_limit)(int);$/;"	m	struct:sqlite3_api_routines
+soft_heap_limit64	sqlite/include/sqlite3ext.h	/^  sqlite3_int64 (*soft_heap_limit64)(sqlite3_int64);$/;"	m	struct:sqlite3_api_routines
+sourceid	sqlite/include/sqlite3ext.h	/^  const char *(*sourceid)(void);$/;"	m	struct:sqlite3_api_routines
+sql	sqlite/include/sqlite3ext.h	/^  const char *(*sql)(sqlite3_stmt*);$/;"	m	struct:sqlite3_api_routines
+sqlite3	sqlite/include/sqlite3.h	/^typedef struct sqlite3 sqlite3;$/;"	t	typeref:struct:sqlite3
+sqlite3_aggregate_context	sqlite/include/sqlite3ext.h	284;"	d
+sqlite3_aggregate_count	sqlite/include/sqlite3ext.h	286;"	d
+sqlite3_api_routines	sqlite/include/sqlite3ext.h	/^struct sqlite3_api_routines {$/;"	s
+sqlite3_api_routines	sqlite/include/sqlite3ext.h	/^typedef struct sqlite3_api_routines sqlite3_api_routines;$/;"	t	typeref:struct:sqlite3_api_routines
+sqlite3_auto_extension	sqlite/include/sqlite3ext.h	488;"	d
+sqlite3_backup	sqlite/include/sqlite3.h	/^typedef struct sqlite3_backup sqlite3_backup;$/;"	t	typeref:struct:sqlite3_backup
+sqlite3_backup_finish	sqlite/include/sqlite3ext.h	449;"	d
+sqlite3_backup_init	sqlite/include/sqlite3ext.h	450;"	d
+sqlite3_backup_pagecount	sqlite/include/sqlite3ext.h	451;"	d
+sqlite3_backup_remaining	sqlite/include/sqlite3ext.h	452;"	d
+sqlite3_backup_step	sqlite/include/sqlite3ext.h	453;"	d
+sqlite3_bind_blob	sqlite/include/sqlite3ext.h	288;"	d
+sqlite3_bind_blob64	sqlite/include/sqlite3ext.h	489;"	d
+sqlite3_bind_double	sqlite/include/sqlite3ext.h	289;"	d
+sqlite3_bind_int	sqlite/include/sqlite3ext.h	290;"	d
+sqlite3_bind_int64	sqlite/include/sqlite3ext.h	291;"	d
+sqlite3_bind_null	sqlite/include/sqlite3ext.h	292;"	d
+sqlite3_bind_parameter_count	sqlite/include/sqlite3ext.h	293;"	d
+sqlite3_bind_parameter_index	sqlite/include/sqlite3ext.h	294;"	d
+sqlite3_bind_parameter_name	sqlite/include/sqlite3ext.h	295;"	d
+sqlite3_bind_text	sqlite/include/sqlite3ext.h	296;"	d
+sqlite3_bind_text16	sqlite/include/sqlite3ext.h	297;"	d
+sqlite3_bind_text64	sqlite/include/sqlite3ext.h	490;"	d
+sqlite3_bind_value	sqlite/include/sqlite3ext.h	298;"	d
+sqlite3_bind_zeroblob	sqlite/include/sqlite3ext.h	414;"	d
+sqlite3_blob	sqlite/include/sqlite3.h	/^typedef struct sqlite3_blob sqlite3_blob;$/;"	t	typeref:struct:sqlite3_blob
+sqlite3_blob_bytes	sqlite/include/sqlite3ext.h	415;"	d
+sqlite3_blob_close	sqlite/include/sqlite3ext.h	416;"	d
+sqlite3_blob_open	sqlite/include/sqlite3ext.h	417;"	d
+sqlite3_blob_read	sqlite/include/sqlite3ext.h	418;"	d
+sqlite3_blob_reopen	sqlite/include/sqlite3ext.h	470;"	d
+sqlite3_blob_write	sqlite/include/sqlite3ext.h	419;"	d
+sqlite3_busy_handler	sqlite/include/sqlite3ext.h	299;"	d
+sqlite3_busy_timeout	sqlite/include/sqlite3ext.h	300;"	d
+sqlite3_callback	sqlite/include/sqlite3.h	/^typedef int (*sqlite3_callback)(void*,int,char**, char**);$/;"	t
+sqlite3_cancel_auto_extension	sqlite/include/sqlite3ext.h	491;"	d
+sqlite3_changes	sqlite/include/sqlite3ext.h	301;"	d
+sqlite3_clear_bindings	sqlite/include/sqlite3ext.h	413;"	d
+sqlite3_close	sqlite/include/sqlite3ext.h	302;"	d
+sqlite3_close_v2	sqlite/include/sqlite3ext.h	474;"	d
+sqlite3_collation_needed	sqlite/include/sqlite3ext.h	303;"	d
+sqlite3_collation_needed16	sqlite/include/sqlite3ext.h	304;"	d
+sqlite3_column_blob	sqlite/include/sqlite3ext.h	305;"	d
+sqlite3_column_bytes	sqlite/include/sqlite3ext.h	306;"	d
+sqlite3_column_bytes16	sqlite/include/sqlite3ext.h	307;"	d
+sqlite3_column_count	sqlite/include/sqlite3ext.h	308;"	d
+sqlite3_column_database_name	sqlite/include/sqlite3ext.h	309;"	d
+sqlite3_column_database_name16	sqlite/include/sqlite3ext.h	310;"	d
+sqlite3_column_decltype	sqlite/include/sqlite3ext.h	311;"	d
+sqlite3_column_decltype16	sqlite/include/sqlite3ext.h	312;"	d
+sqlite3_column_double	sqlite/include/sqlite3ext.h	313;"	d
+sqlite3_column_int	sqlite/include/sqlite3ext.h	314;"	d
+sqlite3_column_int64	sqlite/include/sqlite3ext.h	315;"	d
+sqlite3_column_name	sqlite/include/sqlite3ext.h	316;"	d
+sqlite3_column_name16	sqlite/include/sqlite3ext.h	317;"	d
+sqlite3_column_origin_name	sqlite/include/sqlite3ext.h	318;"	d
+sqlite3_column_origin_name16	sqlite/include/sqlite3ext.h	319;"	d
+sqlite3_column_table_name	sqlite/include/sqlite3ext.h	320;"	d
+sqlite3_column_table_name16	sqlite/include/sqlite3ext.h	321;"	d
+sqlite3_column_text	sqlite/include/sqlite3ext.h	322;"	d
+sqlite3_column_text16	sqlite/include/sqlite3ext.h	323;"	d
+sqlite3_column_type	sqlite/include/sqlite3ext.h	324;"	d
+sqlite3_column_value	sqlite/include/sqlite3ext.h	325;"	d
+sqlite3_commit_hook	sqlite/include/sqlite3ext.h	326;"	d
+sqlite3_compileoption_get	sqlite/include/sqlite3ext.h	454;"	d
+sqlite3_compileoption_used	sqlite/include/sqlite3ext.h	455;"	d
+sqlite3_complete	sqlite/include/sqlite3ext.h	327;"	d
+sqlite3_complete16	sqlite/include/sqlite3ext.h	328;"	d
+sqlite3_context	sqlite/include/sqlite3.h	/^typedef struct sqlite3_context sqlite3_context;$/;"	t	typeref:struct:sqlite3_context
+sqlite3_context_db_handle	sqlite/include/sqlite3ext.h	443;"	d
+sqlite3_create_collation	sqlite/include/sqlite3ext.h	329;"	d
+sqlite3_create_collation16	sqlite/include/sqlite3ext.h	330;"	d
+sqlite3_create_collation_v2	sqlite/include/sqlite3ext.h	420;"	d
+sqlite3_create_function	sqlite/include/sqlite3ext.h	331;"	d
+sqlite3_create_function16	sqlite/include/sqlite3ext.h	332;"	d
+sqlite3_create_function_v2	sqlite/include/sqlite3ext.h	456;"	d
+sqlite3_create_module	sqlite/include/sqlite3ext.h	333;"	d
+sqlite3_create_module_v2	sqlite/include/sqlite3ext.h	334;"	d
+sqlite3_data_count	sqlite/include/sqlite3ext.h	335;"	d
+sqlite3_data_directory	sqlite/include/sqlite3.h	/^SQLITE_API SQLITE_EXTERN char *sqlite3_data_directory;$/;"	v
+sqlite3_db_config	sqlite/include/sqlite3ext.h	457;"	d
+sqlite3_db_filename	sqlite/include/sqlite3ext.h	475;"	d
+sqlite3_db_handle	sqlite/include/sqlite3ext.h	336;"	d
+sqlite3_db_mutex	sqlite/include/sqlite3ext.h	458;"	d
+sqlite3_db_readonly	sqlite/include/sqlite3ext.h	476;"	d
+sqlite3_db_release_memory	sqlite/include/sqlite3ext.h	477;"	d
+sqlite3_db_status	sqlite/include/sqlite3ext.h	459;"	d
+sqlite3_declare_vtab	sqlite/include/sqlite3ext.h	337;"	d
+sqlite3_destructor_type	sqlite/include/sqlite3.h	/^typedef void (*sqlite3_destructor_type)(void*);$/;"	t
+sqlite3_enable_shared_cache	sqlite/include/sqlite3ext.h	338;"	d
+sqlite3_errcode	sqlite/include/sqlite3ext.h	339;"	d
+sqlite3_errmsg	sqlite/include/sqlite3ext.h	340;"	d
+sqlite3_errmsg16	sqlite/include/sqlite3ext.h	341;"	d
+sqlite3_errstr	sqlite/include/sqlite3ext.h	478;"	d
+sqlite3_exec	sqlite/include/sqlite3ext.h	342;"	d
+sqlite3_expired	sqlite/include/sqlite3ext.h	344;"	d
+sqlite3_extended_errcode	sqlite/include/sqlite3ext.h	460;"	d
+sqlite3_extended_result_codes	sqlite/include/sqlite3ext.h	444;"	d
+sqlite3_file	sqlite/include/sqlite3.h	/^struct sqlite3_file {$/;"	s
+sqlite3_file	sqlite/include/sqlite3.h	/^typedef struct sqlite3_file sqlite3_file;$/;"	t	typeref:struct:sqlite3_file
+sqlite3_file_control	sqlite/include/sqlite3ext.h	421;"	d
+sqlite3_finalize	sqlite/include/sqlite3ext.h	346;"	d
+sqlite3_free	sqlite/include/sqlite3ext.h	347;"	d
+sqlite3_free_table	sqlite/include/sqlite3ext.h	348;"	d
+sqlite3_get_autocommit	sqlite/include/sqlite3ext.h	349;"	d
+sqlite3_get_auxdata	sqlite/include/sqlite3ext.h	350;"	d
+sqlite3_get_table	sqlite/include/sqlite3ext.h	351;"	d
+sqlite3_global_recover	sqlite/include/sqlite3ext.h	353;"	d
+sqlite3_index_constraint	sqlite/include/sqlite3.h	/^  struct sqlite3_index_constraint {$/;"	s	struct:sqlite3_index_info
+sqlite3_index_constraint_usage	sqlite/include/sqlite3.h	/^  struct sqlite3_index_constraint_usage {$/;"	s	struct:sqlite3_index_info
+sqlite3_index_info	sqlite/include/sqlite3.h	/^struct sqlite3_index_info {$/;"	s
+sqlite3_index_info	sqlite/include/sqlite3.h	/^typedef struct sqlite3_index_info sqlite3_index_info;$/;"	t	typeref:struct:sqlite3_index_info
+sqlite3_index_orderby	sqlite/include/sqlite3.h	/^  struct sqlite3_index_orderby {$/;"	s	struct:sqlite3_index_info
+sqlite3_int64	sqlite/include/sqlite3.h	/^typedef sqlite_int64 sqlite3_int64;$/;"	t
+sqlite3_interrupt	sqlite/include/sqlite3ext.h	355;"	d
+sqlite3_io_methods	sqlite/include/sqlite3.h	/^struct sqlite3_io_methods {$/;"	s
+sqlite3_io_methods	sqlite/include/sqlite3.h	/^typedef struct sqlite3_io_methods sqlite3_io_methods;$/;"	t	typeref:struct:sqlite3_io_methods
+sqlite3_last_insert_rowid	sqlite/include/sqlite3ext.h	356;"	d
+sqlite3_libversion	sqlite/include/sqlite3ext.h	357;"	d
+sqlite3_libversion_number	sqlite/include/sqlite3ext.h	358;"	d
+sqlite3_limit	sqlite/include/sqlite3ext.h	445;"	d
+sqlite3_load_extension	sqlite/include/sqlite3ext.h	492;"	d
+sqlite3_log	sqlite/include/sqlite3ext.h	461;"	d
+sqlite3_malloc	sqlite/include/sqlite3ext.h	359;"	d
+sqlite3_malloc64	sqlite/include/sqlite3ext.h	493;"	d
+sqlite3_mem_methods	sqlite/include/sqlite3.h	/^struct sqlite3_mem_methods {$/;"	s
+sqlite3_mem_methods	sqlite/include/sqlite3.h	/^typedef struct sqlite3_mem_methods sqlite3_mem_methods;$/;"	t	typeref:struct:sqlite3_mem_methods
+sqlite3_memory_highwater	sqlite/include/sqlite3ext.h	422;"	d
+sqlite3_memory_used	sqlite/include/sqlite3ext.h	423;"	d
+sqlite3_module	sqlite/include/sqlite3.h	/^struct sqlite3_module {$/;"	s
+sqlite3_module	sqlite/include/sqlite3.h	/^typedef struct sqlite3_module sqlite3_module;$/;"	t	typeref:struct:sqlite3_module
+sqlite3_mprintf	sqlite/include/sqlite3ext.h	360;"	d
+sqlite3_msize	sqlite/include/sqlite3ext.h	494;"	d
+sqlite3_mutex	sqlite/include/sqlite3.h	/^typedef struct sqlite3_mutex sqlite3_mutex;$/;"	t	typeref:struct:sqlite3_mutex
+sqlite3_mutex_alloc	sqlite/include/sqlite3ext.h	424;"	d
+sqlite3_mutex_enter	sqlite/include/sqlite3ext.h	425;"	d
+sqlite3_mutex_free	sqlite/include/sqlite3ext.h	426;"	d
+sqlite3_mutex_leave	sqlite/include/sqlite3ext.h	427;"	d
+sqlite3_mutex_methods	sqlite/include/sqlite3.h	/^struct sqlite3_mutex_methods {$/;"	s
+sqlite3_mutex_methods	sqlite/include/sqlite3.h	/^typedef struct sqlite3_mutex_methods sqlite3_mutex_methods;$/;"	t	typeref:struct:sqlite3_mutex_methods
+sqlite3_mutex_try	sqlite/include/sqlite3ext.h	428;"	d
+sqlite3_next_stmt	sqlite/include/sqlite3ext.h	446;"	d
+sqlite3_open	sqlite/include/sqlite3ext.h	361;"	d
+sqlite3_open16	sqlite/include/sqlite3ext.h	362;"	d
+sqlite3_open_v2	sqlite/include/sqlite3ext.h	429;"	d
+sqlite3_overload_function	sqlite/include/sqlite3ext.h	410;"	d
+sqlite3_pcache	sqlite/include/sqlite3.h	/^typedef struct sqlite3_pcache sqlite3_pcache;$/;"	t	typeref:struct:sqlite3_pcache
+sqlite3_pcache_methods	sqlite/include/sqlite3.h	/^struct sqlite3_pcache_methods {$/;"	s
+sqlite3_pcache_methods	sqlite/include/sqlite3.h	/^typedef struct sqlite3_pcache_methods sqlite3_pcache_methods;$/;"	t	typeref:struct:sqlite3_pcache_methods
+sqlite3_pcache_methods2	sqlite/include/sqlite3.h	/^struct sqlite3_pcache_methods2 {$/;"	s
+sqlite3_pcache_methods2	sqlite/include/sqlite3.h	/^typedef struct sqlite3_pcache_methods2 sqlite3_pcache_methods2;$/;"	t	typeref:struct:sqlite3_pcache_methods2
+sqlite3_pcache_page	sqlite/include/sqlite3.h	/^struct sqlite3_pcache_page {$/;"	s
+sqlite3_pcache_page	sqlite/include/sqlite3.h	/^typedef struct sqlite3_pcache_page sqlite3_pcache_page;$/;"	t	typeref:struct:sqlite3_pcache_page
+sqlite3_prepare	sqlite/include/sqlite3ext.h	363;"	d
+sqlite3_prepare16	sqlite/include/sqlite3ext.h	364;"	d
+sqlite3_prepare16_v2	sqlite/include/sqlite3ext.h	366;"	d
+sqlite3_prepare16_v2	sqlite/include/sqlite3ext.h	412;"	d
+sqlite3_prepare_v2	sqlite/include/sqlite3ext.h	365;"	d
+sqlite3_prepare_v2	sqlite/include/sqlite3ext.h	411;"	d
+sqlite3_profile	sqlite/include/sqlite3ext.h	367;"	d
+sqlite3_progress_handler	sqlite/include/sqlite3ext.h	368;"	d
+sqlite3_randomness	sqlite/include/sqlite3ext.h	442;"	d
+sqlite3_realloc	sqlite/include/sqlite3ext.h	369;"	d
+sqlite3_realloc64	sqlite/include/sqlite3ext.h	495;"	d
+sqlite3_release_memory	sqlite/include/sqlite3ext.h	430;"	d
+sqlite3_reset	sqlite/include/sqlite3ext.h	370;"	d
+sqlite3_reset_auto_extension	sqlite/include/sqlite3ext.h	496;"	d
+sqlite3_result_blob	sqlite/include/sqlite3ext.h	371;"	d
+sqlite3_result_blob64	sqlite/include/sqlite3ext.h	497;"	d
+sqlite3_result_double	sqlite/include/sqlite3ext.h	372;"	d
+sqlite3_result_error	sqlite/include/sqlite3ext.h	373;"	d
+sqlite3_result_error16	sqlite/include/sqlite3ext.h	374;"	d
+sqlite3_result_error_code	sqlite/include/sqlite3ext.h	440;"	d
+sqlite3_result_error_nomem	sqlite/include/sqlite3ext.h	431;"	d
+sqlite3_result_error_toobig	sqlite/include/sqlite3ext.h	432;"	d
+sqlite3_result_int	sqlite/include/sqlite3ext.h	375;"	d
+sqlite3_result_int64	sqlite/include/sqlite3ext.h	376;"	d
+sqlite3_result_null	sqlite/include/sqlite3ext.h	377;"	d
+sqlite3_result_text	sqlite/include/sqlite3ext.h	378;"	d
+sqlite3_result_text16	sqlite/include/sqlite3ext.h	379;"	d
+sqlite3_result_text16be	sqlite/include/sqlite3ext.h	380;"	d
+sqlite3_result_text16le	sqlite/include/sqlite3ext.h	381;"	d
+sqlite3_result_text64	sqlite/include/sqlite3ext.h	498;"	d
+sqlite3_result_value	sqlite/include/sqlite3ext.h	382;"	d
+sqlite3_result_zeroblob	sqlite/include/sqlite3ext.h	439;"	d
+sqlite3_rollback_hook	sqlite/include/sqlite3ext.h	383;"	d
+sqlite3_rtree_dbl	sqlite/include/sqlite3.h	/^  typedef double sqlite3_rtree_dbl;$/;"	t
+sqlite3_rtree_dbl	sqlite/include/sqlite3.h	/^  typedef sqlite3_int64 sqlite3_rtree_dbl;$/;"	t
+sqlite3_rtree_geometry	sqlite/include/sqlite3.h	/^struct sqlite3_rtree_geometry {$/;"	s
+sqlite3_rtree_geometry	sqlite/include/sqlite3.h	/^typedef struct sqlite3_rtree_geometry sqlite3_rtree_geometry;$/;"	t	typeref:struct:sqlite3_rtree_geometry
+sqlite3_rtree_query_info	sqlite/include/sqlite3.h	/^struct sqlite3_rtree_query_info {$/;"	s
+sqlite3_rtree_query_info	sqlite/include/sqlite3.h	/^typedef struct sqlite3_rtree_query_info sqlite3_rtree_query_info;$/;"	t	typeref:struct:sqlite3_rtree_query_info
+sqlite3_set_authorizer	sqlite/include/sqlite3ext.h	384;"	d
+sqlite3_set_auxdata	sqlite/include/sqlite3ext.h	385;"	d
+sqlite3_sleep	sqlite/include/sqlite3ext.h	433;"	d
+sqlite3_snprintf	sqlite/include/sqlite3ext.h	386;"	d
+sqlite3_soft_heap_limit	sqlite/include/sqlite3ext.h	434;"	d
+sqlite3_soft_heap_limit64	sqlite/include/sqlite3ext.h	462;"	d
+sqlite3_sourceid	sqlite/include/sqlite3ext.h	463;"	d
+sqlite3_sql	sqlite/include/sqlite3ext.h	447;"	d
+sqlite3_status	sqlite/include/sqlite3ext.h	448;"	d
+sqlite3_step	sqlite/include/sqlite3ext.h	387;"	d
+sqlite3_stmt	sqlite/include/sqlite3.h	/^typedef struct sqlite3_stmt sqlite3_stmt;$/;"	t	typeref:struct:sqlite3_stmt
+sqlite3_stmt_busy	sqlite/include/sqlite3ext.h	479;"	d
+sqlite3_stmt_readonly	sqlite/include/sqlite3ext.h	480;"	d
+sqlite3_stmt_status	sqlite/include/sqlite3ext.h	464;"	d
+sqlite3_strglob	sqlite/include/sqlite3ext.h	499;"	d
+sqlite3_stricmp	sqlite/include/sqlite3ext.h	481;"	d
+sqlite3_strnicmp	sqlite/include/sqlite3ext.h	465;"	d
+sqlite3_syscall_ptr	sqlite/include/sqlite3.h	/^typedef void (*sqlite3_syscall_ptr)(void);$/;"	t
+sqlite3_table_column_metadata	sqlite/include/sqlite3ext.h	388;"	d
+sqlite3_temp_directory	sqlite/include/sqlite3.h	/^SQLITE_API SQLITE_EXTERN char *sqlite3_temp_directory;$/;"	v
+sqlite3_test_control	sqlite/include/sqlite3ext.h	441;"	d
+sqlite3_thread_cleanup	sqlite/include/sqlite3ext.h	389;"	d
+sqlite3_threadsafe	sqlite/include/sqlite3ext.h	438;"	d
+sqlite3_total_changes	sqlite/include/sqlite3ext.h	390;"	d
+sqlite3_trace	sqlite/include/sqlite3ext.h	391;"	d
+sqlite3_transfer_bindings	sqlite/include/sqlite3ext.h	393;"	d
+sqlite3_uint64	sqlite/include/sqlite3.h	/^typedef sqlite_uint64 sqlite3_uint64;$/;"	t
+sqlite3_unlock_notify	sqlite/include/sqlite3ext.h	466;"	d
+sqlite3_update_hook	sqlite/include/sqlite3ext.h	395;"	d
+sqlite3_uri_boolean	sqlite/include/sqlite3ext.h	482;"	d
+sqlite3_uri_int64	sqlite/include/sqlite3ext.h	483;"	d
+sqlite3_uri_parameter	sqlite/include/sqlite3ext.h	484;"	d
+sqlite3_uri_vsnprintf	sqlite/include/sqlite3ext.h	485;"	d
+sqlite3_user_data	sqlite/include/sqlite3ext.h	396;"	d
+sqlite3_value	sqlite/include/sqlite3.h	/^typedef struct Mem sqlite3_value;$/;"	t	typeref:struct:Mem
+sqlite3_value_blob	sqlite/include/sqlite3ext.h	397;"	d
+sqlite3_value_bytes	sqlite/include/sqlite3ext.h	398;"	d
+sqlite3_value_bytes16	sqlite/include/sqlite3ext.h	399;"	d
+sqlite3_value_double	sqlite/include/sqlite3ext.h	400;"	d
+sqlite3_value_int	sqlite/include/sqlite3ext.h	401;"	d
+sqlite3_value_int64	sqlite/include/sqlite3ext.h	402;"	d
+sqlite3_value_numeric_type	sqlite/include/sqlite3ext.h	403;"	d
+sqlite3_value_text	sqlite/include/sqlite3ext.h	404;"	d
+sqlite3_value_text16	sqlite/include/sqlite3ext.h	405;"	d
+sqlite3_value_text16be	sqlite/include/sqlite3ext.h	406;"	d
+sqlite3_value_text16le	sqlite/include/sqlite3ext.h	407;"	d
+sqlite3_value_type	sqlite/include/sqlite3ext.h	408;"	d
+sqlite3_version	sqlite/include/sqlite3.h	/^SQLITE_API SQLITE_EXTERN const char sqlite3_version[];$/;"	v
+sqlite3_vfs	sqlite/include/sqlite3.h	/^struct sqlite3_vfs {$/;"	s
+sqlite3_vfs	sqlite/include/sqlite3.h	/^typedef struct sqlite3_vfs sqlite3_vfs;$/;"	t	typeref:struct:sqlite3_vfs
+sqlite3_vfs_find	sqlite/include/sqlite3ext.h	435;"	d
+sqlite3_vfs_register	sqlite/include/sqlite3ext.h	436;"	d
+sqlite3_vfs_unregister	sqlite/include/sqlite3ext.h	437;"	d
+sqlite3_vmprintf	sqlite/include/sqlite3ext.h	409;"	d
+sqlite3_vtab	sqlite/include/sqlite3.h	/^struct sqlite3_vtab {$/;"	s
+sqlite3_vtab	sqlite/include/sqlite3.h	/^typedef struct sqlite3_vtab sqlite3_vtab;$/;"	t	typeref:struct:sqlite3_vtab
+sqlite3_vtab_config	sqlite/include/sqlite3ext.h	471;"	d
+sqlite3_vtab_cursor	sqlite/include/sqlite3.h	/^struct sqlite3_vtab_cursor {$/;"	s
+sqlite3_vtab_cursor	sqlite/include/sqlite3.h	/^typedef struct sqlite3_vtab_cursor sqlite3_vtab_cursor;$/;"	t	typeref:struct:sqlite3_vtab_cursor
+sqlite3_vtab_on_conflict	sqlite/include/sqlite3ext.h	472;"	d
+sqlite3_wal_autocheckpoint	sqlite/include/sqlite3ext.h	467;"	d
+sqlite3_wal_checkpoint	sqlite/include/sqlite3ext.h	468;"	d
+sqlite3_wal_checkpoint_v2	sqlite/include/sqlite3ext.h	486;"	d
+sqlite3_wal_hook	sqlite/include/sqlite3ext.h	469;"	d
+sqlite_int64	sqlite/include/sqlite3.h	/^  typedef SQLITE_INT64_TYPE sqlite_int64;$/;"	t
+sqlite_int64	sqlite/include/sqlite3.h	/^  typedef __int64 sqlite_int64;$/;"	t
+sqlite_int64	sqlite/include/sqlite3.h	/^  typedef long long int sqlite_int64;$/;"	t
+sqlite_uint64	sqlite/include/sqlite3.h	/^  typedef unsigned SQLITE_INT64_TYPE sqlite_uint64;$/;"	t
+sqlite_uint64	sqlite/include/sqlite3.h	/^  typedef unsigned __int64 sqlite_uint64;$/;"	t
+sqlite_uint64	sqlite/include/sqlite3.h	/^  typedef unsigned long long int sqlite_uint64;$/;"	t
+ssid	wnd_frmwifi.h	/^	char ssid[512];$/;"	m	struct:_wifi_info
+stGetWifi	wnd_frmwifi.c	/^static WIFI_INFO stGetWifi;$/;"	v	file:
+stWifi	wnd_frmwifi.c	/^static WIFI_INFO stWifi[MAX_SIGNUM];$/;"	v	file:
+status	sqlite/include/sqlite3ext.h	/^  int (*status)(int,int*,int*,int);$/;"	m	struct:sqlite3_api_routines
+step	sqlite/include/sqlite3ext.h	/^  int  (*step)(sqlite3_stmt*);$/;"	m	struct:sqlite3_api_routines
+stmt_busy	sqlite/include/sqlite3ext.h	/^  int (*stmt_busy)(sqlite3_stmt*);$/;"	m	struct:sqlite3_api_routines
+stmt_readonly	sqlite/include/sqlite3ext.h	/^  int (*stmt_readonly)(sqlite3_stmt*);$/;"	m	struct:sqlite3_api_routines
+stmt_status	sqlite/include/sqlite3ext.h	/^  int (*stmt_status)(sqlite3_stmt*,int,int);$/;"	m	struct:sqlite3_api_routines
+strBitmapFile	guibitmap.h	/^    char *strBitmapFile;        \/\/位图文件名称$/;"	m	struct:_bitmap
+strFontFile	guifont.h	/^    char *strFontFile;          \/\/字体文件名称$/;"	m	struct:_font
+strglob	sqlite/include/sqlite3ext.h	/^  int (*strglob)(const char*,const char*);$/;"	m	struct:sqlite3_api_routines
+stricmp	sqlite/include/sqlite3ext.h	/^  int (*stricmp)(const char*,const char*);$/;"	m	struct:sqlite3_api_routines
+strnicmp	sqlite/include/sqlite3ext.h	/^  int (*strnicmp)(const char*,const char*,int);$/;"	m	struct:sqlite3_api_routines
+szOsFile	sqlite/include/sqlite3.h	/^  int szOsFile;            \/* Size of subclassed sqlite3_file *\/$/;"	m	struct:sqlite3_vfs
+table_column_metadata	sqlite/include/sqlite3ext.h	/^  int  (*table_column_metadata)(sqlite3*,const char*,const char*,const char*,$/;"	m	struct:sqlite3_api_routines
+tail	wnd_msgqueue.h	/^	int head, tail;$/;"	m	struct:_otdr_msg_queue
+test_control	sqlite/include/sqlite3ext.h	/^  int (*test_control)(int, ...);$/;"	m	struct:sqlite3_api_routines
+thdEvent	guiglobal.c	/^static GUITHREAD thdEvent = -1;$/;"	v	file:
+thdScheduler	guiglobal.c	/^static GUITHREAD thdScheduler = -1;$/;"	v	file:
+thdWifi	wnd_frmwifi.c	/^GUITHREAD thdWifi = -1;$/;"	v
+thdWndTid	guiwindow.h	/^    GUITHREAD thdWndTid;    \/\/窗体线程ID，窗体处理线程的线程标识符$/;"	m	struct:_window
+thread_cleanup	sqlite/include/sqlite3ext.h	/^  void  (*thread_cleanup)(void);$/;"	m	struct:sqlite3_api_routines
+total_changes	sqlite/include/sqlite3ext.h	/^  int  (*total_changes)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+trace	sqlite/include/sqlite3ext.h	/^  void * (*trace)(sqlite3*,void(*xTrace)(void*,const char*),void*);$/;"	m	struct:sqlite3_api_routines
+transfer_bindings	sqlite/include/sqlite3ext.h	/^  int  (*transfer_bindings)(sqlite3_stmt*,sqlite3_stmt*);$/;"	m	struct:sqlite3_api_routines
+ucBlue	guibitmap.h	/^    UINT8 ucBlue;       \/\/该颜色的蓝色分量$/;"	m	struct:_bitmap_rgbquad
+ucGreen	guibitmap.h	/^    UINT8 ucGreen;      \/\/该颜色的绿色分量$/;"	m	struct:_bitmap_rgbquad
+ucRed	guibitmap.h	/^    UINT8 ucRed;        \/\/该颜色的红色分量$/;"	m	struct:_bitmap_rgbquad
+ucReserved	guibitmap.h	/^    UINT8 ucReserved;   \/\/保留值$/;"	m	struct:_bitmap_rgbquad
+uiBgColor	guibrush.h	/^    unsigned int uiBgColor; \/\/画刷背景颜色，RGB888格式$/;"	m	struct:_brush
+uiBgColor	guifont.h	/^    unsigned int uiBgColor;     \/\/字体背景色$/;"	m	struct:_font
+uiBgColor	guiimage.h	/^    unsigned int uiBgColor;     \/\/图像的背景颜色，uiImgDepth为1时使用$/;"	m	struct:_image
+uiBlueBits	guifbmap.h	/^    unsigned int uiBlueBits;    \/\/每像素中蓝色分量所占位数$/;"	m	struct:_fbmap
+uiBlueShift	guifbmap.h	/^    unsigned int uiBlueShift;   \/\/每像素中蓝色分量起始位置$/;"	m	struct:_fbmap
+uiBottomGap	guifont.h	/^    unsigned int uiBottomGap;   \/\/字体下间距，其值<=字体高度\/2$/;"	m	struct:_font
+uiBufSize	guifbmap.h	/^    unsigned int uiBufSize;     \/\/帧缓冲大小，字节单位$/;"	m	struct:_fbmap
+uiClrImportant	guibitmap.h	/^    UINT32 uiClrImportant;  \/\/重要的颜色数$/;"	m	struct:_bitmap_infoheader
+uiClrUsed	guibitmap.h	/^    UINT32 uiClrUsed;       \/\/实际使用的颜色数$/;"	m	struct:_bitmap_infoheader
+uiCodeCount	guifont.h	/^    UINT32 uiCodeCount;     \/\/点阵段包含编码的数量$/;"	m	struct:_font_segmentmap
+uiCompression	guibitmap.h	/^    UINT32 uiCompression;   \/\/压缩算法，目前只支持不压缩图像(BI_RGB，BI_RGB==0)$/;"	m	struct:_bitmap_infoheader
+uiCursX	guitouch.h	/^    unsigned int uiCursX;       \/\/触摸屏光标当前横坐标值，0~0xFFFF$/;"	m	struct:_touch
+uiCursY	guitouch.h	/^    unsigned int uiCursY;       \/\/触摸屏光标当前纵坐标值，0~0xFFFF$/;"	m	struct:_touch
+uiDataOffset	guibitmap.h	/^    UINT32 uiDataOffset;    \/\/偏移量，文件头到实际位图数据的偏移量，以字节为单位$/;"	m	struct:_bitmap_fileheader
+uiDataOffset	guifont.h	/^    UINT32 uiDataOffset;    \/\/偏移量，文件头到点阵数据的偏移量，以字节为单位$/;"	m	struct:_font_fileheader
+uiDispHeight	guiimage.h	/^    unsigned int uiDispHeight;  \/\/可显示的高度，须符合帧缓冲映射的限制$/;"	m	struct:_image
+uiDispWidth	guiimage.h	/^    unsigned int uiDispWidth;   \/\/可显示的宽度，须符合帧缓冲映射的限制$/;"	m	struct:_image
+uiEventCode	guievent.h	/^    unsigned int uiEventCode;   \/\/事件编码，KEY_DOWN，KEY_UP…$/;"	m	struct:_event_item
+uiEventType	guievent.h	/^    unsigned int uiEventType;   \/\/事件类型，1输入事件$/;"	m	struct:_event_item
+uiEventValue	guievent.h	/^    unsigned int uiEventValue;  \/\/事件数值，按键编码或坐标数值(X|Y：X高16位，Y低16位)$/;"	m	struct:_event_item
+uiFgColor	guibrush.h	/^    unsigned int uiFgColor; \/\/画刷前景颜色，RGB888格式$/;"	m	struct:_brush
+uiFgColor	guifont.h	/^    unsigned int uiFgColor;     \/\/字体前景色，即字体颜色$/;"	m	struct:_font
+uiFgColor	guiimage.h	/^    unsigned int uiFgColor;     \/\/图像的前景颜色，uiImgDepth为1时使用$/;"	m	struct:_image
+uiFileFormat	guifont.h	/^    UINT32 uiFileFormat;    \/\/文件格式，1标准、2混合，目前只支持标准格式$/;"	m	struct:_font_fileheader
+uiFileSize	guibitmap.h	/^    UINT32 uiFileSize;      \/\/文件大小，文件占用的字节大小$/;"	m	struct:_bitmap_fileheader
+uiFileSize	guifont.h	/^    UINT32 uiFileSize;      \/\/文件大小，文件占用的字节大小$/;"	m	struct:_font_fileheader
+uiFileType	guifont.h	/^    UINT32 uiFileType;      \/\/文件类型，0x2E464E54('.FNT')为文件中存储序列，小端$/;"	m	struct:_font_fileheader
+uiFontHeight	guifont.h	/^    unsigned int uiFontHeight;  \/\/字体高度，须与.fnt中一致，目前不支持缩放$/;"	m	struct:_font
+uiFontWidth	guifont.h	/^    unsigned int uiFontWidth;   \/\/字体宽度，须与.fnt中一致，目前不支持缩放$/;"	m	struct:_font
+uiGreenBits	guifbmap.h	/^    unsigned int uiGreenBits;   \/\/每像素中绿色分量所占位数$/;"	m	struct:_fbmap
+uiGreenShift	guifbmap.h	/^    unsigned int uiGreenShift;  \/\/每像素中绿色分量起始位置$/;"	m	struct:_fbmap
+uiHorDisp	guifbmap.h	/^    unsigned int uiHorDisp;     \/\/映射后用于显示的水平分辨率，必须<=uiHorRes$/;"	m	struct:_fbmap
+uiHorOff	guifbmap.h	/^    unsigned int uiHorOff;      \/\/水平偏移，uiHorOff=(uiHorRes-uiHorDisp)\/2$/;"	m	struct:_fbmap
+uiHorRes	guifbmap.h	/^    unsigned int uiHorRes;      \/\/帧缓冲水平分辨率$/;"	m	struct:_fbmap
+uiHorRes	guitouch.h	/^    unsigned int uiHorRes;      \/\/触摸屏水平分辨率，0~0xFFFF$/;"	m	struct:_touch
+uiImgDepth	guiimage.h	/^    unsigned int uiImgDepth;    \/\/图像颜色深度，1位、8位、24位$/;"	m	struct:_image
+uiImgHeight	guibitmap.h	/^    UINT32 uiImgHeight;     \/\/图像高度，目前只支持倒向位图(左下角为原点)$/;"	m	struct:_bitmap_infoheader
+uiImgHeight	guiimage.h	/^    unsigned int uiImgHeight;   \/\/图像垂直高度，单位为像素$/;"	m	struct:_image
+uiImgSize	guibitmap.h	/^    UINT32 uiImgSize;       \/\/图像大小，图像占用的字节大小，其值必须为4的倍数$/;"	m	struct:_bitmap_infoheader
+uiImgWidth	guibitmap.h	/^    UINT32 uiImgWidth;      \/\/图像宽度$/;"	m	struct:_bitmap_infoheader
+uiImgWidth	guiimage.h	/^    unsigned int uiImgWidth;    \/\/图像水平宽度，单位为像素$/;"	m	struct:_image
+uiInfoSize	guibitmap.h	/^    UINT32 uiInfoSize;      \/\/信息头大小，该信息头占用的字节大小，值为40$/;"	m	struct:_bitmap_infoheader
+uiLeftGap	guifont.h	/^    unsigned int uiLeftGap;     \/\/字体左间距，其值<=字体宽度\/2$/;"	m	struct:_font
+uiMapLength	guifbmap.h	/^    unsigned int uiMapLength;   \/\/mmap()映射时的长度，munmap()时使用该值$/;"	m	struct:_fbmap
+uiMapOffset	guifbmap.h	/^    unsigned int uiMapOffset;   \/\/mmap()映射时的页偏移，munmap()时使用该值$/;"	m	struct:_fbmap
+uiMatrixCount	guifont.h	/^    UINT32 uiMatrixCount;   \/\/点阵计数，实际包含字体点阵的数量$/;"	m	struct:_font_fileheader
+uiMatrixHeight	guifont.h	/^    UINT32 uiMatrixHeight;  \/\/点阵高度，单个点阵的高度$/;"	m	struct:_font_fileheader
+uiMatrixWidth	guifont.h	/^    UINT32 uiMatrixWidth;   \/\/点阵宽度，单个点阵的宽度$/;"	m	struct:_font_fileheader
+uiMsgValue	guimessage.h	/^    unsigned int uiMsgValue;    \/\/消息数值，键值…，作为消息处理函数的参数$/;"	m	struct:_message_item
+uiPenColor	guipen.h	/^    unsigned int uiPenColor;    \/\/画笔颜色，RGB888格式$/;"	m	struct:_pen
+uiPixelBits	guifbmap.h	/^    unsigned int uiPixelBits;   \/\/像素深度，8、16(RGB565)、24、32(即非压缩24位)$/;"	m	struct:_fbmap
+uiPlaceX	guibitmap.h	/^    unsigned int uiPlaceX;      \/\/位图水平放置位置，以左上角为基点，相对坐标$/;"	m	struct:_bitmap
+uiPlaceX	guiimage.h	/^    unsigned int uiPlaceX;      \/\/图像水平放置位置，以左上角为基点，相对坐标$/;"	m	struct:_image
+uiPlaceX	guitext.h	/^    unsigned int uiPlaceX;          \/\/文本水平放置位置，以左上角为基点，相对坐标$/;"	m	struct:_text
+uiPlaceY	guibitmap.h	/^    unsigned int uiPlaceY;      \/\/位图垂直放置位置，以左上角为基点，相对坐标$/;"	m	struct:_bitmap
+uiPlaceY	guiimage.h	/^    unsigned int uiPlaceY;      \/\/图像垂直放置位置，以左上角为基点，相对坐标$/;"	m	struct:_image
+uiPlaceY	guitext.h	/^    unsigned int uiPlaceY;          \/\/文本垂直放置位置，以左上角为基点，相对坐标$/;"	m	struct:_text
+uiRealHeight	guifont.h	/^    unsigned int uiRealHeight;  \/\/点阵数据可用于显示的实际高度$/;"	m	struct:_font_matrix
+uiRealWidth	guifont.h	/^    unsigned int uiRealWidth;   \/\/点阵数据可用于显示的实际宽度$/;"	m	struct:_font_matrix
+uiRealX	guiimage.h	/^    unsigned int uiRealX;       \/\/以左上角为基点，加水平偏移后的绝对坐标$/;"	m	struct:_image
+uiRealY	guiimage.h	/^    unsigned int uiRealY;       \/\/以左上角为基点，加垂直偏移后的绝对坐标$/;"	m	struct:_image
+uiRedBits	guifbmap.h	/^    unsigned int uiRedBits;     \/\/每像素中红色分量所占位数$/;"	m	struct:_fbmap
+uiRedShift	guifbmap.h	/^    unsigned int uiRedShift;    \/\/每像素中红色分量起始位置$/;"	m	struct:_fbmap
+uiReserved	guifont.h	/^    UINT32 uiReserved;      \/\/保留值$/;"	m	struct:_font_segmentmap
+uiRightGap	guifont.h	/^    unsigned int uiRightGap;    \/\/字体右间距，其值<=字体宽度\/2$/;"	m	struct:_font
+uiSegmentOffset	guifont.h	/^    UINT32 uiSegmentOffset; \/\/文件头到点阵数据段的偏移，以字节为单位$/;"	m	struct:_font_segmentmap
+uiStartCode	guifont.h	/^    UINT32 uiStartCode;     \/\/点阵段对应的起始编码$/;"	m	struct:_font_segmentmap
+uiTextLength	guitext.h	/^    unsigned int uiTextLength;      \/\/文本长度，即文本中字符的个数，不含'\\0'$/;"	m	struct:_text
+uiTopGap	guifont.h	/^    unsigned int uiTopGap;      \/\/字体上间距，其值<=字体高度\/2$/;"	m	struct:_font
+uiVerDisp	guifbmap.h	/^    unsigned int uiVerDisp;     \/\/映射后用于显示的垂直分辨率，必须<=uiVerRes$/;"	m	struct:_fbmap
+uiVerOff	guifbmap.h	/^    unsigned int uiVerOff;      \/\/垂直偏移，uiVerOff=(uiVerRes-uiVerDisp)\/2$/;"	m	struct:_fbmap
+uiVerRes	guifbmap.h	/^    unsigned int uiVerRes;      \/\/帧缓冲垂直分辨率$/;"	m	struct:_fbmap
+uiVerRes	guitouch.h	/^    unsigned int uiVerRes;      \/\/触摸屏垂直分辨率，0~0xFFFF$/;"	m	struct:_touch
+uiViewHeight	guibitmap.h	/^    unsigned int uiViewHeight;  \/\/显示高度，>=0，初始化为0则按BMP实际高度$/;"	m	struct:_bitmap
+uiViewHeight	guitext.h	/^    unsigned int uiViewHeight;      \/\/显示高度，>=0，初始化为0则按文本实际高度$/;"	m	struct:_text
+uiViewWidth	guibitmap.h	/^    unsigned int uiViewWidth;   \/\/显示宽度，>=0，初始化为0则按BMP实际宽度$/;"	m	struct:_bitmap
+uiViewWidth	guitext.h	/^    unsigned int uiViewWidth;       \/\/显示宽度，>=0，初始化为0则按文本实际宽度$/;"	m	struct:_text
+uiXRes	guibitmap.h	/^    UINT32 uiXRes;          \/\/水平分辨率，单位为像素\/米$/;"	m	struct:_bitmap_infoheader
+uiYRes	guibitmap.h	/^    UINT32 uiYRes;          \/\/垂直分辨率，单位为像素\/米$/;"	m	struct:_bitmap_infoheader
+unlock_notify	sqlite/include/sqlite3ext.h	/^  int (*unlock_notify)(sqlite3*,void(*)(void**,int),void*);$/;"	m	struct:sqlite3_api_routines
+update_hook	sqlite/include/sqlite3ext.h	/^  void * (*update_hook)(sqlite3*,void(*)(void*,int ,char const*,char const*,$/;"	m	struct:sqlite3_api_routines
+uri_boolean	sqlite/include/sqlite3ext.h	/^  int (*uri_boolean)(const char*,const char*,int);$/;"	m	struct:sqlite3_api_routines
+uri_int64	sqlite/include/sqlite3ext.h	/^  sqlite3_int64 (*uri_int64)(const char*,const char*,sqlite3_int64);$/;"	m	struct:sqlite3_api_routines
+uri_parameter	sqlite/include/sqlite3ext.h	/^  const char *(*uri_parameter)(const char*,const char*);$/;"	m	struct:sqlite3_api_routines
+usBitCount	guibitmap.h	/^    UINT16 usBitCount;      \/\/每像素所占比特数，目前只支持1位色、8位色、24位色$/;"	m	struct:_bitmap_infoheader
+usDevPlanes	guibitmap.h	/^    UINT16 usDevPlanes;     \/\/目标设备位面数，值必须为1$/;"	m	struct:_bitmap_infoheader
+usFileType	guibitmap.h	/^    UINT16 usFileType;      \/\/文件类型，0x424D('BM')为文件中的存储序列，小端存储$/;"	m	struct:_bitmap_fileheader
+usFillChar	guibitmap.h	/^    UINT16 usFillChar;      \/\/填充字符，用于对齐字边界$/;"	m	struct:_bitmap_fileheader
+usReserved1	guibitmap.h	/^    UINT16 usReserved1;     \/\/保留字1，值必须为0$/;"	m	struct:_bitmap_fileheader
+usReserved2	guibitmap.h	/^    UINT16 usReserved2;     \/\/保留字2，值必须为0$/;"	m	struct:_bitmap_fileheader
+usSegmentCount	guifont.h	/^    UINT16 usSegmentCount;  \/\/分段计数，包含点阵段的数量，分段标记为1时有效$/;"	m	struct:_font_fileheader
+usSegmentFlag	guifont.h	/^    UINT16 usSegmentFlag;   \/\/分段标记，编码是否分段(0不分段)，目前只支持不分段$/;"	m	struct:_font_fileheader
+usable	sqlite/include/sqlite3.h	/^     unsigned char usable;     \/* True if this constraint is usable *\/$/;"	m	struct:sqlite3_index_info::sqlite3_index_constraint
+user_data	sqlite/include/sqlite3ext.h	/^  void * (*user_data)(sqlite3_context*);$/;"	m	struct:sqlite3_api_routines
+value_blob	sqlite/include/sqlite3ext.h	/^  const void * (*value_blob)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_bytes	sqlite/include/sqlite3ext.h	/^  int  (*value_bytes)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_bytes16	sqlite/include/sqlite3ext.h	/^  int  (*value_bytes16)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_double	sqlite/include/sqlite3ext.h	/^  double  (*value_double)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_int	sqlite/include/sqlite3ext.h	/^  int  (*value_int)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_int64	sqlite/include/sqlite3ext.h	/^  sqlite_int64  (*value_int64)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_numeric_type	sqlite/include/sqlite3ext.h	/^  int  (*value_numeric_type)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_text	sqlite/include/sqlite3ext.h	/^  const unsigned char * (*value_text)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_text16	sqlite/include/sqlite3ext.h	/^  const void * (*value_text16)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_text16be	sqlite/include/sqlite3ext.h	/^  const void * (*value_text16be)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_text16le	sqlite/include/sqlite3ext.h	/^  const void * (*value_text16le)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+value_type	sqlite/include/sqlite3ext.h	/^  int  (*value_type)(sqlite3_value*);$/;"	m	struct:sqlite3_api_routines
+vfs_find	sqlite/include/sqlite3ext.h	/^  sqlite3_vfs *(*vfs_find)(const char*);$/;"	m	struct:sqlite3_api_routines
+vfs_register	sqlite/include/sqlite3ext.h	/^  int (*vfs_register)(sqlite3_vfs*,int);$/;"	m	struct:sqlite3_api_routines
+vfs_unregister	sqlite/include/sqlite3ext.h	/^  int (*vfs_unregister)(sqlite3_vfs*);$/;"	m	struct:sqlite3_api_routines
+vmprintf	sqlite/include/sqlite3ext.h	/^  char *(*vmprintf)(const char*,va_list);$/;"	m	struct:sqlite3_api_routines
+vsnprintf	sqlite/include/sqlite3ext.h	/^  char *(*vsnprintf)(int,char*,const char*,va_list);$/;"	m	struct:sqlite3_api_routines
+vsystem	wnd_frmwifi.c	/^int vsystem(const char * cmdstring)$/;"	f
+vtab_config	sqlite/include/sqlite3ext.h	/^  int (*vtab_config)(sqlite3*,int op,...);$/;"	m	struct:sqlite3_api_routines
+vtab_on_conflict	sqlite/include/sqlite3ext.h	/^  int (*vtab_on_conflict)(sqlite3*);$/;"	m	struct:sqlite3_api_routines
+wal_autocheckpoint	sqlite/include/sqlite3ext.h	/^  int (*wal_autocheckpoint)(sqlite3*,int);$/;"	m	struct:sqlite3_api_routines
+wal_checkpoint	sqlite/include/sqlite3ext.h	/^  int (*wal_checkpoint)(sqlite3*,const char*);$/;"	m	struct:sqlite3_api_routines
+wal_checkpoint_v2	sqlite/include/sqlite3ext.h	/^  int (*wal_checkpoint_v2)(sqlite3*,const char*,int,int*,int*);$/;"	m	struct:sqlite3_api_routines
+wal_hook	sqlite/include/sqlite3ext.h	/^  void *(*wal_hook)(sqlite3*,int(*)(void*,sqlite3*,const char*,int),void*);$/;"	m	struct:sqlite3_api_routines
+x	guibase.h	/^    unsigned int x;     \/\/横坐标$/;"	m	struct:_point
+xAccess	sqlite/include/sqlite3.h	/^  int (*xAccess)(sqlite3_vfs*, const char *zName, int flags, int *pResOut);$/;"	m	struct:sqlite3_vfs
+xBegin	sqlite/include/sqlite3.h	/^  int (*xBegin)(sqlite3_vtab *pVTab);$/;"	m	struct:sqlite3_module
+xBestIndex	sqlite/include/sqlite3.h	/^  int (*xBestIndex)(sqlite3_vtab *pVTab, sqlite3_index_info*);$/;"	m	struct:sqlite3_module
+xCachesize	sqlite/include/sqlite3.h	/^  void (*xCachesize)(sqlite3_pcache*, int nCachesize);$/;"	m	struct:sqlite3_pcache_methods
+xCachesize	sqlite/include/sqlite3.h	/^  void (*xCachesize)(sqlite3_pcache*, int nCachesize);$/;"	m	struct:sqlite3_pcache_methods2
+xCheckReservedLock	sqlite/include/sqlite3.h	/^  int (*xCheckReservedLock)(sqlite3_file*, int *pResOut);$/;"	m	struct:sqlite3_io_methods
+xClose	sqlite/include/sqlite3.h	/^  int (*xClose)(sqlite3_file*);$/;"	m	struct:sqlite3_io_methods
+xClose	sqlite/include/sqlite3.h	/^  int (*xClose)(sqlite3_vtab_cursor*);$/;"	m	struct:sqlite3_module
+xColumn	sqlite/include/sqlite3.h	/^  int (*xColumn)(sqlite3_vtab_cursor*, sqlite3_context*, int);$/;"	m	struct:sqlite3_module
+xCommit	sqlite/include/sqlite3.h	/^  int (*xCommit)(sqlite3_vtab *pVTab);$/;"	m	struct:sqlite3_module
+xConnect	sqlite/include/sqlite3.h	/^  int (*xConnect)(sqlite3*, void *pAux,$/;"	m	struct:sqlite3_module
+xCreate	sqlite/include/sqlite3.h	/^  int (*xCreate)(sqlite3*, void *pAux,$/;"	m	struct:sqlite3_module
+xCreate	sqlite/include/sqlite3.h	/^  sqlite3_pcache *(*xCreate)(int szPage, int bPurgeable);$/;"	m	struct:sqlite3_pcache_methods
+xCreate	sqlite/include/sqlite3.h	/^  sqlite3_pcache *(*xCreate)(int szPage, int szExtra, int bPurgeable);$/;"	m	struct:sqlite3_pcache_methods2
+xCurrentTime	sqlite/include/sqlite3.h	/^  int (*xCurrentTime)(sqlite3_vfs*, double*);$/;"	m	struct:sqlite3_vfs
+xCurrentTimeInt64	sqlite/include/sqlite3.h	/^  int (*xCurrentTimeInt64)(sqlite3_vfs*, sqlite3_int64*);$/;"	m	struct:sqlite3_vfs
+xDelUser	sqlite/include/sqlite3.h	/^  void (*xDelUser)(void *);       \/* Called by SQLite to clean up pUser *\/$/;"	m	struct:sqlite3_rtree_geometry
+xDelUser	sqlite/include/sqlite3.h	/^  void (*xDelUser)(void*);          \/* function to free pUser *\/$/;"	m	struct:sqlite3_rtree_query_info
+xDelete	sqlite/include/sqlite3.h	/^  int (*xDelete)(sqlite3_vfs*, const char *zName, int syncDir);$/;"	m	struct:sqlite3_vfs
+xDestroy	sqlite/include/sqlite3.h	/^  int (*xDestroy)(sqlite3_vtab *pVTab);$/;"	m	struct:sqlite3_module
+xDestroy	sqlite/include/sqlite3.h	/^  void (*xDestroy)(sqlite3_pcache*);$/;"	m	struct:sqlite3_pcache_methods
+xDestroy	sqlite/include/sqlite3.h	/^  void (*xDestroy)(sqlite3_pcache*);$/;"	m	struct:sqlite3_pcache_methods2
+xDeviceCharacteristics	sqlite/include/sqlite3.h	/^  int (*xDeviceCharacteristics)(sqlite3_file*);$/;"	m	struct:sqlite3_io_methods
+xDisconnect	sqlite/include/sqlite3.h	/^  int (*xDisconnect)(sqlite3_vtab *pVTab);$/;"	m	struct:sqlite3_module
+xDlClose	sqlite/include/sqlite3.h	/^  void (*xDlClose)(sqlite3_vfs*, void*);$/;"	m	struct:sqlite3_vfs
+xDlError	sqlite/include/sqlite3.h	/^  void (*xDlError)(sqlite3_vfs*, int nByte, char *zErrMsg);$/;"	m	struct:sqlite3_vfs
+xDlOpen	sqlite/include/sqlite3.h	/^  void *(*xDlOpen)(sqlite3_vfs*, const char *zFilename);$/;"	m	struct:sqlite3_vfs
+xEof	sqlite/include/sqlite3.h	/^  int (*xEof)(sqlite3_vtab_cursor*);$/;"	m	struct:sqlite3_module
+xFetch	sqlite/include/sqlite3.h	/^  int (*xFetch)(sqlite3_file*, sqlite3_int64 iOfst, int iAmt, void **pp);$/;"	m	struct:sqlite3_io_methods
+xFetch	sqlite/include/sqlite3.h	/^  sqlite3_pcache_page *(*xFetch)(sqlite3_pcache*, unsigned key, int createFlag);$/;"	m	struct:sqlite3_pcache_methods2
+xFetch	sqlite/include/sqlite3.h	/^  void *(*xFetch)(sqlite3_pcache*, unsigned key, int createFlag);$/;"	m	struct:sqlite3_pcache_methods
+xFileControl	sqlite/include/sqlite3.h	/^  int (*xFileControl)(sqlite3_file*, int op, void *pArg);$/;"	m	struct:sqlite3_io_methods
+xFileSize	sqlite/include/sqlite3.h	/^  int (*xFileSize)(sqlite3_file*, sqlite3_int64 *pSize);$/;"	m	struct:sqlite3_io_methods
+xFilter	sqlite/include/sqlite3.h	/^  int (*xFilter)(sqlite3_vtab_cursor*, int idxNum, const char *idxStr,$/;"	m	struct:sqlite3_module
+xFindFunction	sqlite/include/sqlite3.h	/^  int (*xFindFunction)(sqlite3_vtab *pVtab, int nArg, const char *zName,$/;"	m	struct:sqlite3_module
+xFree	sqlite/include/sqlite3.h	/^  void (*xFree)(void*);          \/* Free a prior allocation *\/$/;"	m	struct:sqlite3_mem_methods
+xFullPathname	sqlite/include/sqlite3.h	/^  int (*xFullPathname)(sqlite3_vfs*, const char *zName, int nOut, char *zOut);$/;"	m	struct:sqlite3_vfs
+xGetLastError	sqlite/include/sqlite3.h	/^  int (*xGetLastError)(sqlite3_vfs*, int, char *);$/;"	m	struct:sqlite3_vfs
+xGetSystemCall	sqlite/include/sqlite3.h	/^  sqlite3_syscall_ptr (*xGetSystemCall)(sqlite3_vfs*, const char *zName);$/;"	m	struct:sqlite3_vfs
+xInit	sqlite/include/sqlite3.h	/^  int (*xInit)(void*);           \/* Initialize the memory allocator *\/$/;"	m	struct:sqlite3_mem_methods
+xInit	sqlite/include/sqlite3.h	/^  int (*xInit)(void*);$/;"	m	struct:sqlite3_pcache_methods
+xInit	sqlite/include/sqlite3.h	/^  int (*xInit)(void*);$/;"	m	struct:sqlite3_pcache_methods2
+xLock	sqlite/include/sqlite3.h	/^  int (*xLock)(sqlite3_file*, int);$/;"	m	struct:sqlite3_io_methods
+xMalloc	sqlite/include/sqlite3.h	/^  void *(*xMalloc)(int);         \/* Memory allocation function *\/$/;"	m	struct:sqlite3_mem_methods
+xMutexAlloc	sqlite/include/sqlite3.h	/^  sqlite3_mutex *(*xMutexAlloc)(int);$/;"	m	struct:sqlite3_mutex_methods
+xMutexEnd	sqlite/include/sqlite3.h	/^  int (*xMutexEnd)(void);$/;"	m	struct:sqlite3_mutex_methods
+xMutexEnter	sqlite/include/sqlite3.h	/^  void (*xMutexEnter)(sqlite3_mutex *);$/;"	m	struct:sqlite3_mutex_methods
+xMutexFree	sqlite/include/sqlite3.h	/^  void (*xMutexFree)(sqlite3_mutex *);$/;"	m	struct:sqlite3_mutex_methods
+xMutexHeld	sqlite/include/sqlite3.h	/^  int (*xMutexHeld)(sqlite3_mutex *);$/;"	m	struct:sqlite3_mutex_methods
+xMutexInit	sqlite/include/sqlite3.h	/^  int (*xMutexInit)(void);$/;"	m	struct:sqlite3_mutex_methods
+xMutexLeave	sqlite/include/sqlite3.h	/^  void (*xMutexLeave)(sqlite3_mutex *);$/;"	m	struct:sqlite3_mutex_methods
+xMutexNotheld	sqlite/include/sqlite3.h	/^  int (*xMutexNotheld)(sqlite3_mutex *);$/;"	m	struct:sqlite3_mutex_methods
+xMutexTry	sqlite/include/sqlite3.h	/^  int (*xMutexTry)(sqlite3_mutex *);$/;"	m	struct:sqlite3_mutex_methods
+xNext	sqlite/include/sqlite3.h	/^  int (*xNext)(sqlite3_vtab_cursor*);$/;"	m	struct:sqlite3_module
+xNextSystemCall	sqlite/include/sqlite3.h	/^  const char *(*xNextSystemCall)(sqlite3_vfs*, const char *zName);$/;"	m	struct:sqlite3_vfs
+xOpen	sqlite/include/sqlite3.h	/^  int (*xOpen)(sqlite3_vfs*, const char *zName, sqlite3_file*,$/;"	m	struct:sqlite3_vfs
+xOpen	sqlite/include/sqlite3.h	/^  int (*xOpen)(sqlite3_vtab *pVTab, sqlite3_vtab_cursor **ppCursor);$/;"	m	struct:sqlite3_module
+xPagecount	sqlite/include/sqlite3.h	/^  int (*xPagecount)(sqlite3_pcache*);$/;"	m	struct:sqlite3_pcache_methods
+xPagecount	sqlite/include/sqlite3.h	/^  int (*xPagecount)(sqlite3_pcache*);$/;"	m	struct:sqlite3_pcache_methods2
+xRandomness	sqlite/include/sqlite3.h	/^  int (*xRandomness)(sqlite3_vfs*, int nByte, char *zOut);$/;"	m	struct:sqlite3_vfs
+xRead	sqlite/include/sqlite3.h	/^  int (*xRead)(sqlite3_file*, void*, int iAmt, sqlite3_int64 iOfst);$/;"	m	struct:sqlite3_io_methods
+xRealloc	sqlite/include/sqlite3.h	/^  void *(*xRealloc)(void*,int);  \/* Resize an allocation *\/$/;"	m	struct:sqlite3_mem_methods
+xRekey	sqlite/include/sqlite3.h	/^  void (*xRekey)(sqlite3_pcache*, sqlite3_pcache_page*, $/;"	m	struct:sqlite3_pcache_methods2
+xRekey	sqlite/include/sqlite3.h	/^  void (*xRekey)(sqlite3_pcache*, void*, unsigned oldKey, unsigned newKey);$/;"	m	struct:sqlite3_pcache_methods
+xRelease	sqlite/include/sqlite3.h	/^  int (*xRelease)(sqlite3_vtab *pVTab, int);$/;"	m	struct:sqlite3_module
+xRename	sqlite/include/sqlite3.h	/^  int (*xRename)(sqlite3_vtab *pVtab, const char *zNew);$/;"	m	struct:sqlite3_module
+xRollback	sqlite/include/sqlite3.h	/^  int (*xRollback)(sqlite3_vtab *pVTab);$/;"	m	struct:sqlite3_module
+xRollbackTo	sqlite/include/sqlite3.h	/^  int (*xRollbackTo)(sqlite3_vtab *pVTab, int);$/;"	m	struct:sqlite3_module
+xRoundup	sqlite/include/sqlite3.h	/^  int (*xRoundup)(int);          \/* Round up request size to allocation size *\/$/;"	m	struct:sqlite3_mem_methods
+xRowid	sqlite/include/sqlite3.h	/^  int (*xRowid)(sqlite3_vtab_cursor*, sqlite3_int64 *pRowid);$/;"	m	struct:sqlite3_module
+xSavepoint	sqlite/include/sqlite3.h	/^  int (*xSavepoint)(sqlite3_vtab *pVTab, int);$/;"	m	struct:sqlite3_module
+xSectorSize	sqlite/include/sqlite3.h	/^  int (*xSectorSize)(sqlite3_file*);$/;"	m	struct:sqlite3_io_methods
+xSetSystemCall	sqlite/include/sqlite3.h	/^  int (*xSetSystemCall)(sqlite3_vfs*, const char *zName, sqlite3_syscall_ptr);$/;"	m	struct:sqlite3_vfs
+xShmBarrier	sqlite/include/sqlite3.h	/^  void (*xShmBarrier)(sqlite3_file*);$/;"	m	struct:sqlite3_io_methods
+xShmLock	sqlite/include/sqlite3.h	/^  int (*xShmLock)(sqlite3_file*, int offset, int n, int flags);$/;"	m	struct:sqlite3_io_methods
+xShmMap	sqlite/include/sqlite3.h	/^  int (*xShmMap)(sqlite3_file*, int iPg, int pgsz, int, void volatile**);$/;"	m	struct:sqlite3_io_methods
+xShmUnmap	sqlite/include/sqlite3.h	/^  int (*xShmUnmap)(sqlite3_file*, int deleteFlag);$/;"	m	struct:sqlite3_io_methods
+xShrink	sqlite/include/sqlite3.h	/^  void (*xShrink)(sqlite3_pcache*);$/;"	m	struct:sqlite3_pcache_methods2
+xShutdown	sqlite/include/sqlite3.h	/^  void (*xShutdown)(void*);      \/* Deinitialize the memory allocator *\/$/;"	m	struct:sqlite3_mem_methods
+xShutdown	sqlite/include/sqlite3.h	/^  void (*xShutdown)(void*);$/;"	m	struct:sqlite3_pcache_methods
+xShutdown	sqlite/include/sqlite3.h	/^  void (*xShutdown)(void*);$/;"	m	struct:sqlite3_pcache_methods2
+xSize	sqlite/include/sqlite3.h	/^  int (*xSize)(void*);           \/* Return the size of an allocation *\/$/;"	m	struct:sqlite3_mem_methods
+xSleep	sqlite/include/sqlite3.h	/^  int (*xSleep)(sqlite3_vfs*, int microseconds);$/;"	m	struct:sqlite3_vfs
+xSync	sqlite/include/sqlite3.h	/^  int (*xSync)(sqlite3_file*, int flags);$/;"	m	struct:sqlite3_io_methods
+xSync	sqlite/include/sqlite3.h	/^  int (*xSync)(sqlite3_vtab *pVTab);$/;"	m	struct:sqlite3_module
+xTruncate	sqlite/include/sqlite3.h	/^  int (*xTruncate)(sqlite3_file*, sqlite3_int64 size);$/;"	m	struct:sqlite3_io_methods
+xTruncate	sqlite/include/sqlite3.h	/^  void (*xTruncate)(sqlite3_pcache*, unsigned iLimit);$/;"	m	struct:sqlite3_pcache_methods
+xTruncate	sqlite/include/sqlite3.h	/^  void (*xTruncate)(sqlite3_pcache*, unsigned iLimit);$/;"	m	struct:sqlite3_pcache_methods2
+xUnfetch	sqlite/include/sqlite3.h	/^  int (*xUnfetch)(sqlite3_file*, sqlite3_int64 iOfst, void *p);$/;"	m	struct:sqlite3_io_methods
+xUnlock	sqlite/include/sqlite3.h	/^  int (*xUnlock)(sqlite3_file*, int);$/;"	m	struct:sqlite3_io_methods
+xUnpin	sqlite/include/sqlite3.h	/^  void (*xUnpin)(sqlite3_pcache*, sqlite3_pcache_page*, int discard);$/;"	m	struct:sqlite3_pcache_methods2
+xUnpin	sqlite/include/sqlite3.h	/^  void (*xUnpin)(sqlite3_pcache*, void*, int discard);$/;"	m	struct:sqlite3_pcache_methods
+xUpdate	sqlite/include/sqlite3.h	/^  int (*xUpdate)(sqlite3_vtab *, int, sqlite3_value **, sqlite3_int64 *);$/;"	m	struct:sqlite3_module
+xWrite	sqlite/include/sqlite3.h	/^  int (*xWrite)(sqlite3_file*, const void*, int iAmt, sqlite3_int64 iOfst);$/;"	m	struct:sqlite3_io_methods
+xthreadsafe	sqlite/include/sqlite3ext.h	/^  int (*xthreadsafe)(void);$/;"	m	struct:sqlite3_api_routines
+y	guibase.h	/^    unsigned int y;     \/\/纵坐标$/;"	m	struct:_point
+zErrMsg	sqlite/include/sqlite3.h	/^  char *zErrMsg;                  \/* Error message from sqlite3_mprintf() *\/$/;"	m	struct:sqlite3_vtab
+zName	sqlite/include/sqlite3.h	/^  const char *zName;       \/* Name of this virtual file system *\/$/;"	m	struct:sqlite3_vfs

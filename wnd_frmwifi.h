@@ -33,6 +33,7 @@ typedef enum _wifi_state
 	ENUM_OPEN = 1,
 	ENUM_SCAN,
 	ENUM_SCAN_R,
+	ENUM_CONNECT,//victor
 }WIFI_S;
 
 /*******************************************************************************
